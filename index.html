@@ -58,31 +58,23 @@
     </script>
     <style>
       body {
-        background: radial-gradient(
-          circle at center,
-          rgba(0, 255, 180, 0.08) 0%,
-          rgba(0, 0, 0, 1) 80%
-        );
-        color: #fff;
+        background: #FFFFFF;
+        color: #334155;
         font-family: "Inter", sans-serif;
       }
       .hero-bg {
-        background: radial-gradient(
-          ellipse at center,
-          rgba(0, 53, 37, 0.692),
-          rgba(0, 0, 0, 1)
-        );
+        background: #FFFFFF;
       }
       .card {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(15, 23, 42, 0.1);
         backdrop-filter: blur(8px);
         transition: all 0.4s ease;
       }
       .card:hover {
         transform: translateY(-6px);
-        border-color: rgba(0, 255, 180, 0.4);
-        box-shadow: 0 0 20px rgba(0, 255, 180, 0.1);
+        border-color: rgba(3, 105, 161, 0.4);
+        box-shadow: 0 0 20px rgba(3, 105, 161, 0.1);
       }
       .fade-up {
         opacity: 0;
@@ -94,7 +86,7 @@
         transform: translateY(0);
       }
       .glow-hover:hover {
-        box-shadow: 0 0 30px rgba(0, 255, 180, 0.3);
+        box-shadow: 0 0 30px rgba(3, 105, 161, 0.3);
       }
 
       html {
@@ -114,49 +106,35 @@
   <!-- Text Column -->
   <div class="flex-1 flex flex-col items-center md:items-start justify-center fade-up">
     <div class="text-3xl md:text-7xl font-semibold mb-4">
-      Stanley <span class="text-green-400">Andrade</span>
+      Stanley <span class="text-[#0369A1]">Andrade</span>
     </div>
-    <p class="text-gray-300 max-w-xl mb-4 md:text-2xl">
+    <p class="text-[#334155] max-w-xl mb-4 md:text-2xl">
       I help healthcare professionals gain more patients and business owners gain more clients.
     </p>
-    <p class="text-gray-300 max-w-xl mb-8 md:text-xl">
+    <p class="text-[#334155] max-w-xl mb-8 md:text-xl">
       5 anos de experiência como Engenheiro de Software atendendo clientes no mundo todo: América, Europa, Ásia, África e Oceania.
     </p>
     <a href="#myform">
       <button
-        class="px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full text-black font-semibold hover:opacity-90 transition glow-hover"
+        class="px-6 py-3 bg-[#0369A1] rounded-full text-white font-semibold hover:opacity-90 transition glow-hover"
       >
         Contact me via email
       </button>
     </a>
-
-    <!-- <p class="mt-12 text-white text-2xl md:text-4xl">What are you looking for?</p>
-
-    <div class="mt-6 flex flex-wrap justify-center md:justify-start gap-3">
-      <a href="#myform" class="card px-8 py-6 rounded-2xl text-center w-44 fade-up">
-        <div class="text-gray-200 font-medium">Mobile App</div>
-      </a>
-      <a href="#myform" class="card px-8 py-6 rounded-2xl text-center w-44 fade-up">
-        <div class="text-gray-200 font-medium">Software/SAAS</div>
-      </a>
-      <a href="#myform" class="card px-8 py-6 rounded-2xl text-center w-44 fade-up">
-        <div class="text-gray-200 font-medium">Website</div>
-      </a>
-    </div> -->
   </div>
 
   <!-- Image Column -->
   <div class="flex-1 fade-up">
-    <img src="./img/eu.jpg" alt="Hero Illustration" class="w-full max-w-lg mx-auto md:mx-0 rounded-full" />
+    <img src="./img/eusemfundo.png" alt="Hero Illustration" class="w-2/3 max-w-lg mx-auto md:mx-0 rounded-full" />
   </div>
 </section>
 
 <!-- Lead Form Section -->
-<section id="myform" class="w-full bg-black/40 py-20 px-6 md:px-20 text-center text-gray-200">
-  <h2 class="text-3xl md:text-4xl font-semibold mb-8 fade-up">
-    Let's <span class="text-green-400">talk about your project</span>
+<section id="myform" class="w-full bg-white py-20 px-6 md:px-20 text-center text-[#334155]">
+  <h2 class="text-3xl md:text-4xl font-semibold mb-8 fade-up text-[#1A1A1A]">
+    Let's <span class="text-[#0369A1]">talk about your project</span>
   </h2>
-  <p class="max-w-xl mx-auto text-gray-400 mb-12 fade-up">
+  <p class="max-w-xl mx-auto text-[#334155] mb-12 fade-up">
     Fill out the form and I will contact you quickly with a tailored proposal.
   </p>
 
@@ -170,21 +148,21 @@
       name="Name"
       placeholder="Name"
       required
-      class="w-full bg-black/50 border border-white/10 text-gray-200 rounded-xl px-5 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 transition"
+      class="w-full bg-white border border-slate-300 text-[#334155] rounded-xl px-5 py-3 focus:outline-none focus:ring-2 focus:ring-[#0369A1] transition"
     />
     <input
       type="email"
       name="Email"
       placeholder="Your Email"
       required
-      class="w-full bg-black/50 border border-white/10 text-gray-200 rounded-xl px-5 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 transition"
+      class="w-full bg-white border border-slate-300 text-[#334155] rounded-xl px-5 py-3 focus:outline-none focus:ring-2 focus:ring-[#0369A1] transition"
     />
     <input
       type="tel"
       name="Tel"
       placeholder="Phone"
       required
-      class="w-full bg-black/50 border border-white/10 text-gray-200 rounded-xl px-5 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 transition"
+      class="w-full bg-white border border-slate-300 text-[#334155] rounded-xl px-5 py-3 focus:outline-none focus:ring-2 focus:ring-[#0369A1] transition"
     />
 
     <!-- Hidden fields -->
@@ -202,26 +180,60 @@
 
     <button
       type="submit"
-      class="mt-4 px-8 py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full text-black font-semibold hover:opacity-90 transition transform hover:-translate-y-1 duration-300 glow-hover"
+      class="mt-4 px-8 py-3 bg-[#0369A1] rounded-full text-white font-semibold hover:opacity-90 transition transform hover:-translate-y-1 duration-300 glow-hover"
     >
       Get a free quote
     </button>
   </form>
 </section>
 
+<!-- Landing Page Examples Section -->
+<section class="w-full py-24 bg-[#E0F2FE] text-center">
+  <h2 class="text-3xl md:text-4xl font-semibold mb-12 text-[#1A1A1A] fade-up">Landing Page Examples</h2>
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto px-6">
+    <a href="pages/dentist.html" target="_blank" class="bg-white p-6 rounded-2xl hover:shadow-lg transition fade-up">
+      <h3 class="text-[#0369A1] font-semibold mb-2">Dental Care</h3>
+      <p class="text-[#334155] text-sm">Professional dental services landing page</p>
+    </a>
+    <a href="pages/hospital.html" target="_blank" class="bg-white p-6 rounded-2xl hover:shadow-lg transition fade-up">
+      <h3 class="text-[#0369A1] font-semibold mb-2">Global Care Hospital</h3>
+      <p class="text-[#334155] text-sm">Advanced medical excellence hospital page</p>
+    </a>
+    <a href="pages/dermatologist.html" target="_blank" class="bg-white p-6 rounded-2xl hover:shadow-lg transition fade-up">
+      <h3 class="text-[#0369A1] font-semibold mb-2">DermaClinic</h3>
+      <p class="text-[#334155] text-sm">Excellence in skin care dermatology page</p>
+    </a>
+    <a href="pages/nurse.html" target="_blank" class="bg-white p-6 rounded-2xl hover:shadow-lg transition fade-up">
+      <h3 class="text-[#0369A1] font-semibold mb-2">Elite Nursing Care</h3>
+      <p class="text-[#334155] text-sm">Compassionate health services nursing page</p>
+    </a>
+    <a href="pages/psychologist.html" target="_blank" class="bg-white p-6 rounded-2xl hover:shadow-lg transition fade-up">
+      <h3 class="text-[#0369A1] font-semibold mb-2">Mindful Journey</h3>
+      <p class="text-[#334155] text-sm">Professional psychological support page</p>
+    </a>
+    <a href="pages/cardiologist.html" target="_blank" class="bg-white p-6 rounded-2xl hover:shadow-lg transition fade-up">
+      <h3 class="text-[#0369A1] font-semibold mb-2">HeartCare Specialist</h3>
+      <p class="text-[#334155] text-sm">Advanced cardiovascular care page</p>
+    </a>
+    <a href="pages/clinicalanalysis.html" target="_blank" class="bg-white p-6 rounded-2xl hover:shadow-lg transition fade-up">
+      <h3 class="text-[#0369A1] font-semibold mb-2">Precision Lab</h3>
+      <p class="text-[#334155] text-sm">Advanced diagnostics & clinical analysis page</p>
+    </a>
+  </div>
+</section>
 
     <section class="hero-bg flex flex-col items-center justify-center text-center pt-0 pb-20 w-full">
-            <p class="mt-12 mb-12  text-white-400 text-4xl md:text-4xl fade-up">How I help you</p>
+            <p class="mt-12 mb-12 text-[#1A1A1A] text-4xl md:text-4xl fade-up">How I help you</p>
 
       <div class="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
         <div class="card w-72 p-6 rounded-2xl text-left fade-up flex items-center justify-center">
-          <h3 class=" font-semibold mb-3 text-grey-400">Healthcare professionals get more patients with digital funnels.</h3>
+          <h3 class="font-semibold mb-3 text-[#334155]">Healthcare professionals get more patients with digital funnels.</h3>
         </div>
         <div class="card w-72 p-6 rounded-2xl text-left fade-up items-center justify-center flex">
-          <h3 class=" font-semibold mb-3 text-grey-400">Entrepreneurs increase client acquisition with paid traffic and conversion-first websites.</h3>
+          <h3 class="font-semibold mb-3 text-[#334155]">Entrepreneurs increase client acquisition with paid traffic and conversion-first websites.</h3>
         </div>
         <div class="card w-72 p-6 rounded-2xl text-left fade-up items-center justify-center flex">
-          <h3 class=" font-semibold mb-3 text-grey-400">End-to-end apps and software (Android, iOS, web, SaaS) for business growth.</h3>
+          <h3 class="font-semibold mb-3 text-[#334155]">End-to-end apps and software (Android, iOS, web, SaaS) for business growth.</h3>
         </div>
       </div>
     </section>
@@ -231,65 +243,65 @@
     </section>
 
     <section class="hero-bg flex flex-col items-center justify-center text-center pt-0 pb-20 w-full">
-      <p class="mt-12 mb-12  text-white-400 text-4xl md:text-4xl fade-up">Technologies we will develop for your business</p>
+      <p class="mt-12 mb-12 text-[#1A1A1A] text-4xl md:text-4xl fade-up">Technologies we will develop for your business</p>
         <div class="mt-6 flex flex-wrap justify-center gap-3">
         <!-- <div class="card px-6 py-6 rounded-2xl text-center w-44 fade-up ">
           <div class="text-gray-200 font-medium">Growth Strategy</div>
         </div> -->
         <a href="#myform" class="card px-8 py-6 rounded-2xl text-center w-44 fade-up">
-            <div class="text-gray-200 font-medium">Mobile App Android & IOS</div>
+            <div class="text-[#334155] font-medium">Mobile App Android & IOS</div>
         </a>
         <a href="#myform" class="card px-8 py-6 rounded-2xl text-center w-44 fade-up">
-          <div class="text-gray-200 font-medium">Software/SAAS</div>
+          <div class="text-[#334155] font-medium">Software/SAAS</div>
         </a>
         <a href="#myform" class="card px-8 py-6 rounded-2xl text-center w-44 fade-up">
-          <div class="text-gray-200 font-medium">Website</div>
+          <div class="text-[#334155] font-medium">Website</div>
         </a>
       </div>
     </section>
 
     <!-- Verifiable Compute Section -->
     <section class="hero-bg w-full py-24 text-center">
-      <h2 class="text-3xl md:text-4xl font-semibold mb-1 fade-up">
-        How it <span class="text-green-400">works</span>
+      <h2 class="text-3xl md:text-4xl font-semibold mb-1 fade-up text-[#1A1A1A]">
+        How it <span class="text-[#0369A1]">works</span>
       </h2>
       <div class="flex flex-col items-center" >
-        <p class="text-white-300 max-w-xl mb-8 fade-up" >
+        <p class="text-[#334155] max-w-xl mb-8 fade-up" >
         From idea to production in three simple steps
         </p>
       </div>
 
       <div
-        class="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-24 text-gray-300"
+        class="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-24 text-[#334155]"
       >
         <div class="flex flex-col items-center fade-up">
           <div class="card w-16 h-16 rounded-2xl flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#0369A1]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20h9M16.5 3.5a2.121 2.121 0 113 3L7 19l-4 1 1-4L16.5 3.5z" />
             </svg>
           </div>
-          <p class="text-2xl font-bold" >Meeting on Google Meet</p>
-          <p class="max-w-[180px] text-sm">Tell us what your company's needs or problems are.</p>
+          <p class="text-2xl font-bold text-[#1A1A1A]" >Meeting on Google Meet</p>
+          <p class="max-w-[180px] text-sm text-[#334155]">Tell us what your company's needs or problems are.</p>
         </div>
 
         <div class="flex flex-col items-center fade-up">
           <div class="card w-16 h-16 rounded-2xl flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#0369A1]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
             </svg>
           </div>
-          <p class="text-2xl font-bold" >We create ours for you</p>
-          <p class="max-w-[200px] text-sm">Our qualified programmers will develop the solution for you.</p>
+          <p class="text-2xl font-bold text-[#1A1A1A]" >We create ours for you</p>
+          <p class="max-w-[200px] text-sm text-[#334155]">Our qualified programmers will develop the solution for you.</p>
         </div>
 
         <div class="flex flex-col items-center fade-up">
           <div class="card w-16 h-16 rounded-2xl flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#0369A1]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <p class="text-2xl font-bold" >Ready</p>
-          <p class="max-w-[200px] text-sm">The solution to your problems is ready for you and your customers to use.</p>
+          <p class="text-2xl font-bold text-[#1A1A1A]" >Ready</p>
+          <p class="max-w-[200px] text-sm text-[#334155]">The solution to your problems is ready for you and your customers to use.</p>
         </div>
       </div>
     </section>
@@ -300,71 +312,71 @@
 
     <!-- Technology Section -->
     <section id="technology" class="w-full py-24 text-center hero-bg">
-      <h2 class="text-3xl md:text-4xl font-semibold mb-12 fade-up">
-        What we <span class="text-green-400">offer</span>
+      <h2 class="text-3xl md:text-4xl font-semibold mb-12 fade-up text-[#1A1A1A]">
+        What we <span class="text-[#0369A1]">offer</span>
       </h2>
 
       <div class="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto">
         <div class="card w-72 p-6 rounded-2xl text-left fade-up">
-          <h3 class="text-xl font-semibold mb-3 text-green-400">Healthcare Patient Growth</h3>
-          <p class="text-gray-300 text-sm">Marketing funnels and automation to generate patients for clinics and health professionals.</p>
+          <h3 class="text-xl font-semibold mb-3 text-[#0369A1]">Healthcare Patient Growth</h3>
+          <p class="text-[#334155] text-sm">Marketing funnels and automation to generate patients for clinics and health professionals.</p>
         </div>
         <div class="card w-72 p-6 rounded-2xl text-left fade-up">
-          <h3 class="text-xl font-semibold mb-3 text-green-400">Entrepreneur Client Acquisition</h3>
-          <p class="text-gray-300 text-sm">Paid traffic, lead magnets and conversion-focused websites that bring more clients.</p>
+          <h3 class="text-xl font-semibold mb-3 text-[#0369A1]">Entrepreneur Client Acquisition</h3>
+          <p class="text-[#334155] text-sm">Paid traffic, lead magnets and conversion-focused websites that bring more clients.</p>
         </div>
         <div class="card w-72 p-6 rounded-2xl text-left fade-up">
-          <h3 class="text-xl font-semibold mb-3 text-green-400">Apps & Custom Software</h3>
-          <p class="text-gray-300 text-sm">Android/iOS apps and custom software tailored to business processes.</p>
+          <h3 class="text-xl font-semibold mb-3 text-[#0369A1]">Apps & Custom Software</h3>
+          <p class="text-[#334155] text-sm">Android/iOS apps and custom software tailored to business processes.</p>
         </div>
       </div>
     </section>
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="w-full py-24 text-center hero-bg">
-      <h2 class="text-3xl md:text-4xl font-semibold mb-12 fade-up">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-12 fade-up text-[#1A1A1A]">
         Success stories from across the Americas
       </h2>
 
       <div class="flex flex-col md:flex-row justify-center items-center gap-8 max-w-6xl mx-auto">
         <div class="card p-8 rounded-2xl max-w-sm fade-up">
-          <p class="text-gray-200 mb-4">
-            “Today’s users expect fast, simple, and intuitive experiences. A custom mobile app keeps your brand at their fingertips — increasing engagement, loyalty, and satisfaction.”
+          <p class="text-[#334155] mb-4">
+            "Today's users expect fast, simple, and intuitive experiences. A custom mobile app keeps your brand at their fingertips — increasing engagement, loyalty, and satisfaction."
           </p>
-          <span class="text-green-400 font-semibold">Consumers Prefer Mobile Applications</span>
+          <span class="text-[#0369A1] font-semibold">Consumers Prefer Mobile Applications</span>
         </div>
 
         <div class="card p-8 rounded-2xl max-w-sm fade-up">
-          <p class="text-gray-200 mb-4">
-            “Stand out from the competition with a modern, high-performance mobile app tailored to your business. Deliver value faster, improve customer experience, and grow your brand.”
+          <p class="text-[#334155] mb-4">
+            "Stand out from the competition with a modern, high-performance mobile app tailored to your business. Deliver value faster, improve customer experience, and grow your brand."
           </p>
-          <span class="text-green-400 font-semibold">Gain a Competitive Advantage</span>
+          <span class="text-[#0369A1] font-semibold">Gain a Competitive Advantage</span>
         </div>
 
         <div class="card p-8 rounded-2xl max-w-sm fade-up">
-          <p class="text-gray-200 mb-4">
-            “Simplify transactions and boost sales by integrating secure payment options into your app. Offer your customers convenience while keeping all operations in one place.”
+          <p class="text-[#334155] mb-4">
+            "Simplify transactions and boost sales by integrating secure payment options into your app. Offer your customers convenience while keeping all operations in one place."
           </p>
-          <span class="text-green-400 font-semibold">Accenture Partner</span>
+          <span class="text-[#0369A1] font-semibold">Accenture Partner</span>
         </div>
       </div>
     </section>
 
     <!-- Satisfied Customers Section -->
-<section class="w-full py-24 bg-black/30 text-center overflow-hidden">
-  <h2 class="text-3xl md:text-4xl font-semibold mb-10 text-white fade-up">
-    Satisfied <span class="text-green-400">Customers</span>
+<section class="w-full py-24 bg-[#E0F2FE] text-center overflow-hidden">
+  <h2 class="text-3xl md:text-4xl font-semibold mb-10 text-[#1A1A1A] fade-up">
+    Satisfied <span class="text-[#0369A1]">Customers</span>
   </h2>
 
   <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-2 px-1 fade-up">
     
     <!-- Card 1 -->
     <a href="https://www.comunhaorara.com/pages/baixenossoapp.html" target="_blank" rel="noopener noreferrer"
-      class="bg-white/5 rounded-2xl p-1 text-center hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_25px_rgba(0,255,180,0.25)] transition duration-300 block">
+      class="bg-white rounded-2xl p-1 text-center hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_25px_rgba(3,105,161,0.25)] transition duration-300 block">
       <img src="/img/1.png" alt="Rara App" class="mx-auto mb-4 w-full object-contain rounded-2xl" />
-      <h3 class="text-lg font-semibold text-white">Rara App</h3>
-      <p class="text-green-400 text-sm mb-2">Android and iOS App</p>
-      <p class="text-gray-400 text-xs">
+      <h3 class="text-lg font-semibold text-[#1A1A1A]">Rara App</h3>
+      <p class="text-[#0369A1] text-sm mb-2">Android and iOS App</p>
+      <p class="text-[#334155] text-xs">
         Customer: Igreja Comunhão Rara<br>
         Mobile: React Native<br>
         Backend: Node.js<br>
@@ -374,11 +386,11 @@
 
     <!-- Card 2 -->
     <a href="https://www.memorizegifts.com/" target="_blank" rel="noopener noreferrer"
-      class="bg-white/5 rounded-2xl p-1 text-center hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_25px_rgba(0,255,180,0.25)] transition duration-300 block">
+      class="bg-white rounded-2xl p-1 text-center hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_25px_rgba(3,105,161,0.25)] transition duration-300 block">
       <img src="/img/2.png" alt="Memorize Gifts" class="mx-auto mb-4 w-full object-contain rounded-2xl" />
-      <h3 class="text-lg font-semibold text-white">Memorize Gifts</h3>
-      <p class="text-green-400 text-sm mb-2">Landing Page</p>
-      <p class="text-gray-400 text-xs">
+      <h3 class="text-lg font-semibold text-[#1A1A1A]">Memorize Gifts</h3>
+      <p class="text-[#0369A1] text-sm mb-2">Landing Page</p>
+      <p class="text-[#334155] text-xs">
         Frontend: HTML, CSS, JS<br>
         Host: Vercel
       </p>
@@ -386,11 +398,11 @@
 
     <!-- Card 3 -->
     <a href="https://app.cestsegtrabalho.com.br/" target="_blank" rel="noopener noreferrer"
-      class="bg-white/5 rounded-2xl p-1 text-center hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_25px_rgba(0,255,180,0.25)] transition duration-300 block">
+      class="bg-white rounded-2xl p-1 text-center hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_25px_rgba(3,105,161,0.25)] transition duration-300 block">
       <img src="/img/4.png" alt="CestSegTrabalho" class="mx-auto mb-4 w-full object-contain rounded-2xl" />
-      <h3 class="text-lg font-semibold text-white">CestSeg Trabalho</h3>
-      <p class="text-green-400 text-sm mb-2">School Platform</p>
-      <p class="text-gray-400 text-xs">
+      <h3 class="text-lg font-semibold text-[#1A1A1A]">CestSeg Trabalho</h3>
+      <p class="text-[#0369A1] text-sm mb-2">School Platform</p>
+      <p class="text-[#334155] text-xs">
         Frontend: React<br>
         Backend: Node.js<br>
         Database: MongoDB
@@ -399,11 +411,11 @@
 
     <!-- Card 4 -->
     <a href="https://acotaengenharia.com/" target="_blank" rel="noopener noreferrer"
-      class="bg-white/5 rounded-2xl p-1 text-center hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_25px_rgba(0,255,180,0.25)] transition duration-300 block">
+      class="bg-white rounded-2xl p-1 text-center hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_25px_rgba(3,105,161,0.25)] transition duration-300 block">
       <img src="/img/3.png" alt="Acota Engenharia" class="mx-auto mb-4 w-full object-contain rounded-2xl" />
-      <h3 class="text-lg font-semibold text-white">Acota Engenharia</h3>
-      <p class="text-green-400 text-sm mb-2">Institutional Website</p>
-      <p class="text-gray-400 text-xs">
+      <h3 class="text-lg font-semibold text-[#1A1A1A]">Acota Engenharia</h3>
+      <p class="text-[#0369A1] text-sm mb-2">Institutional Website</p>
+      <p class="text-[#334155] text-xs">
         Frontend: Wordpress<br>
         Host: Hostinger
       </p>
@@ -411,11 +423,11 @@
 
     <!-- Card 5 -->
     <a href="https://midiararario.vercel.app/" target="_blank" rel="noopener noreferrer"
-      class="bg-white/5 rounded-2xl p-1 text-center hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_25px_rgba(0,255,180,0.25)] transition duration-300 block">
+      class="bg-white rounded-2xl p-1 text-center hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_25px_rgba(3,105,161,0.25)] transition duration-300 block">
       <img src="/img/5.png" alt="Mídia Rara Rio" class="mx-auto mb-4 w-full object-contain rounded-2xl" />
-      <h3 class="text-lg font-semibold text-white">Mídia Rara Rio</h3>
-      <p class="text-green-400 text-sm mb-2">Interactive Form</p>
-      <p class="text-gray-400 text-xs">
+      <h3 class="text-lg font-semibold text-[#1A1A1A]">Mídia Rara Rio</h3>
+      <p class="text-[#0369A1] text-sm mb-2">Interactive Form</p>
+      <p class="text-[#334155] text-xs">
         Frontend: HTML, JS<br>
         SMTP: Gmail
       </p>
@@ -423,11 +435,11 @@
 
     <!-- Card 6 -->
     <a href="https://www.rnclimaepecas.com/" target="_blank" rel="noopener noreferrer"
-      class="bg-white/5 rounded-2xl p-1 text-center hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_25px_rgba(0,255,180,0.25)] transition duration-300 block">
+      class="bg-white rounded-2xl p-1 text-center hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_25px_rgba(3,105,161,0.25)] transition duration-300 block">
       <img src="/img/6.png" alt="MRN Clima e Pecas" class="mx-auto mb-4 w-full object-contain rounded-2xl" />
-      <h3 class="text-lg font-semibold text-white">RN Clima e Pecas</h3>
-      <p class="text-green-400 text-sm mb-2">Air Conditioning Maintenance</p>
-      <p class="text-gray-400 text-xs">
+      <h3 class="text-lg font-semibold text-[#1A1A1A]">RN Clima e Pecas</h3>
+      <p class="text-[#0369A1] text-sm mb-2">Air Conditioning Maintenance</p>
+      <p class="text-[#334155] text-xs">
         Frontend: HTML, TailwindCSS, JavaScript
       </p>
     </a>
@@ -436,24 +448,24 @@
 
 
 <!-- Growth Plan Section -->
-<section id="growth-plan" class="w-full bg-black/40 py-20 px-6 md:px-20 text-center text-gray-200">
-  <h2 class="text-3xl md:text-4xl font-semibold mb-6 fade-up">
+<section id="growth-plan" class="w-full bg-white py-20 px-6 md:px-20 text-center text-[#334155]">
+  <h2 class="text-3xl md:text-4xl font-semibold mb-6 fade-up text-[#1A1A1A]">
     Startup Growth Plan — ready for your brand
   </h2>
-  <p class="mx-auto max-w-3xl text-gray-300 mb-8 fade-up">
+  <p class="mx-auto max-w-3xl text-[#334155] mb-8 fade-up">
     I offer a complete launch package for coaches, clinics and small businesses in the Americas. It includes everything you need to be found and trusted online.
   </p>
-  <div class="mx-auto max-w-3xl text-left text-gray-200 grid grid-cols-1 md:grid-cols-2 gap-4 fade-up">
-    <div class="bg-white/5 p-4 rounded-xl">
-      <h3 class="font-semibold text-green-400 mb-2">Core Web Setup</h3>
+  <div class="mx-auto max-w-3xl text-left text-[#334155] grid grid-cols-1 md:grid-cols-2 gap-4 fade-up">
+    <div class="bg-[#E0F2FE] p-4 rounded-xl">
+      <h3 class="font-semibold text-[#0369A1] mb-2">Core Web Setup</h3>
       <ul class="list-disc list-inside text-sm">
         <li>Custom website</li>
         <li>Domain registration</li>
         <li>Hosting</li>
       </ul>
     </div>
-    <div class="bg-white/5 p-4 rounded-xl">
-      <h3 class="font-semibold text-green-400 mb-2">Growth & Visibility</h3>
+    <div class="bg-[#E0F2FE] p-4 rounded-xl">
+      <h3 class="font-semibold text-[#0369A1] mb-2">Growth & Visibility</h3>
       <ul class="list-disc list-inside text-sm">
         <li>Google Search Console indexation</li>
         <li>Google Analytics setup</li>
@@ -463,7 +475,7 @@
   </div>
   <div class="mt-8 fade-up">
     <a href="mailto:stanleyclientes@gmail.com?subject=Growth%20Plan%20Inquiry&body=Hi%20Stanley%2C%0A%0AI%27m%20interested%20in%20the%20startup%20growth%20plan.%20Please%20send%20details.%0A%0A">
-      <button class="px-8 py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full text-black font-semibold hover:opacity-90 transition glow-hover">
+      <button class="px-8 py-3 bg-[#0369A1] rounded-full text-white font-semibold hover:opacity-90 transition glow-hover">
         Email Me to Start the Plan
       </button>
     </a>

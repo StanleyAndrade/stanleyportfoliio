@@ -1,6 +1,6 @@
 <!-- /component/header.html -->
 <header
-  class="w-full flex justify-between items-center px-8 py-5 fixed top-0 left-0 z-50 bg-black/30 backdrop-blur-md border-b border-white/5 fade-up"
+  class="w-full flex justify-between items-center px-8 py-5 fixed top-0 left-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 fade-up"
 >
   <!-- Logo -->
   <div class="flex items-center gap-2">
@@ -10,11 +10,11 @@
   </div>
 
   <!-- Navigation Menu (Desktop) -->
-  <nav class="hidden md:flex gap-8 text-gray-300 font-medium">
-    <a href="/" class="hover:text-white transition">Home</a>
-    <a href="#technology" class="hover:text-white transition">Services</a>
-    <a href="#testimonials" class="hover:text-white transition">Portfolio</a>
-    <a href="#myform" class="hover:text-white transition">Contact</a>
+  <nav class="hidden md:flex gap-8 text-[#334155] font-medium">
+    <a href="/" class="hover:text-[#0369A1] transition">Home</a>
+    <a href="#technology" class="hover:text-[#0369A1] transition">Services</a>
+    <a href="#testimonials" class="hover:text-[#0369A1] transition">Portfolio</a>
+    <a href="#myform" class="hover:text-[#0369A1] transition">Contact</a>
   </nav>
 
   <!-- Buttons -->
@@ -24,7 +24,7 @@
     </button> -->
     <a href="#myform">
       <button
-        class="px-4 py-2 bg-white text-black font-medium rounded-full hover:bg-gray-200 transition glow-hover"
+        class="px-4 py-2 bg-[#0369A1] text-white font-medium rounded-full hover:bg-[#3ABFF8] transition glow-hover"
       >
         Get a free quote
       </button>
@@ -33,21 +33,21 @@
 
   <!-- Hamburger (Mobile) -->
   <div class="md:hidden flex flex-col gap-[5px] cursor-pointer" onclick="toggleMenu()">
-    <span class="w-6 h-[2px] bg-white rounded"></span>
-    <span class="w-6 h-[2px] bg-white rounded"></span>
-    <span class="w-6 h-[2px] bg-white rounded"></span>
+    <span class="w-6 h-[2px] bg-[#1A1A1A] rounded"></span>
+    <span class="w-6 h-[2px] bg-[#1A1A1A] rounded"></span>
+    <span class="w-6 h-[2px] bg-[#1A1A1A] rounded"></span>
   </div>
 </header>
 
 <!-- Mobile Menu -->
 <nav
   id="mobile-nav"
-  class="hidden flex-col items-center bg-black/90 backdrop-blur-md fixed top-[70px] left-0 w-full py-6 z-40 md:hidden border-t border-white/10"
+  class="hidden flex-col items-center bg-white/90 backdrop-blur-md fixed top-[70px] left-0 w-full py-6 z-40 md:hidden border-t border-slate-200"
 >
-  <a href="/" class="py-2 text-gray-300 hover:text-white transition">Home</a>
-  <a href="/pages/mkt-en.html" class="py-2 text-gray-300 hover:text-white transition">Marketing</a>
-  <a href="/pages/contact.html" class="py-2 text-gray-300 hover:text-white transition">Contact</a>
-  <a href="/pages/support.html" class="py-2 text-gray-300 hover:text-white transition">Support</a>
+  <a href="/" class="py-2 text-[#334155] hover:text-[#0369A1] transition">Home</a>
+  <a href="/pages/mkt-en.html" class="py-2 text-[#334155] hover:text-[#0369A1] transition">Marketing</a>
+  <a href="/pages/contact.html" class="py-2 text-[#334155] hover:text-[#0369A1] transition">Contact</a>
+  <a href="/pages/support.html" class="py-2 text-[#334155] hover:text-[#0369A1] transition">Support</a>
   <div class="flex flex-col gap-3 mt-4 w-4/5">
     <!-- <button class="px-4 py-2 text-sm text-gray-200 hover:text-white transition border border-white/10 rounded-md">
       Log In

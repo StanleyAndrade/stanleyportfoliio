@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HeartCare Specialist | Advanced Cardiovascular Care</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#1E40AF", /* Royal Navy - Authority */
+            secondary: "#BE123C", /* Soft Crimson - Heart Vitality */
+            surface: "#F8FAFC", /* Ultra Clean Gray/White */
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-white text-slate-900 antialiased font-sans">
+
+  <nav class="fixed w-full z-50 bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20 items-center">
+        <div class="flex-shrink-0 flex items-center gap-2">
+          <div class="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center text-white shadow-lg">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+          <span class="text-xl font-bold tracking-tight text-primary uppercase">HeartCare</span>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-8 font-semibold">
+          <a href="#home" class="hover:text-secondary transition">Home</a>
+          <a href="#exams" class="hover:text-secondary transition">Diagnosis</a>
+          <a href="#contact" class="hover:text-secondary transition">Contact</a>
+          <a href="tel:+5521992002356" class="bg-primary text-white px-6 py-2.5 rounded-lg hover:bg-secondary transition-all shadow-md">Book Examination</a>
+        </div>
+
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-primary p-2">
+            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white px-6 py-6 space-y-4 border-t border-gray-100">
+      <a href="#home" class="block text-lg font-bold">Home</a>
+      <a href="#exams" class="block text-lg font-bold">Diagnosis</a>
+      <a href="#contact" class="block text-lg font-bold">Contact</a>
+      <a href="tel:+5521992002356" class="block bg-secondary text-white text-center py-3 rounded-lg font-bold">Book Now</a>
+    </div>
+  </nav>
+
+  <section id="home" class="relative min-h-screen flex items-center pt-20 bg-gradient-to-br from-white to-slate-100">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div class="z-10">
+        <span class="inline-block bg-blue-100 text-primary px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-4">Cardiovascular Excellence</span>
+        <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 text-primary">
+          Your heart deserves the <span class="text-secondary font-black underline">best defense.</span>
+        </h1>
+        <p class="text-xl text-slate-600 mb-8 max-w-lg leading-relaxed">
+          Combining cutting-edge technology with personalized care to ensure your cardiovascular health is always at its peak.
+        </p>
+        <div class="flex gap-4 flex-wrap">
+          <a href="tel:+5521992002356" class="bg-secondary text-white px-8 py-4 rounded-xl shadow-xl hover:scale-105 transition-all font-bold">
+            Emergency Contact
+          </a>
+          <a href="#exams" class="bg-white border-2 border-primary text-primary px-8 py-4 rounded-xl hover:bg-primary hover:text-white transition-all font-bold">
+            Clinical Exams
+          </a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="absolute -top-10 -right-10 w-72 h-72 bg-secondary/5 rounded-full blur-3xl"></div>
+        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=800" 
+             alt="Heart Specialist" 
+             class="rounded-[2rem] shadow-2xl relative z-10 w-full h-[550px] object-cover border-8 border-white">
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 px-6 bg-primary text-white">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 text-center">
+      <div>
+        <div class="text-4xl font-black mb-2 tracking-tighter">PREVENTION</div>
+        <p class="text-blue-200">Early detection protocols to prevent severe cardiac events.</p>
+      </div>
+      <div>
+        <div class="text-4xl font-black mb-2 tracking-tighter">TECHNOLOGY</div>
+        <p class="text-blue-200">State-of-the-art diagnostic equipment for high precision.</p>
+      </div>
+      <div>
+        <div class="text-4xl font-black mb-2 tracking-tighter">EXPERTISE</div>
+        <p class="text-blue-200">Board-certified cardiologists with decades of experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="exams" class="py-24 px-6 bg-surface">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-20">
+        <h2 class="text-4xl font-black text-primary mb-4">Diagnostic & Treatment</h2>
+        <div class="w-20 h-1.5 bg-secondary mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-8 rounded-2xl border border-slate-200 hover:border-secondary transition-all">
+          <h3 class="text-lg font-black text-primary mb-4">Consultations</h3>
+          <p class="text-sm text-slate-500 leading-relaxed">Comprehensive evaluation of risk factors, symptoms, and medical history.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl border border-slate-200 hover:border-secondary transition-all">
+          <h3 class="text-lg font-black text-primary mb-4">Electrocardiogram</h3>
+          <p class="text-sm text-slate-500 leading-relaxed">High-precision ECG to monitor your heart rhythm and electrical activity.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl border border-slate-200 hover:border-secondary transition-all">
+          <h3 class="text-lg font-black text-primary mb-4">Echocardiography</h3>
+          <ul class="text-xs text-slate-500 space-y-1">
+            <li>• Heart Chamber Imaging</li>
+            <li>• Valve Evaluation</li>
+            <li>• Blood Flow Analysis</li>
+          </ul>
+        </div>
+        <div class="bg-white p-8 rounded-2xl border border-slate-200 hover:border-secondary transition-all">
+          <h3 class="text-lg font-black text-primary mb-4">Stress Testing</h3>
+          <p class="text-sm text-slate-500 leading-relaxed">Evaluating how your heart responds during physical activity and exertion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-24 px-6 bg-white">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <h2 class="text-5xl font-black text-primary mb-8 tracking-tighter leading-none">Don't wait for symptoms to <span class="text-secondary">check your heart.</span></h2>
+        <div class="space-y-8">
+            <a href="tel:+5521992002356" class="block group">
+                <span class="text-xs text-slate-400 font-bold uppercase block mb-1">Direct Phone</span>
+                <span class="text-3xl font-black text-primary group-hover:text-secondary transition-colors">+55 21 99200-2356</span>
+            </a>
+            <a href="mailto:stanleyclientes@gmail.com" class="block group">
+                <span class="text-xs text-slate-400 font-bold uppercase block mb-1">Email Address</span>
+                <span class="text-2xl font-black text-primary group-hover:text-secondary transition-colors">stanleyclientes@gmail.com</span>
+            </a>
+        </div>
+      </div>
+      <div class="rounded-[2.5rem] overflow-hidden shadow-2xl h-[400px]  contrast-125 border-4 border-white ring-1 ring-slate-100">
+        <iframe
+          class="w-full h-full"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.215!2d-43.1729!3d-22.9068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDU0JzI0LjUiUyA0M8KwMTAnMjIuNCJX!5e0!3m2!1sen!2sbr!4v1625680000000!5m2!1sen!2sbr"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-12 bg-slate-900 text-slate-500 text-center text-sm font-medium tracking-wide">
+    © 2026 HEARTCARE SPECIALIST - ALL RIGHTS RESERVED.
+  </footer>
+
+  <script>
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => menu.classList.add('hidden'));
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        e.preventDefault();
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dental Care | Your Best Smile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#3ABFF8",
+            secondary: "#0369a1",
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-white text-gray-800 antialiased">
+
+  <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20 items-center">
+        <div class="flex-shrink-0 flex items-center gap-2">
+          <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-xl">
+            D
+          </div>
+          <span class="text-xl font-bold tracking-tight text-secondary">DentalCare</span>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-8 font-medium">
+          <a href="#home" class="hover:text-primary transition">Home</a>
+          <a href="#services" class="hover:text-primary transition">Services</a>
+          <a href="#contact" class="hover:text-primary transition">Contact</a>
+          <a href="tel:+5521992002356" class="bg-primary text-white px-5 py-2 rounded-full hover:bg-secondary transition shadow-md">Book Now</a>
+        </div>
+
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="text-gray-600 focus:outline-none p-2">
+            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-4 shadow-lg">
+      <a href="#home" class="block text-lg font-medium hover:text-primary">Home</a>
+      <a href="#services" class="block text-lg font-medium hover:text-primary">Services</a>
+      <a href="#contact" class="block text-lg font-medium hover:text-primary">Contact</a>
+      <a href="tel:+5521992002356" class="block bg-primary text-white text-center py-3 rounded-xl">Book Now</a>
+    </div>
+  </nav>
+
+  <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div class="z-10">
+        <span class="text-primary font-bold tracking-widest uppercase text-sm">Professional Care</span>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mt-4 mb-6">
+          Your smile speaks before you even say a word.
+        </h1>
+        <p class="text-lg text-gray-600 mb-8 max-w-lg">
+          You deserve to smile without shame, pain, or fear. A healthy smile opens doors you can't even imagine.
+        </p>
+        <div class="flex gap-4 flex-wrap">
+          <a href="tel:+5521992002356" class="bg-primary text-white px-8 py-4 rounded-2xl shadow-lg hover:bg-secondary transition-all transform hover:-translate-y-1">
+            Call Now
+          </a>
+          <a href="#services" class="border-2 border-primary text-primary px-8 py-4 rounded-2xl hover:bg-primary hover:text-white transition-all">
+            Our Services
+          </a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+        <img src="/img/dentista.png" 
+             alt="Smiling Dentist" 
+             class="rounded-3xl shadow-2xl relative z-10 w-full h-[500px] object-cover">
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 px-6 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold">Why invest in your oral health?</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-8 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+          <div class="w-12 h-12 bg-primary/20 text-primary rounded-lg flex items-center justify-center mb-4 font-bold">01</div>
+          Going to the dentist isn't an expense; it’s an investment in your self-esteem.
+        </div>
+        <div class="p-8 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+          <div class="w-12 h-12 bg-primary/20 text-primary rounded-lg flex items-center justify-center mb-4 font-bold">02</div>
+          Don’t wait for pain to take action. Prevention is always simpler than treatment.
+        </div>
+        <div class="p-8 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+          <div class="w-12 h-12 bg-primary/20 text-primary rounded-lg flex items-center justify-center mb-4 font-bold">03</div>
+          A well-cared-for smile conveys confidence, self-care, and presence.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+        <div class="max-w-xl">
+          <h2 class="text-4xl font-bold mb-4">Complete Dental Services</h2>
+          <p class="text-gray-600">We offer the latest technology and comfort for your dental treatment.</p>
+        </div>
+        <!-- <img src="/img/dentista.png" 
+             class="w-40 h-40 rounded-full object-cover border-4 border-primary shadow-lg hidden md:block" alt="Clinic"> -->
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="space-y-4 p-6 hover:bg-blue-50 rounded-xl transition border border-transparent hover:border-blue-100">
+          <h3 class="text-xl font-bold text-secondary">Preventive</h3>
+          <ul class="text-gray-600 space-y-2 text-sm">
+            <li>• Professional Cleaning</li>
+            <li>• Fluoride Application</li>
+            <li>• Dental Fillings</li>
+          </ul>
+        </div>
+        <div class="space-y-4 p-6 hover:bg-blue-50 rounded-xl transition border border-transparent hover:border-blue-100">
+          <h3 class="text-xl font-bold text-secondary">Aesthetics</h3>
+          <ul class="text-gray-600 space-y-2 text-sm">
+            <li>• Teeth Whitening</li>
+            <li>• Porcelain Veneers</li>
+            <li>• Contact Lenses</li>
+          </ul>
+        </div>
+        <div class="space-y-4 p-6 hover:bg-blue-50 rounded-xl transition border border-transparent hover:border-blue-100">
+          <h3 class="text-xl font-bold text-secondary">Implants</h3>
+          <ul class="text-gray-600 space-y-2 text-sm">
+            <li>• Fixed Prosthetics</li>
+            <li>• Dental Implants</li>
+            <li>• Oral Rehabilitation</li>
+          </ul>
+        </div>
+        <div class="space-y-4 p-6 hover:bg-blue-50 rounded-xl transition border border-transparent hover:border-blue-100">
+          <h3 class="text-xl font-bold text-secondary">Specialties</h3>
+          <ul class="text-gray-600 space-y-2 text-sm">
+            <li>• Root Canal</li>
+            <li>• Orthodontics</li>
+            <li>• Facial Harmonization</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-secondary text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+        <img src="https://images.unsplash.com/photo-1593022356769-11f762e25ed9?auto=format&fit=crop&q=80&w=1200" alt="Clinic Background" class="w-full h-full object-cover">
+    </div>
+    <div class="max-w-4xl mx-auto text-center px-6 relative z-10">
+      <h2 class="text-3xl md:text-4xl font-bold mb-8 italic">
+        "You don’t have to live with pain or shame."
+      </h2>
+      <p class="text-xl opacity-90 leading-relaxed">
+        The pain you ignore today can become a much bigger problem tomorrow. 
+        Small steps now guarantee a full quality of life later.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="py-24 px-6 bg-white">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div class="rounded-3xl overflow-hidden shadow-2xl h-96 border-4 border-white">
+        <iframe
+          class="w-full h-full transition-all duration-700"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.215!2d-43.1729!3d-22.9068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDU0JzI0LjUiUyA0M8KwMTAnMjIuNCJX!5e0!3m2!1sen!2sbr!4v1625680000000!5m2!1sen!2sbr"
+          loading="lazy">
+        </iframe>
+      </div>
+      <div>
+        <h2 class="text-4xl font-bold mb-6">Ready to transform your smile?</h2>
+        <p class="text-gray-600 mb-8">
+            Every appointment is one more step toward living better. The best version of you starts with the care you give yourself.
+        </p>
+        <div class="space-y-6">
+            <a href="tel:+5521992002356" class="flex items-center gap-4 group">
+                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white group-hover:scale-110 transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.1 15.1 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27c1.12.45 2.33.69 3.58.69a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.24 2.46.69 3.57a1 1 0 01-.27 1.11l-2.2 2.2z"/></svg>
+                </div>
+                <span class="text-xl font-semibold">+55 21 99200-2356</span>
+            </a>
+            <a href="mailto:stanleyclientes@gmail.com" class="flex items-center gap-4 group">
+                <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white group-hover:scale-110 transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </div>
+                <span class="text-xl font-semibold">stanleyclientes@gmail.com</span>
+            </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-8 text-center text-gray-400 text-sm border-t">
+    © 2026 Dental Care - All Rights Reserved.
+  </footer>
+
+  <script>
+    // --- MOBILE MENU LOGIC ---
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+      });
+    });
+
+    // --- SMOOTH SCROLL OFFSET ---
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        e.preventDefault();
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

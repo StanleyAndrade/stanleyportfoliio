@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mindful Journey | Professional Psychological Support</title>
+  <script src="https://cdn.tailwindcss.com/"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#8BA889", /* Sage Green - Calming & Balanced */
+            secondary: "#4A5D48", /* Dark Forest - Grounding */
+            accent: "#F7F3F0", /* Soft Beige - Warmth */
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-white text-gray-800 antialiased">
+
+  <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20 items-center">
+        <div class="flex-shrink-0 flex items-center gap-2">
+          <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-serif italic text-xl">
+            M
+          </div>
+          <span class="text-xl font-semibold tracking-tight text-secondary font-serif">MindfulJourney</span>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-8 font-medium">
+          <a href="#home" class="hover:text-primary transition">Home</a>
+          <a href="#services" class="hover:text-primary transition">Therapy</a>
+          <a href="#contact" class="hover:text-primary transition">Contact</a>
+          <a href="tel:+5521992002356" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition shadow-md">Book a Session</a>
+        </div>
+
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="text-gray-600 focus:outline-none p-2">
+            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white px-6 py-4 space-y-4 shadow-lg">
+      <a href="#home" class="block text-lg font-medium hover:text-primary">Home</a>
+      <a href="#services" class="block text-lg font-medium hover:text-primary">Therapy</a>
+      <a href="#contact" class="block text-lg font-medium hover:text-primary">Contact</a>
+      <a href="tel:+5521992002356" class="block bg-primary text-white text-center py-3 rounded-xl">Book a Session</a>
+    </div>
+  </nav>
+
+  <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-accent">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div class="z-10">
+        <span class="text-primary font-bold tracking-widest uppercase text-sm">Safe Space for Healing</span>
+        <h1 class="text-4xl md:text-6xl font-serif font-bold leading-tight mt-4 mb-6 text-secondary">
+          Your mental health is a priority, not a luxury.
+        </h1>
+        <p class="text-lg text-gray-600 mb-8 max-w-lg leading-relaxed">
+          Reconnect with yourself in a safe, judgment-free environment. Professional therapy designed to help you navigate life's challenges with clarity and resilience.
+        </p>
+        <div class="flex gap-4 flex-wrap">
+          <a href="tel:+5521992002356" class="bg-primary text-white px-8 py-4 rounded-2xl shadow-lg hover:bg-secondary transition-all transform hover:-translate-y-1 font-semibold">
+            Start Your Journey
+          </a>
+          <a href="#services" class="border-2 border-primary text-primary px-8 py-4 rounded-2xl hover:bg-primary hover:text-white transition-all font-semibold">
+            How I Help
+          </a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=800" 
+             alt="Kind Psychologist" 
+             class="rounded-3xl shadow-2xl relative z-10 w-full h-[500px] object-cover">
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-serif font-bold text-secondary italic leading-relaxed">"The only journey is the journey within."</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="p-10 bg-accent rounded-3xl text-center hover:shadow-lg transition duration-300">
+          <h4 class="font-bold text-secondary text-xl mb-4">Empathy</h4>
+          A warm, listening ear to help you feel heard, validated, and understood.
+        </div>
+        <div class="p-10 bg-accent rounded-3xl text-center hover:shadow-lg transition duration-300">
+          <h4 class="font-bold text-secondary text-xl mb-4">Growth</h4>
+          Tools and techniques to break old patterns and build a healthier future.
+        </div>
+        <div class="p-10 bg-accent rounded-3xl text-center hover:shadow-lg transition duration-300">
+          <h4 class="font-bold text-secondary text-xl mb-4">Balance</h4>
+          Learning to manage anxiety and stress to find your inner peace again.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-24 px-6 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-xl mb-16">
+        <h2 class="text-4xl font-serif font-bold mb-4 text-secondary">Therapeutic Approaches</h2>
+        <p class="text-gray-600">Tailored support for every stage of your emotional well-being.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-primary">
+          <h3 class="text-xl font-bold text-secondary mb-4">Individual Therapy</h3>
+          <p class="text-gray-600 text-sm mb-4 italic">One-on-one sessions focused on:</p>
+          <ul class="text-gray-600 space-y-2 text-sm">
+            <li>• Anxiety & Depression</li>
+            <li>• Self-esteem Issues</li>
+            <li>• Trauma Recovery</li>
+          </ul>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-primary">
+          <h3 class="text-xl font-bold text-secondary mb-4">Couples Counseling</h3>
+          <p class="text-gray-600 text-sm mb-4 italic">Focused on:</p>
+          <ul class="text-gray-600 space-y-2 text-sm">
+            <li>• Communication Mastery</li>
+            <li>• Conflict Resolution</li>
+            <li>• Relationship Healing</li>
+          </ul>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-primary">
+          <h3 class="text-xl font-bold text-secondary mb-4">Specialized Areas</h3>
+          <p class="text-gray-600 text-sm mb-4 italic">Including:</p>
+          <ul class="text-gray-600 space-y-2 text-sm">
+            <li>• Grief & Loss</li>
+            <li>• Career Burnout</li>
+            <li>• Mindfulness & Stress</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-secondary text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+        <img src="https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?auto=format&fit=crop&q=80&w=1200" alt="Serene Nature" class="w-full h-full object-cover">
+    </div>
+    <div class="max-w-3xl mx-auto text-center px-6 relative z-10">
+      <h2 class="text-3xl md:text-5xl font-serif mb-8">
+        It's okay to not be okay.
+      </h2>
+      <p class="text-xl opacity-90 font-light tracking-wide">
+        Take the first step towards a lighter life today. Online and in-person sessions are available.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="py-24 px-6 bg-white">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div class="rounded-3xl overflow-hidden shadow-xl h-96">
+        <iframe
+          class="w-full h-full"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.215!2d-43.1729!3d-22.9068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDU0JzI0LjUiUyA0M8KwMTAnMjIuNCJX!5e0!3m2!1sen!2sbr!4v1625680000000!5m2!1sen!2sbr"
+          loading="lazy">
+        </iframe>
+      </div>
+      <div>
+        <h2 class="text-4xl font-serif font-bold mb-6 text-secondary">Begin your healing today</h2>
+        <p class="text-gray-600 mb-8 text-lg">
+            Mental wellness is a journey, and you don't have to walk it alone. Contact me to schedule a consultation.
+        </p>
+        <div class="space-y-6">
+            <a href="tel:+5521992002356" class="flex items-center gap-4 group">
+                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.1 15.1 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27c1.12.45 2.33.69 3.58.69a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.24 2.46.69 3.57a1 1 0 01-.27 1.11l-2.2 2.2z"/></svg>
+                </div>
+                <span class="text-xl font-medium">+55 21 99200-2356</span>
+            </a>
+            <a href="mailto:stanleyclientes@gmail.com" class="flex items-center gap-4 group">
+                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </div>
+                <span class="text-xl font-medium">stanleyclientes@gmail.com</span>
+            </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-8 text-center text-gray-400 text-sm border-t bg-accent">
+    © 2026 Mindful Journey | Professional Psychology - All Rights Reserved.
+  </footer>
+
+  <script>
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+      });
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        e.preventDefault();
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
