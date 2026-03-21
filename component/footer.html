@@ -1,0 +1,38 @@
+<!-- /component/footer.html -->
+<footer
+  class="w-full bg-black/40 text-gray-400 text-sm py-10 text-center border-t border-white/10 fade-up"
+>
+  <div class="mb-3 flex items-center justify-center " >
+    <img src="/img/newlogo.svg" alt="Stanley Andrade" class="w-44">
+  </div>
+
+  <div class="flex flex-wrap justify-center gap-6 mb-5 text-gray-300">
+    <a href="#" class="hover:text-white transition">Privacy</a>
+    <a href="#myform" class="hover:text-white transition">Contact</a>
+  </div>
+
+  <p class="text-gray-500">
+    © 2026 Stanley Andrade. All rights reserved.
+  </p>
+</footer>
+
+<style>
+  /* Fade animation */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeUp 0.6s ease forwards;
+    animation-delay: 0.2s;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

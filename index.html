@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Stanley Andrade - Software Engineer</title>
+    <meta name="description" content="Stanley Andrade, software engineer with 5 years experience, helping businesses grow with web and app solutions.">
+    <link rel="canonical" href="https://www.stanleyandrade.dev">
+
+    <!-- Favicon padrão -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/icon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/img/icon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/img/icon/android-chrome-512x512.png">
+    <!-- Apple Touch Icon (iPhone/iPad quando adiciona à tela inicial) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/icon/apple-touch-icon.png">
+    <!-- Favicon padrão para compatibilidade -->
+    <link rel="shortcut icon" href="/img/icon/favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Stanley Andrade - Software Engineer" />
+    <meta name="description" content="Stanley Andrade, software engineer with 5 years experience, helping businesses grow with web and app solutions.">
+    <meta property="og:image" content="https://www.stanleyandrade.vercel.app/img/logo-link.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.stanleyandrade.vercel.app" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.stanleyandrade.vercel.app"
+    },
+    "headline": "Stanley Andrade - Software Engineer",
+    "description": "Software engineer with 5 years of experience helping clients in the Americas grow with web and mobile solutions.",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://www.stanleyandrade.vercel.app/img/logo-link.png",
+        "width": 1200,
+        "height": 630
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Stanley Andrade",
+        "url": "https://www.stanleyandrade.vercel.app"
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "Stanley Andrade"
+    },
+    "datePublished": "2025-10-21",
+    "dateModified": "2025-10-21"
+    }
+    </script>
+    <style>
+      body {
+        background: radial-gradient(
+          circle at center,
+          rgba(0, 255, 180, 0.08) 0%,
+          rgba(0, 0, 0, 1) 80%
+        );
+        color: #fff;
+        font-family: "Inter", sans-serif;
+      }
+      .hero-bg {
+        background: radial-gradient(
+          ellipse at center,
+          rgba(0, 53, 37, 0.692),
+          rgba(0, 0, 0, 1)
+        );
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(8px);
+        transition: all 0.4s ease;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(0, 255, 180, 0.4);
+        box-shadow: 0 0 20px rgba(0, 255, 180, 0.1);
+      }
+      .fade-up {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.9s ease, transform 0.9s ease;
+      }
+      .fade-up.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .glow-hover:hover {
+        box-shadow: 0 0 30px rgba(0, 255, 180, 0.3);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body class="min-h-screen flex flex-col items-center justify-start overflow-x-hidden">
+    <!-- Header -->
+    <div id="header-container"></div>
+    <script src="/component/header.js"></script>
+
+<!-- Hero Section -->
+<section id="overview" class="hero-bg flex flex-col md:flex-row items-center justify-between text-center md:text-left pt-40 pb-0 w-full px-6 md:px-16 gap-10">
+  
+  <!-- Text Column -->
+  <div class="flex-1 flex flex-col items-center md:items-start justify-center fade-up">
+    <div class="text-3xl md:text-7xl font-semibold mb-4">
+      Stanley <span class="text-green-400">Andrade</span>
+    </div>
+    <p class="text-gray-300 max-w-xl mb-4 md:text-2xl">
+      Software Engineer with 5 years of experience, helping professionals and entrepreneurs across the Americas grow revenue with digital products.
+    </p>
+    <p class="text-gray-300 max-w-xl mb-8 md:text-xl">
+      Current Software Engineering student. Specialized in healthcare patient acquisition, paid traffic, websites, mobile apps, and tailored software solutions.
+    </p>
+    <a href="#myform">
+      <button
+        class="px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full text-black font-semibold hover:opacity-90 transition glow-hover"
+      >
+        Contact me via email
+      </button>
+    </a>
+
+    <!-- <p class="mt-12 text-white text-2xl md:text-4xl">What are you looking for?</p>
+
+    <div class="mt-6 flex flex-wrap justify-center md:justify-start gap-3">
+      <a href="#myform" class="card px-8 py-6 rounded-2xl text-center w-44 fade-up">
+        <div class="text-gray-200 font-medium">Mobile App</div>
+      </a>
+      <a href="#myform" class="card px-8 py-6 rounded-2xl text-center w-44 fade-up">
+        <div class="text-gray-200 font-medium">Software/SAAS</div>
+      </a>
+      <a href="#myform" class="card px-8 py-6 rounded-2xl text-center w-44 fade-up">
+        <div class="text-gray-200 font-medium">Website</div>
+      </a>
+    </div> -->
+  </div>
+
+  <!-- Image Column -->
+  <div class="flex-1 fade-up">
+    <img src="./img/eu.jpg" alt="Hero Illustration" class="w-full max-w-lg mx-auto md:mx-0 rounded-full" />
+  </div>
+</section>
+
+
+    <section class="hero-bg flex flex-col items-center justify-center text-center pt-0 pb-20 w-full">
+            <p class="mt-12 mb-12  text-white-400 text-4xl md:text-4xl fade-up">How I help you</p>
+
+      <div class="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
+        <div class="card w-72 p-6 rounded-2xl text-left fade-up flex items-center justify-center">
+          <h3 class=" font-semibold mb-3 text-grey-400">Healthcare professionals get more patients with digital funnels.</h3>
+        </div>
+        <div class="card w-72 p-6 rounded-2xl text-left fade-up items-center justify-center flex">
+          <h3 class=" font-semibold mb-3 text-grey-400">Entrepreneurs increase client acquisition with paid traffic and conversion-first websites.</h3>
+        </div>
+        <div class="card w-72 p-6 rounded-2xl text-left fade-up items-center justify-center flex">
+          <h3 class=" font-semibold mb-3 text-grey-400">End-to-end apps and software (Android, iOS, web, SaaS) for business growth.</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero-bg flex flex-col items-center justify-center text-center pt-1 pb-2 w-full">
+      <img src="./img/site.jpg" class="rounded-2xl px-2" alt="">
+    </section>
+
+    <section class="hero-bg flex flex-col items-center justify-center text-center pt-0 pb-20 w-full">
+      <p class="mt-12 mb-12  text-white-400 text-4xl md:text-4xl fade-up">Technologies we will develop for your business</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-3">
+        <!-- <div class="card px-6 py-6 rounded-2xl text-center w-44 fade-up ">
+          <div class="text-gray-200 font-medium">Growth Strategy</div>
+        </div> -->
+        <a href="#myform" class="card px-8 py-6 rounded-2xl text-center w-44 fade-up">
+            <div class="text-gray-200 font-medium">Mobile App Android & IOS</div>
+        </a>
+        <a href="#myform" class="card px-8 py-6 rounded-2xl text-center w-44 fade-up">
+          <div class="text-gray-200 font-medium">Software/SAAS</div>
+        </a>
+        <a href="#myform" class="card px-8 py-6 rounded-2xl text-center w-44 fade-up">
+          <div class="text-gray-200 font-medium">Website</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Verifiable Compute Section -->
+    <section class="hero-bg w-full py-24 text-center">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-1 fade-up">
+        How it <span class="text-green-400">works</span>
+      </h2>
+      <div class="flex flex-col items-center" >
+        <p class="text-white-300 max-w-xl mb-8 fade-up" >
+        From idea to production in three simple steps
+        </p>
+      </div>
+
+      <div
+        class="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-24 text-gray-300"
+      >
+        <div class="flex flex-col items-center fade-up">
+          <div class="card w-16 h-16 rounded-2xl flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20h9M16.5 3.5a2.121 2.121 0 113 3L7 19l-4 1 1-4L16.5 3.5z" />
+            </svg>
+          </div>
+          <p class="text-2xl font-bold" >Meeting on Google Meet</p>
+          <p class="max-w-[180px] text-sm">Tell us what your company's needs or problems are.</p>
+        </div>
+
+        <div class="flex flex-col items-center fade-up">
+          <div class="card w-16 h-16 rounded-2xl flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </div>
+          <p class="text-2xl font-bold" >We create ours for you</p>
+          <p class="max-w-[200px] text-sm">Our qualified programmers will develop the solution for you.</p>
+        </div>
+
+        <div class="flex flex-col items-center fade-up">
+          <div class="card w-16 h-16 rounded-2xl flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <p class="text-2xl font-bold" >Ready</p>
+          <p class="max-w-[200px] text-sm">The solution to your problems is ready for you and your customers to use.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="hero-bg flex flex-col items-center justify-center text-center pt-1 pb-2 w-full">
+      <img src="./img/m3.png" alt="">
+    </section> -->
+
+    <!-- Technology Section -->
+    <section id="technology" class="w-full py-24 text-center hero-bg">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-12 fade-up">
+        What we <span class="text-green-400">offer</span>
+      </h2>
+
+      <div class="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto">
+        <div class="card w-72 p-6 rounded-2xl text-left fade-up">
+          <h3 class="text-xl font-semibold mb-3 text-green-400">Healthcare Patient Growth</h3>
+          <p class="text-gray-300 text-sm">Marketing funnels and automation to generate patients for clinics and health professionals.</p>
+        </div>
+        <div class="card w-72 p-6 rounded-2xl text-left fade-up">
+          <h3 class="text-xl font-semibold mb-3 text-green-400">Entrepreneur Client Acquisition</h3>
+          <p class="text-gray-300 text-sm">Paid traffic, lead magnets and conversion-focused websites that bring more clients.</p>
+        </div>
+        <div class="card w-72 p-6 rounded-2xl text-left fade-up">
+          <h3 class="text-xl font-semibold mb-3 text-green-400">Apps & Custom Software</h3>
+          <p class="text-gray-300 text-sm">Android/iOS apps and custom software tailored to business processes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="w-full py-24 text-center hero-bg">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-12 fade-up">
+        Success stories from across the Americas
+      </h2>
+
+      <div class="flex flex-col md:flex-row justify-center items-center gap-8 max-w-6xl mx-auto">
+        <div class="card p-8 rounded-2xl max-w-sm fade-up">
+          <p class="text-gray-200 mb-4">
+            “Today’s users expect fast, simple, and intuitive experiences. A custom mobile app keeps your brand at their fingertips — increasing engagement, loyalty, and satisfaction.”
+          </p>
+          <span class="text-green-400 font-semibold">Consumers Prefer Mobile Applications</span>
+        </div>
+
+        <div class="card p-8 rounded-2xl max-w-sm fade-up">
+          <p class="text-gray-200 mb-4">
+            “Stand out from the competition with a modern, high-performance mobile app tailored to your business. Deliver value faster, improve customer experience, and grow your brand.”
+          </p>
+          <span class="text-green-400 font-semibold">Gain a Competitive Advantage</span>
+        </div>
+
+        <div class="card p-8 rounded-2xl max-w-sm fade-up">
+          <p class="text-gray-200 mb-4">
+            “Simplify transactions and boost sales by integrating secure payment options into your app. Offer your customers convenience while keeping all operations in one place.”
+          </p>
+          <span class="text-green-400 font-semibold">Accenture Partner</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Satisfied Customers Section -->
+<section class="w-full py-24 bg-black/30 text-center overflow-hidden">
+  <h2 class="text-3xl md:text-4xl font-semibold mb-10 text-white fade-up">
+    Satisfied <span class="text-green-400">Customers</span>
+  </h2>
+
+  <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-2 px-1 fade-up">
+    
+    <!-- Card 1 -->
+    <a href="https://www.comunhaorara.com/pages/baixenossoapp.html" target="_blank" rel="noopener noreferrer"
+      class="bg-white/5 rounded-2xl p-1 text-center hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_25px_rgba(0,255,180,0.25)] transition duration-300 block">
+      <img src="/img/1.png" alt="Rara App" class="mx-auto mb-4 w-full object-contain rounded-2xl" />
+      <h3 class="text-lg font-semibold text-white">Rara App</h3>
+      <p class="text-green-400 text-sm mb-2">Android and iOS App</p>
+      <p class="text-gray-400 text-xs">
+        Customer: Igreja Comunhão Rara<br>
+        Mobile: React Native<br>
+        Backend: Node.js<br>
+        Cloud: AWS
+      </p>
+    </a>
+
+    <!-- Card 2 -->
+    <a href="https://www.memorizegifts.com/" target="_blank" rel="noopener noreferrer"
+      class="bg-white/5 rounded-2xl p-1 text-center hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_25px_rgba(0,255,180,0.25)] transition duration-300 block">
+      <img src="/img/2.png" alt="Memorize Gifts" class="mx-auto mb-4 w-full object-contain rounded-2xl" />
+      <h3 class="text-lg font-semibold text-white">Memorize Gifts</h3>
+      <p class="text-green-400 text-sm mb-2">Landing Page</p>
+      <p class="text-gray-400 text-xs">
+        Frontend: HTML, CSS, JS<br>
+        Host: Vercel
+      </p>
+    </a>
+
+    <!-- Card 3 -->
+    <a href="https://app.cestsegtrabalho.com.br/" target="_blank" rel="noopener noreferrer"
+      class="bg-white/5 rounded-2xl p-1 text-center hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_25px_rgba(0,255,180,0.25)] transition duration-300 block">
+      <img src="/img/4.png" alt="CestSegTrabalho" class="mx-auto mb-4 w-full object-contain rounded-2xl" />
+      <h3 class="text-lg font-semibold text-white">CestSeg Trabalho</h3>
+      <p class="text-green-400 text-sm mb-2">School Platform</p>
+      <p class="text-gray-400 text-xs">
+        Frontend: React<br>
+        Backend: Node.js<br>
+        Database: MongoDB
+      </p>
+    </a>
+
+    <!-- Card 4 -->
+    <a href="https://acotaengenharia.com/" target="_blank" rel="noopener noreferrer"
+      class="bg-white/5 rounded-2xl p-1 text-center hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_25px_rgba(0,255,180,0.25)] transition duration-300 block">
+      <img src="/img/3.png" alt="Acota Engenharia" class="mx-auto mb-4 w-full object-contain rounded-2xl" />
+      <h3 class="text-lg font-semibold text-white">Acota Engenharia</h3>
+      <p class="text-green-400 text-sm mb-2">Institutional Website</p>
+      <p class="text-gray-400 text-xs">
+        Frontend: Wordpress<br>
+        Host: Hostinger
+      </p>
+    </a>
+
+    <!-- Card 5 -->
+    <a href="https://midiararario.vercel.app/" target="_blank" rel="noopener noreferrer"
+      class="bg-white/5 rounded-2xl p-1 text-center hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_25px_rgba(0,255,180,0.25)] transition duration-300 block">
+      <img src="/img/5.png" alt="Mídia Rara Rio" class="mx-auto mb-4 w-full object-contain rounded-2xl" />
+      <h3 class="text-lg font-semibold text-white">Mídia Rara Rio</h3>
+      <p class="text-green-400 text-sm mb-2">Interactive Form</p>
+      <p class="text-gray-400 text-xs">
+        Frontend: HTML, JS<br>
+        SMTP: Gmail
+      </p>
+    </a>
+
+    <!-- Card 6 -->
+    <a href="https://www.rnclimaepecas.com/" target="_blank" rel="noopener noreferrer"
+      class="bg-white/5 rounded-2xl p-1 text-center hover:-translate-y-2 hover:scale-105 hover:shadow-[0_0_25px_rgba(0,255,180,0.25)] transition duration-300 block">
+      <img src="/img/6.png" alt="MRN Clima e Pecas" class="mx-auto mb-4 w-full object-contain rounded-2xl" />
+      <h3 class="text-lg font-semibold text-white">RN Clima e Pecas</h3>
+      <p class="text-green-400 text-sm mb-2">Air Conditioning Maintenance</p>
+      <p class="text-gray-400 text-xs">
+        Frontend: HTML, TailwindCSS, JavaScript
+      </p>
+    </a>
+  </div>
+</section>
+
+
+<!-- Growth Plan Section -->
+<section id="growth-plan" class="w-full bg-black/40 py-20 px-6 md:px-20 text-center text-gray-200">
+  <h2 class="text-3xl md:text-4xl font-semibold mb-6 fade-up">
+    Startup Growth Plan — ready for your brand
+  </h2>
+  <p class="mx-auto max-w-3xl text-gray-300 mb-8 fade-up">
+    I offer a complete launch package for coaches, clinics and small businesses in the Americas. It includes everything you need to be found and trusted online.
+  </p>
+  <div class="mx-auto max-w-3xl text-left text-gray-200 grid grid-cols-1 md:grid-cols-2 gap-4 fade-up">
+    <div class="bg-white/5 p-4 rounded-xl">
+      <h3 class="font-semibold text-green-400 mb-2">Core Web Setup</h3>
+      <ul class="list-disc list-inside text-sm">
+        <li>Custom website</li>
+        <li>Domain registration</li>
+        <li>Hosting</li>
+      </ul>
+    </div>
+    <div class="bg-white/5 p-4 rounded-xl">
+      <h3 class="font-semibold text-green-400 mb-2">Growth & Visibility</h3>
+      <ul class="list-disc list-inside text-sm">
+        <li>Google Search Console indexation</li>
+        <li>Google Analytics setup</li>
+        <li>Google Business Profile (Google Meu Negócio)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="mt-8 fade-up">
+    <a href="mailto:stanleyclientes@gmail.com?subject=Growth%20Plan%20Inquiry&body=Hi%20Stanley%2C%0A%0AI%27m%20interested%20in%20the%20startup%20growth%20plan.%20Please%20send%20details.%0A%0A">
+      <button class="px-8 py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full text-black font-semibold hover:opacity-90 transition glow-hover">
+        Email Me to Start the Plan
+      </button>
+    </a>
+  </div>
+</section>
+
+<!-- Lead Form Section -->
+<section id="myform" class="w-full bg-black/40 py-20 px-6 md:px-20 text-center text-gray-200">
+  <h2 class="text-3xl md:text-4xl font-semibold mb-8 fade-up">
+    Let's <span class="text-green-400">talk about your project</span>
+  </h2>
+  <p class="max-w-xl mx-auto text-gray-400 mb-12 fade-up">
+    Fill out the form and I will contact you quickly with a tailored proposal.
+  </p>
+
+  <form
+    class="max-w-xl mx-auto flex flex-col gap-5 fade-up"
+    action="https://formsubmit.co/stanleyclientes@gmail.com"
+    method="POST"
+  >
+    <input
+      type="text"
+      name="Name"
+      placeholder="Name"
+      required
+      class="w-full bg-black/50 border border-white/10 text-gray-200 rounded-xl px-5 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 transition"
+    />
+    <input
+      type="email"
+      name="Email"
+      placeholder="Your Email"
+      required
+      class="w-full bg-black/50 border border-white/10 text-gray-200 rounded-xl px-5 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 transition"
+    />
+    <input
+      type="tel"
+      name="Tel"
+      placeholder="Phone"
+      required
+      class="w-full bg-black/50 border border-white/10 text-gray-200 rounded-xl px-5 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 transition"
+    />
+
+    <!-- Hidden fields -->
+    <input type="hidden" name="Product" value="Home" />
+    <input type="hidden" name="Device" id="device" />
+    <input type="hidden" name="IP" id="ip" />
+    <input type="hidden" name="Country" id="country" />
+    <input type="hidden" name="Region" id="region" />
+    <input type="hidden" name="City" id="city" />
+    <input type="hidden" name="District" id="district" />
+    <input type="hidden" name="PostalCode" id="postal" />
+    <input type="hidden" name="_subject" value="Lead - Stanley Andrade" />
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="hidden" name="_next" value="https://www.stanleyandrade.vercel.app/pages/thankyou.html" />
+
+    <button
+      type="submit"
+      class="mt-4 px-8 py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full text-black font-semibold hover:opacity-90 transition transform hover:-translate-y-1 duration-300 glow-hover"
+    >
+      Get a free quote
+    </button>
+  </form>
+</section>
+
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    <script src="/component/footer.js"></script>
+
+    <!-- Animation Script -->
+    <script>
+      const elements = document.querySelectorAll(".fade-up");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+      elements.forEach((el) => observer.observe(el));
+    </script>
+
+    <!-- Carousel Script -->
+<script>
+  const carousel = document.getElementById('carousel');
+  const next = document.getElementById('next');
+  const prev = document.getElementById('prev');
+
+  let index = 0;
+
+  function updateCarousel() {
+    const slidesPerView = window.innerWidth >= 768 ? 0 : 1;
+    const totalSlides = carousel.children.length;
+    const maxIndex = totalSlides - slidesPerView;
+    if (index > maxIndex) index = 0;
+    if (index < 0) index = maxIndex;
+    carousel.style.transform = `translateX(-${index * (100 / slidesPerView)}%)`;
+  }
+
+  next.addEventListener('click', () => { index++; updateCarousel(); });
+  prev.addEventListener('click', () => { index--; updateCarousel(); });
+  window.addEventListener('resize', updateCarousel);
+
+  // Auto-slide
+  setInterval(() => {
+    index++;
+    updateCarousel();
+  }, 4000);
+
+  updateCarousel();
+</script>
+
+        <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/68ad3a4e429f5919255f1e37/1j3ianh6d';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+    <script>
+    // Captura o tipo de aparelho e navegador
+    document.getElementById("device").value = navigator.userAgent;
+
+    // API de geolocalização completa
+    fetch("https://ipapi.co/json/")
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById("ip").value = data.ip || "";
+            document.getElementById("country").value = data.country_name || "";
+            document.getElementById("region").value = data.region || "";
+            document.getElementById("city").value = data.city || "";
+            document.getElementById("district").value = data.district || ""; // bairro
+            document.getElementById("postal").value = data.postal || "";
+            document.getElementById("latitude").value = data.latitude || "";
+            document.getElementById("longitude").value = data.longitude || "";
+            document.getElementById("isp").value = data.org || "";
+        })
+        .catch(err => console.error("Erro ao obter localização:", err));
+    </script>
+
+  </body>
+
+
+</html>

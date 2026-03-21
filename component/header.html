@@ -1,0 +1,88 @@
+<!-- /component/header.html -->
+<header
+  class="w-full flex justify-between items-center px-8 py-5 fixed top-0 left-0 z-50 bg-black/30 backdrop-blur-md border-b border-white/5 fade-up"
+>
+  <!-- Logo -->
+  <div class="flex items-center gap-2">
+    <!-- <a href="/" class="block">
+      <img src="/img/newlogo.svg" alt="Stanley Andrade" class="h-20 w-full" />
+    </a> -->
+  </div>
+
+  <!-- Navigation Menu (Desktop) -->
+  <nav class="hidden md:flex gap-8 text-gray-300 font-medium">
+    <a href="/" class="hover:text-white transition">Home</a>
+    <a href="#technology" class="hover:text-white transition">Services</a>
+    <a href="#testimonials" class="hover:text-white transition">Portfolio</a>
+    <a href="#myform" class="hover:text-white transition">Contact</a>
+  </nav>
+
+  <!-- Buttons -->
+  <div class="hidden md:flex gap-4">
+    <!-- <button class="px-4 py-2 text-sm text-gray-200 hover:text-white transition">
+      Log In
+    </button> -->
+    <a href="#myform">
+      <button
+        class="px-4 py-2 bg-white text-black font-medium rounded-full hover:bg-gray-200 transition glow-hover"
+      >
+        Get a free quote
+      </button>
+    </a>
+  </div>
+
+  <!-- Hamburger (Mobile) -->
+  <div class="md:hidden flex flex-col gap-[5px] cursor-pointer" onclick="toggleMenu()">
+    <span class="w-6 h-[2px] bg-white rounded"></span>
+    <span class="w-6 h-[2px] bg-white rounded"></span>
+    <span class="w-6 h-[2px] bg-white rounded"></span>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<nav
+  id="mobile-nav"
+  class="hidden flex-col items-center bg-black/90 backdrop-blur-md fixed top-[70px] left-0 w-full py-6 z-40 md:hidden border-t border-white/10"
+>
+  <a href="/" class="py-2 text-gray-300 hover:text-white transition">Home</a>
+  <a href="/pages/mkt-en.html" class="py-2 text-gray-300 hover:text-white transition">Marketing</a>
+  <a href="/pages/contact.html" class="py-2 text-gray-300 hover:text-white transition">Contact</a>
+  <a href="/pages/support.html" class="py-2 text-gray-300 hover:text-white transition">Support</a>
+  <div class="flex flex-col gap-3 mt-4 w-4/5">
+    <!-- <button class="px-4 py-2 text-sm text-gray-200 hover:text-white transition border border-white/10 rounded-md">
+      Log In
+    </button> -->
+    <a href="#myform" >
+      <button
+        class="px-4 py-2 bg-white w-full text-black font-medium rounded-full hover:bg-gray-200 transition glow-hover"
+      >
+        Get a free quote
+      </button>
+    </a>
+  </div>
+</nav>
+
+<style>
+  /* Transição suave ao abrir menu mobile */
+  #mobile-nav.show {
+    display: flex;
+    animation: fadeDown 0.3s ease forwards;
+  }
+
+  @keyframes fadeDown {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Glow-hover reutilizado */
+  .glow-hover:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+  }
+</style>
