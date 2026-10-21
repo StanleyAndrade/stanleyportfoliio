@@ -1,0 +1,8 @@
+{
+  "name": "stanleyportfolio",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "stripe": "^23.0.0"
+  }
+}
