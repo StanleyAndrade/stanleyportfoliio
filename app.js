@@ -3,7 +3,7 @@ const CONFIG = {
     // Id do vídeo do YouTube (o que vem depois de "watch?v=" ou "youtu.be/"). Vazio = mostra "Video coming soon".
     youtubeId: '',
     // Link da página de agendamento do Google Agenda (Agendamentos > Compartilhar). Vazio = abre o e-mail.
-    agendaUrl: '',
+    agendaUrl: 'https://calendar.app.google/skVPsSZXLBUwNbP9A',
     // Tawk.to: Administration > Chat Widget > "Direct Chat Link" tem o formato tawk.to/chat/<propertyId>/<widgetId>
     tawkPropertyId: '69be13661f2eee1c3a8ff257',
     tawkWidgetId: '1jk77nih2',
