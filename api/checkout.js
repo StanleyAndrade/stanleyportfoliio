@@ -9,6 +9,34 @@ const PLANOS = {
     serverfall: { nome: 'ServerFall Website Monitoring', descricao: '24/7 uptime, domain and SSL monitoring', valor: 1900, mensal: true },
 }
 
+// Textos que o cliente vê, no idioma da página (en, es ou pt)
+const IDIOMAS = {
+    en: {
+        stripe: 'en',
+        campoNegocio: 'Business name',
+        metodo: 'Method not allowed.',
+        indisponivel: 'Online payment is not available right now. Please contact me by email or WhatsApp.',
+        planoInvalido: 'Plan not found. Please refresh the page and try again.',
+        falhaStripe: 'Could not reach the payment system. Please try again in a moment.',
+    },
+    es: {
+        stripe: 'es',
+        campoNegocio: 'Nombre del negocio',
+        metodo: 'Método no permitido.',
+        indisponivel: 'El pago en línea no está disponible en este momento. Contáctame por correo o WhatsApp.',
+        planoInvalido: 'Plan no encontrado. Actualiza la página e inténtalo de nuevo.',
+        falhaStripe: 'No se pudo conectar con el sistema de pago. Inténtalo de nuevo en un momento.',
+    },
+    pt: {
+        stripe: 'pt-BR',
+        campoNegocio: 'Nome do negócio',
+        metodo: 'Método não permitido.',
+        indisponivel: 'O pagamento on-line não está disponível agora. Fale comigo por e-mail ou WhatsApp.',
+        planoInvalido: 'Plano não encontrado. Atualize a página e tente de novo.',
+        falhaStripe: 'Não foi possível falar com o sistema de pagamento. Tente de novo daqui a pouco.',
+    },
+}
+
 let _stripe = null
 
 function getStripe() {
@@ -31,19 +59,22 @@ function responder(res, status, success, data, message) {
 }
 
 export default async function handler(req, res) {
+    const idioma = Object.hasOwn(IDIOMAS, req.body?.idioma) ? req.body.idioma : 'en'
+    const textos = IDIOMAS[idioma]
+
     if (req.method !== 'POST') {
         res.setHeader('Allow', 'POST')
-        return responder(res, 405, false, null, 'Method not allowed.')
+        return responder(res, 405, false, null, textos.metodo)
     }
 
     if (!process.env.STRIPE_SECRET_KEY) {
-        return responder(res, 503, false, null, 'Online payment is not available right now. Please contact me by email or WhatsApp.')
+        return responder(res, 503, false, null, textos.indisponivel)
     }
 
     const planoId = req.body?.plano
     const plano = Object.hasOwn(PLANOS, planoId) ? PLANOS[planoId] : null
     if (!plano) {
-        return responder(res, 400, false, null, 'Plan not found. Please refresh the page and try again.')
+        return responder(res, 400, false, null, textos.planoInvalido)
     }
 
     const site = urlDoSite(req)
@@ -58,17 +89,17 @@ export default async function handler(req, res) {
             }],
             ...(plano.mensal ? {} : { customer_creation: 'always' }),
             metadata: { plano: planoId },
-            custom_fields: [{ key: 'business', label: { type: 'custom', custom: 'Business name' }, type: 'text' }],
+            custom_fields: [{ key: 'business', label: { type: 'custom', custom: textos.campoNegocio }, type: 'text' }],
             phone_number_collection: { enabled: true },
             billing_address_collection: 'auto',
             allow_promotion_codes: true,
-            locale: 'en',
-            success_url: `${site}/?checkout=success&plan=${planoId}`,
-            cancel_url: `${site}/?checkout=cancel#pricing`,
+            locale: textos.stripe,
+            success_url: `${site}/?checkout=success&plan=${planoId}&lang=${idioma}`,
+            cancel_url: `${site}/?checkout=cancel&lang=${idioma}#pricing`,
         })
         return responder(res, 200, true, { url: sessao.url }, null)
     } catch (error) {
         console.error('Erro ao criar checkout do Stripe:', error.message)
-        return responder(res, 502, false, null, 'Could not reach the payment system. Please try again in a moment.')
+        return responder(res, 502, false, null, textos.falhaStripe)
     }
 }

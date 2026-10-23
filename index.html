@@ -32,28 +32,33 @@
 
     <header class="topo">
         <div class="topo__dentro">
-            <a href="#top" class="marca" aria-label="Stanley Andrade — home">
+            <a href="#top" class="marca" aria-label="Stanley Andrade — home" data-i18n-aria="aria.home">
                 <span class="marca__logo">SA</span>
                 <span class="marca__nome">Stanley Andrade</span>
             </a>
             <nav class="topo__nav" aria-label="Main">
-                <a href="#pricing">Pricing</a>
-                <a href="#how">How it works</a>
-                <a href="#about">About me</a>
-                <a href="#faq">FAQ</a>
-                <a href="#contact">Contact</a>
+                <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+                <a href="#how" data-i18n="nav.how">How it works</a>
+                <a href="#about" data-i18n="nav.about">About me</a>
+                <a href="#faq" data-i18n="nav.faq">FAQ</a>
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
             </nav>
-            <div class="tema" role="group" aria-label="Color theme">
-                <button type="button" class="tema__btn" data-tema="light" aria-label="Light theme" title="Light theme">
+            <div class="tema idioma" role="group" aria-label="Language" data-i18n-aria="aria.idioma">
+                <button type="button" class="tema__btn idioma__btn" data-idioma="en" lang="en" aria-label="English" title="English">EN</button>
+                <button type="button" class="tema__btn idioma__btn" data-idioma="es" lang="es" aria-label="Español" title="Español">ES</button>
+                <button type="button" class="tema__btn idioma__btn" data-idioma="pt" lang="pt-BR" aria-label="Português" title="Português">PT</button>
+            </div>
+            <div class="tema" role="group" aria-label="Color theme" data-i18n-aria="aria.tema">
+                <button type="button" class="tema__btn" data-tema="light" aria-label="Light theme" title="Light theme" data-i18n-aria="tema.light">
                     <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
                 </button>
-                <button type="button" class="tema__btn" data-tema="rosa" aria-label="Pink theme" title="Pink theme">
+                <button type="button" class="tema__btn" data-tema="rosa" aria-label="Pink theme" title="Pink theme" data-i18n-aria="tema.rosa">
                     <svg viewBox="0 0 24 24"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7Z"/></svg>
                 </button>
-                <button type="button" class="tema__btn" data-tema="dark" aria-label="Dark theme" title="Dark theme">
+                <button type="button" class="tema__btn" data-tema="dark" aria-label="Dark theme" title="Dark theme" data-i18n-aria="tema.dark">
                     <svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
                 </button>
-                <button type="button" class="tema__btn" data-tema="system" aria-label="Automatic (follows your device)" title="Automatic (follows your device)">
+                <button type="button" class="tema__btn" data-tema="system" aria-label="Automatic (follows your device)" title="Automatic (follows your device)" data-i18n-aria="tema.system">
                     <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
                 </button>
             </div>
@@ -65,165 +70,165 @@
 
         <!-- HERO curto: os planos vêm logo em seguida -->
         <section class="hero">
-            <p class="selo"><span class="selo__ponto"></span> Websites for local businesses · from $99</p>
-            <h1 class="hero__titulo">No website? <span class="degrade">Your customers are calling your competitor.</span></h1>
-            <p class="hero__texto">
+            <p class="selo"><span class="selo__ponto"></span> <span data-i18n="hero.selo">Websites for local businesses · from $99</span></p>
+            <h1 class="hero__titulo" data-i18n="hero.titulo">No website? <span class="degrade">Your customers are calling your competitor.</span></h1>
+            <p class="hero__texto" data-i18n="hero.texto">
                 When people need a plumber, a cleaner or a mechanic, they search on Google. If they can't find you, they call someone else.
                 I build simple, fast websites that make your phone ring. <strong>One-time price. No contracts. No tech headaches.</strong>
             </p>
             <ul class="hero__garantias">
-                <li>Unlimited revisions</li>
-                <li>Looks great on phones</li>
-                <li>Secure payment by Stripe</li>
+                <li data-i18n="hero.g1">Unlimited revisions</li>
+                <li data-i18n="hero.g2">Looks great on phones</li>
+                <li data-i18n="hero.g3">Secure payment by Stripe</li>
             </ul>
         </section>
 
         <!-- PLANOS -->
         <section id="pricing" class="secao secao--planos">
             <div class="secao__cabeca">
-                <h2>Pick your website</h2>
-                <p>Pay once. You own it. I handle the tech, you handle your customers.</p>
+                <h2 data-i18n="precos.titulo">Pick your website</h2>
+                <p data-i18n="precos.sub">Pay once. You own it. I handle the tech, you handle your customers.</p>
             </div>
 
             <div class="planos">
                 <article class="plano revelar" style="--i:0">
                     <div class="plano__topo">
-                        <h3>Essential Page</h3>
-                        <p class="plano__para">Perfect to get online fast</p>
+                        <h3 data-i18n="p1.nome">Essential Page</h3>
+                        <p class="plano__para" data-i18n="p1.para">Perfect to get online fast</p>
                     </div>
-                    <p class="plano__preco"><span class="plano__valor">$99</span><span class="plano__periodo">one-time</span></p>
+                    <p class="plano__preco"><span class="plano__valor">$99</span><span class="plano__periodo" data-i18n="plano.unico">one-time</span></p>
                     <ul class="plano__lista">
-                        <li>1 custom page made for your business</li>
-                        <li>Looks great on phones, tablets and computers</li>
-                        <li>Tap-to-call, email and social media buttons</li>
-                        <li>Up to 300 words and 3 photos</li>
-                        <li>I can help write the text and pick photos</li>
-                        <li>Unlimited revisions until you love it</li>
-                        <li>Extra pages: $100 each</li>
+                        <li data-i18n="p1.l1">1 custom page made for your business</li>
+                        <li data-i18n="plano.telas">Looks great on phones, tablets and computers</li>
+                        <li data-i18n="p1.l2">Tap-to-call, email and social media buttons</li>
+                        <li data-i18n="p1.l3">Up to 300 words and 3 photos</li>
+                        <li data-i18n="p1.l4">I can help write the text and pick photos</li>
+                        <li data-i18n="plano.revisoes">Unlimited revisions until you love it</li>
+                        <li data-i18n="p1.l5">Extra pages: $100 each</li>
                     </ul>
-                    <button type="button" class="btn btn--primario btn--bloco" data-plano="essential">Get my page — $99</button>
+                    <button type="button" class="btn btn--primario btn--bloco" data-plano="essential" data-i18n="p1.btn">Get my page — $99</button>
                     <p class="plano__erro" role="alert" hidden></p>
                 </article>
 
                 <article class="plano plano--destaque revelar" style="--i:1">
-                    <span class="plano__selo">Most popular</span>
+                    <span class="plano__selo" data-i18n="p2.selo">Most popular</span>
                     <div class="plano__topo">
-                        <h3>Standard Website</h3>
-                        <p class="plano__para">Get found on Google and get more calls</p>
+                        <h3 data-i18n="p2.nome">Standard Website</h3>
+                        <p class="plano__para" data-i18n="p2.para">Get found on Google and get more calls</p>
                     </div>
-                    <p class="plano__preco"><span class="plano__valor">$499</span><span class="plano__periodo">one-time</span></p>
+                    <p class="plano__preco"><span class="plano__valor">$499</span><span class="plano__periodo" data-i18n="plano.unico">one-time</span></p>
                     <ul class="plano__lista">
-                        <li>Up to 5 custom pages (Home, Services, About, Gallery, Contact…)</li>
-                        <li>Looks great on phones, tablets and computers</li>
-                        <li>Contact and "Request a quote" forms</li>
-                        <li>Local SEO setup so people near you find you</li>
-                        <li>Help with your Google Business Profile and Maps</li>
-                        <li>Up to 1,500 words and 15 photos</li>
-                        <li>Unlimited revisions until you love it</li>
+                        <li data-i18n="p2.l1">Up to 5 custom pages (Home, Services, About, Gallery, Contact…)</li>
+                        <li data-i18n="plano.telas">Looks great on phones, tablets and computers</li>
+                        <li data-i18n="p2.l2">Contact and "Request a quote" forms</li>
+                        <li data-i18n="p2.l3">Local SEO setup so people near you find you</li>
+                        <li data-i18n="p2.l4">Help with your Google Business Profile and Maps</li>
+                        <li data-i18n="p2.l5">Up to 1,500 words and 15 photos</li>
+                        <li data-i18n="plano.revisoes">Unlimited revisions until you love it</li>
                     </ul>
-                    <button type="button" class="btn btn--primario btn--bloco" data-plano="standard">Get my website — $499</button>
+                    <button type="button" class="btn btn--primario btn--bloco" data-plano="standard" data-i18n="p2.btn">Get my website — $499</button>
                     <p class="plano__erro" role="alert" hidden></p>
                 </article>
 
                 <article class="plano revelar" style="--i:2">
                     <div class="plano__topo">
-                        <h3>Business Website</h3>
-                        <p class="plano__para">Sell your products online, 24/7</p>
+                        <h3 data-i18n="p3.nome">Business Website</h3>
+                        <p class="plano__para" data-i18n="p3.para">Sell your products online, 24/7</p>
                     </div>
-                    <p class="plano__preco"><span class="plano__valor">$999</span><span class="plano__periodo">one-time</span></p>
+                    <p class="plano__preco"><span class="plano__valor">$999</span><span class="plano__periodo" data-i18n="plano.unico">one-time</span></p>
                     <ul class="plano__lista">
-                        <li>Complete online store</li>
-                        <li>Shopping cart and checkout</li>
-                        <li>Accept credit cards, Stripe and PayPal</li>
-                        <li>Inventory-ready product layout</li>
-                        <li>Setup of 10 simple products or 5 with options (size, color)</li>
-                        <li>Automatic order and receipt emails</li>
-                        <li>Unlimited revisions until you love it</li>
+                        <li data-i18n="p3.l1">Complete online store</li>
+                        <li data-i18n="p3.l2">Shopping cart and checkout</li>
+                        <li data-i18n="p3.l3">Accept credit cards, Stripe and PayPal</li>
+                        <li data-i18n="p3.l4">Inventory-ready product layout</li>
+                        <li data-i18n="p3.l5">Setup of 10 simple products or 5 with options (size, color)</li>
+                        <li data-i18n="p3.l6">Automatic order and receipt emails</li>
+                        <li data-i18n="plano.revisoes">Unlimited revisions until you love it</li>
                     </ul>
-                    <button type="button" class="btn btn--primario btn--bloco" data-plano="business">Get my store — $999</button>
+                    <button type="button" class="btn btn--primario btn--bloco" data-plano="business" data-i18n="p3.btn">Get my store — $999</button>
                     <p class="plano__erro" role="alert" hidden></p>
                 </article>
             </div>
 
             <div class="secao__cabeca secao__cabeca--extra">
-                <h2>More ways to grow</h2>
-                <p>Show up on Google Maps and keep your website up and running.</p>
+                <h2 data-i18n="extra.titulo">More ways to grow</h2>
+                <p data-i18n="extra.sub">Show up on Google Maps and keep your website up and running.</p>
             </div>
 
             <div class="planos planos--dois">
                 <article class="plano revelar" style="--i:0">
                     <div class="plano__topo">
-                        <h3>Google Business Profile Setup</h3>
-                        <p class="plano__para">Show up on Google Maps when people search near you</p>
+                        <h3 data-i18n="gmb.nome">Google Business Profile Setup</h3>
+                        <p class="plano__para" data-i18n="gmb.para">Show up on Google Maps when people search near you</p>
                     </div>
-                    <p class="plano__preco"><span class="plano__valor">$199</span><span class="plano__periodo">one-time</span></p>
+                    <p class="plano__preco"><span class="plano__valor">$199</span><span class="plano__periodo" data-i18n="plano.unico">one-time</span></p>
                     <ul class="plano__lista">
-                        <li>Complete profile: hours, service areas and contact info</li>
-                        <li>The right main and extra categories for your business</li>
-                        <li>Photos, logo and description that match your brand</li>
-                        <li>Ready to collect Google reviews from happy customers</li>
-                        <li>30 days of free support after launch</li>
+                        <li data-i18n="gmb.l1">Complete profile: hours, service areas and contact info</li>
+                        <li data-i18n="gmb.l2">The right main and extra categories for your business</li>
+                        <li data-i18n="gmb.l3">Photos, logo and description that match your brand</li>
+                        <li data-i18n="gmb.l4">Ready to collect Google reviews from happy customers</li>
+                        <li data-i18n="gmb.l5">30 days of free support after launch</li>
                     </ul>
-                    <button type="button" class="btn btn--primario btn--bloco" data-plano="gmb">Set up my profile — $199</button>
+                    <button type="button" class="btn btn--primario btn--bloco" data-plano="gmb" data-i18n="gmb.btn">Set up my profile — $199</button>
                     <p class="plano__erro" role="alert" hidden></p>
                 </article>
 
                 <article class="plano revelar" style="--i:1">
                     <div class="plano__topo">
-                        <h3>ServerFall Website Monitoring</h3>
-                        <p class="plano__para">Know right away if your website goes down</p>
+                        <h3 data-i18n="sf.nome">ServerFall Website Monitoring</h3>
+                        <p class="plano__para" data-i18n="sf.para">Know right away if your website goes down</p>
                     </div>
-                    <p class="plano__preco"><span class="plano__valor">$19</span><span class="plano__periodo">/ month</span></p>
+                    <p class="plano__preco"><span class="plano__valor">$19</span><span class="plano__periodo" data-i18n="sf.periodo">/ month</span></p>
                     <ul class="plano__lista">
-                        <li>Your website checked every minute, 24/7</li>
-                        <li>Instant alert when it goes down or gets slow</li>
-                        <li>Reminders before your domain and SSL expire</li>
-                        <li>Simple dashboard to see everything in one place</li>
-                        <li>Cancel anytime</li>
+                        <li data-i18n="sf.l1">Your website checked every minute, 24/7</li>
+                        <li data-i18n="sf.l2">Instant alert when it goes down or gets slow</li>
+                        <li data-i18n="sf.l3">Reminders before your domain and SSL expire</li>
+                        <li data-i18n="sf.l4">Simple dashboard to see everything in one place</li>
+                        <li data-i18n="sf.l5">Cancel anytime</li>
                     </ul>
-                    <button type="button" class="btn btn--primario btn--bloco" data-plano="serverfall">Start monitoring — $19/mo</button>
+                    <button type="button" class="btn btn--primario btn--bloco" data-plano="serverfall" data-i18n="sf.btn">Start monitoring — $19/mo</button>
                     <p class="plano__erro" role="alert" hidden></p>
-                    <a class="plano__link" href="https://serverfall.vercel.app/" target="_blank" rel="noopener">Learn more about ServerFall →</a>
+                    <a class="plano__link" href="https://serverfall.vercel.app/" target="_blank" rel="noopener" data-i18n="sf.link">Learn more about ServerFall →</a>
                 </article>
             </div>
 
             <div class="stripe-faixa">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                <p><strong>Secure payment by Stripe.</strong> Trusted by millions of businesses worldwide. Your card goes straight to Stripe — I never see it.</p>
+                <p data-i18n="stripe.faixa"><strong>Secure payment by Stripe.</strong> Trusted by millions of businesses worldwide. Your card goes straight to Stripe — I never see it.</p>
             </div>
-            <p class="planos__duvida">Not sure which one fits you? <a href="#contact">Talk to me first</a> — it's free.</p>
+            <p class="planos__duvida" data-i18n="planos.duvida">Not sure which one fits you? <a href="#contact">Talk to me first</a> — it's free.</p>
         </section>
 
         <!-- DOR -->
         <section class="secao">
             <div class="secao__cabeca">
-                <h2>Sound familiar?</h2>
-                <p>Most small business owners I talk to say the same things.</p>
+                <h2 data-i18n="dores.titulo">Sound familiar?</h2>
+                <p data-i18n="dores.sub">Most small business owners I talk to say the same things.</p>
             </div>
             <div class="dores">
                 <div class="dor revelar" style="--i:0">
-                    <p class="dor__frase">"My Craigslist ad keeps disappearing."</p>
-                    <p>Ads expire and get buried in hours. A website works for you 24/7 and never expires.</p>
+                    <p class="dor__frase" data-i18n="d1.frase">"My Craigslist ad keeps disappearing."</p>
+                    <p data-i18n="d1.texto">Ads expire and get buried in hours. A website works for you 24/7 and never expires.</p>
                 </div>
                 <div class="dor revelar" style="--i:1">
-                    <p class="dor__frase">"People search for me and can't find me."</p>
-                    <p>If you're not on Google, you don't exist to new customers. Let's fix that.</p>
+                    <p class="dor__frase" data-i18n="d2.frase">"People search for me and can't find me."</p>
+                    <p data-i18n="d2.texto">If you're not on Google, you don't exist to new customers. Let's fix that.</p>
                 </div>
                 <div class="dor revelar" style="--i:2">
-                    <p class="dor__frase">"Customers don't trust me without a website."</p>
-                    <p>Most people check a business online before they call. A clean website shows you're the real deal.</p>
+                    <p class="dor__frase" data-i18n="d3.frase">"Customers don't trust me without a website."</p>
+                    <p data-i18n="d3.texto">Most people check a business online before they call. A clean website shows you're the real deal.</p>
                 </div>
                 <div class="dor revelar" style="--i:3">
-                    <p class="dor__frase">"I don't have time for tech stuff."</p>
-                    <p>You don't need to. You send me the basics, I do the rest and keep you in the loop.</p>
+                    <p class="dor__frase" data-i18n="d4.frase">"I don't have time for tech stuff."</p>
+                    <p data-i18n="d4.texto">You don't need to. You send me the basics, I do the rest and keep you in the loop.</p>
                 </div>
                 <div class="dor revelar" style="--i:4">
-                    <p class="dor__frase">"Agencies want thousands of dollars."</p>
-                    <p>You get a professional website from $99. One-time price, no surprises, no long contracts.</p>
+                    <p class="dor__frase" data-i18n="d5.frase">"Agencies want thousands of dollars."</p>
+                    <p data-i18n="d5.texto">You get a professional website from $99. One-time price, no surprises, no long contracts.</p>
                 </div>
                 <div class="dor revelar" style="--i:5">
-                    <p class="dor__frase">"My competitor gets all the calls."</p>
-                    <p>They probably show up on Google Maps and have a website. Soon, so will you.</p>
+                    <p class="dor__frase" data-i18n="d6.frase">"My competitor gets all the calls."</p>
+                    <p data-i18n="d6.texto">They probably show up on Google Maps and have a website. Soon, so will you.</p>
                 </div>
             </div>
         </section>
@@ -231,29 +236,29 @@
         <!-- COMO FUNCIONA -->
         <section id="how" class="secao">
             <div class="secao__cabeca">
-                <h2>How it works</h2>
-                <p>Four simple steps. No meetings you don't need.</p>
+                <h2 data-i18n="como.titulo">How it works</h2>
+                <p data-i18n="como.sub">Four simple steps. No meetings you don't need.</p>
             </div>
             <ol class="passos">
                 <li class="passo revelar" style="--i:0">
                     <span class="passo__num">1</span>
-                    <h3>Pick a plan</h3>
-                    <p>Choose the plan that fits you and pay securely with Stripe.</p>
+                    <h3 data-i18n="passo1.t">Pick a plan</h3>
+                    <p data-i18n="passo1.p">Choose the plan that fits you and pay securely with Stripe.</p>
                 </li>
                 <li class="passo revelar" style="--i:1">
                     <span class="passo__num">2</span>
-                    <h3>Tell me about your business</h3>
-                    <p>A quick call or a few messages: your services, area, photos and logo (if you have one).</p>
+                    <h3 data-i18n="passo2.t">Tell me about your business</h3>
+                    <p data-i18n="passo2.p">A quick call or a few messages: your services, area, photos and logo (if you have one).</p>
                 </li>
                 <li class="passo revelar" style="--i:2">
                     <span class="passo__num">3</span>
-                    <h3>Review and ask for changes</h3>
-                    <p>I build it and send you a preview link. Ask for changes as many times as you need.</p>
+                    <h3 data-i18n="passo3.t">Review and ask for changes</h3>
+                    <p data-i18n="passo3.p">I build it and send you a preview link. Ask for changes as many times as you need.</p>
                 </li>
                 <li class="passo revelar" style="--i:3">
                     <span class="passo__num">4</span>
-                    <h3>Go live and get calls</h3>
-                    <p>Your website goes online and starts bringing you new customers.</p>
+                    <h3 data-i18n="passo4.t">Go live and get calls</h3>
+                    <p data-i18n="passo4.p">Your website goes online and starts bringing you new customers.</p>
                 </li>
             </ol>
         </section>
@@ -263,20 +268,20 @@
             <div class="sobre">
                 <div class="sobre__video revelar" id="video"></div>
                 <div class="sobre__texto revelar" style="--i:1">
-                    <p class="selo selo--pequeno">Who's building your website</p>
-                    <h2>Hi, I'm Stanley Andrade</h2>
-                    <p>
+                    <p class="selo selo--pequeno" data-i18n="sobre.selo">Who's building your website</p>
+                    <h2 data-i18n="sobre.titulo">Hi, I'm Stanley Andrade</h2>
+                    <p data-i18n="sobre.p1">
                         I'm a Software Engineer and I've been building websites and systems since 2021.
                         I work with business owners in the <strong>United States</strong>, <strong>Brazil</strong> and <strong>Spain</strong>.
                     </p>
-                    <p>
+                    <p data-i18n="sobre.p2">
                         You talk directly to me — no sales team, no middleman. I keep things simple,
                         explain everything in plain English and make sure you're happy before we finish.
                     </p>
                     <ul class="sobre__numeros">
-                        <li><strong>Since 2021</strong><span>building software</span></li>
-                        <li><strong>3 countries</strong><span>US, Brazil, Spain</span></li>
-                        <li><strong>1 person</strong><span>you talk to</span></li>
+                        <li data-i18n="sobre.n1"><strong>Since 2021</strong><span>building software</span></li>
+                        <li data-i18n="sobre.n2"><strong>3 countries</strong><span>US, Brazil, Spain</span></li>
+                        <li data-i18n="sobre.n3"><strong>1 person</strong><span>you talk to</span></li>
                     </ul>
                 </div>
             </div>
@@ -285,36 +290,36 @@
         <!-- DÚVIDAS -->
         <section id="faq" class="secao">
             <div class="secao__cabeca">
-                <h2>Questions people ask me</h2>
+                <h2 data-i18n="faq.titulo">Questions people ask me</h2>
             </div>
             <div class="faq">
                 <details class="faq__item">
-                    <summary>Is the price really one-time?</summary>
-                    <p>Yes. The website plans are a one-time payment. The only monthly plan on this page is ServerFall Monitoring ($19/month), and it's optional. You can cancel it anytime.</p>
+                    <summary data-i18n="faq.q1">Is the price really one-time?</summary>
+                    <p data-i18n="faq.a1">Yes. The website plans are a one-time payment. The only monthly plan on this page is ServerFall Monitoring ($19/month), and it's optional. You can cancel it anytime.</p>
                 </details>
                 <details class="faq__item">
-                    <summary>What do I need to send you?</summary>
-                    <p>Your business name, what you do, the area you serve, your phone and email. Photos and a logo help, but if you don't have them, I'll help you with that too.</p>
+                    <summary data-i18n="faq.q2">What do I need to send you?</summary>
+                    <p data-i18n="faq.a2">Your business name, what you do, the area you serve, your phone and email. Photos and a logo help, but if you don't have them, I'll help you with that too.</p>
                 </details>
                 <details class="faq__item">
-                    <summary>I don't have a domain name (like mybusiness.com). Is that a problem?</summary>
-                    <p>Not at all. I'll help you choose and set up your domain. The domain itself is paid to the registrar (usually around $12–20 per year) and it's registered in your name, so it's always yours.</p>
+                    <summary data-i18n="faq.q3">I don't have a domain name (like mybusiness.com). Is that a problem?</summary>
+                    <p data-i18n="faq.a3">Not at all. I'll help you choose and set up your domain. The domain itself is paid to the registrar (usually around $12–20 per year) and it's registered in your name, so it's always yours.</p>
                 </details>
                 <details class="faq__item">
-                    <summary>How long does it take?</summary>
-                    <p>It depends on the plan and on how fast you send me your info. A one-page website is the quickest. After our first talk, I'll give you a clear date.</p>
+                    <summary data-i18n="faq.q4">How long does it take?</summary>
+                    <p data-i18n="faq.a4">It depends on the plan and on how fast you send me your info. A one-page website is the quickest. After our first talk, I'll give you a clear date.</p>
                 </details>
                 <details class="faq__item">
-                    <summary>What if I don't like it?</summary>
-                    <p>Every website plan comes with unlimited revisions. I'll keep adjusting it until you're happy with it.</p>
+                    <summary data-i18n="faq.q5">What if I don't like it?</summary>
+                    <p data-i18n="faq.a5">Every website plan comes with unlimited revisions. I'll keep adjusting it until you're happy with it.</p>
                 </details>
                 <details class="faq__item">
-                    <summary>Is it safe to pay on your website?</summary>
-                    <p>Yes. Payments are processed by Stripe, one of the most trusted payment companies in the world. Your card details go straight to Stripe — I never see them.</p>
+                    <summary data-i18n="faq.q6">Is it safe to pay on your website?</summary>
+                    <p data-i18n="faq.a6">Yes. Payments are processed by Stripe, one of the most trusted payment companies in the world. Your card details go straight to Stripe — I never see them.</p>
                 </details>
                 <details class="faq__item">
-                    <summary>You're not in the US. Is that okay?</summary>
-                    <p>Yes. I already work with clients in the United States and Europe. We talk by email, chat, WhatsApp or video call, at a time that works for you.</p>
+                    <summary data-i18n="faq.q7">You're not in the US. Is that okay?</summary>
+                    <p data-i18n="faq.a7">Yes. I already work with clients in the United States and Europe. We talk by email, chat, WhatsApp or video call, at a time that works for you.</p>
                 </details>
             </div>
         </section>
@@ -322,19 +327,19 @@
         <!-- CONTATO -->
         <section id="contact" class="secao">
             <div class="secao__cabeca">
-                <h2>Let's talk</h2>
-                <p>Questions before you buy? Reach me the way you like. I usually reply within a few hours.</p>
+                <h2 data-i18n="contato.titulo">Let's talk</h2>
+                <p data-i18n="contato.sub">Questions before you buy? Reach me the way you like. I usually reply within a few hours.</p>
             </div>
             <div class="contatos">
                 <a class="contato revelar" style="--i:0" id="contato-agenda" href="#" target="_blank" rel="noopener">
                     <span class="contato__icone"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
-                    <span><strong>Book a free call</strong><small>Google Meet · pick a day and time</small></span>
+                    <span><strong data-i18n="contato.agenda">Book a free call</strong><small data-i18n="contato.agenda.sub">Google Meet · pick a day and time</small></span>
                 </a>
-                <a class="contato revelar" style="--i:1" href="mailto:stanleyclientes@gmail.com?subject=Website%20for%20my%20business">
+                <a class="contato revelar" style="--i:1" id="contato-email" href="mailto:stanleyclientes@gmail.com?subject=Website%20for%20my%20business">
                     <span class="contato__icone"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
-                    <span><strong>Email</strong><small>stanleyclientes@gmail.com</small></span>
+                    <span><strong data-i18n="contato.email">Email</strong><small>stanleyclientes@gmail.com</small></span>
                 </a>
-                <a class="contato revelar" style="--i:2" href="https://wa.me/5521992002356?text=Hi%20Stanley!%20I%27d%20like%20a%20website%20for%20my%20business." target="_blank" rel="noopener">
+                <a class="contato revelar" style="--i:2" id="contato-whatsapp" href="https://wa.me/5521992002356?text=Hi%20Stanley!%20I%27d%20like%20a%20website%20for%20my%20business." target="_blank" rel="noopener">
                     <span class="contato__icone contato__icone--zap"><svg viewBox="0 0 24 24"><path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.3Z"/><path d="M9 10c0 3 2 5 5 5l1.2-1.2-2-1-1 .8c-1-.4-1.8-1.2-2.2-2.2l.8-1-1-2Z"/></svg></span>
                     <span><strong>WhatsApp</strong><small>+55 21 99200-2356</small></span>
                 </a>
@@ -344,17 +349,18 @@
                 </a>
                 <button type="button" class="contato revelar" style="--i:4" id="contato-chat">
                     <span class="contato__icone"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12Z"/></svg></span>
-                    <span><strong>Live chat</strong><small>Chat with me right here</small></span>
+                    <span><strong data-i18n="contato.chat">Live chat</strong><small data-i18n="contato.chat.sub">Chat with me right here</small></span>
                 </button>
             </div>
         </section>
     </main>
 
     <footer class="rodape">
-        <p>© <span id="ano">2026</span> Stanley Andrade · Software Engineer</p>
-        <p>Secure payments by Stripe · <a href="mailto:stanleyclientes@gmail.com">stanleyclientes@gmail.com</a></p>
+        <p>© <span id="ano">2026</span> Stanley Andrade · <span data-i18n="rodape.cargo">Software Engineer</span></p>
+        <p><span data-i18n="rodape.stripe">Secure payments by Stripe</span> · <a href="mailto:stanleyclientes@gmail.com">stanleyclientes@gmail.com</a></p>
     </footer>
 
+    <script src="i18n.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

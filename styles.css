@@ -300,6 +300,17 @@ svg {
     margin-left: 0;
 }
 
+.tema + .tema {
+    margin-left: -8px;
+}
+
+.idioma__btn {
+    font: inherit;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
 .tema__btn {
     display: grid;
     place-items: center;
@@ -328,13 +339,13 @@ svg {
     box-shadow: var(--shadow-sm);
 }
 
-@media (max-width: 420px) {
+@media (max-width: 560px) {
     .marca__nome {
         display: none;
     }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1040px) {
     .topo__nav {
         display: flex;
     }

@@ -38,21 +38,21 @@ document.querySelectorAll('[data-plano]').forEach((botao) => {
         erro.hidden = true
         botao.disabled = true
         botao.classList.add('btn--carregando')
-        botao.textContent = 'Opening secure checkout...'
+        botao.textContent = t('js.abrindo')
 
         try {
             const resposta = await fetch('/api/checkout', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ plano: botao.dataset.plano }),
+                body: JSON.stringify({ plano: botao.dataset.plano, idioma: idiomaAtual }),
             })
             const corpo = await resposta.json().catch(() => null)
             if (!resposta.ok || !corpo?.success) {
-                throw new Error(corpo?.message ?? 'Something went wrong. Please try again.')
+                throw new Error(corpo?.message ?? t('js.erro'))
             }
             window.location.href = corpo.data.url
         } catch (e) {
-            erro.textContent = e instanceof TypeError ? 'No internet connection. Please check it and try again.' : e.message
+            erro.textContent = e instanceof TypeError ? t('js.semInternet') : e.message
             erro.hidden = false
             botao.disabled = false
             botao.classList.remove('btn--carregando')
@@ -64,16 +64,21 @@ document.querySelectorAll('[data-plano]').forEach((botao) => {
 // Volta do Stripe: mostra o aviso e limpa a URL
 const params = new URLSearchParams(window.location.search)
 const retorno = params.get('checkout')
-if (retorno) {
-    const aviso = document.getElementById('aviso-checkout')
+const aviso = document.getElementById('aviso-checkout')
+
+function mostrarAvisoCheckout() {
+    if (!retorno) return
     if (retorno === 'success') {
         aviso.className = 'aviso aviso--sucesso'
-        aviso.textContent = `Payment received — thank you! I'll email you within 24 hours to get started. Questions? Write to ${CONFIG.email}.`
+        aviso.textContent = t('js.sucesso', { email: CONFIG.email })
     } else {
         aviso.className = 'aviso aviso--info'
-        aviso.textContent = 'Checkout canceled — no charge was made. Questions before you buy? Talk to me below.'
+        aviso.textContent = t('js.cancelado')
     }
     aviso.hidden = false
+}
+
+if (retorno || params.has('lang')) {
     history.replaceState(null, '', window.location.pathname + window.location.hash)
 }
 
@@ -81,25 +86,34 @@ if (retorno) {
 const video = document.getElementById('video')
 const iconePlay = '<svg viewBox="0 0 24 24"><path d="M7 4v16l13-8Z"/></svg>'
 
-if (CONFIG.youtubeId) {
+function montarVideo() {
+    if (!CONFIG.youtubeId) {
+        video.innerHTML = `<div class="video__vazio"><span class="video__vazio-icone">${iconePlay}</span><strong>${t('js.videoTitulo')}</strong><small>${t('js.videoEmBreve')}</small></div>`
+        return
+    }
+    if (video.querySelector('iframe')) return // já está tocando: não interrompe
     // Só carrega o player do YouTube quando a pessoa clica (página mais leve)
     const capa = document.createElement('button')
     capa.type = 'button'
     capa.className = 'video__capa'
-    capa.setAttribute('aria-label', 'Play video: meet Stanley')
+    capa.setAttribute('aria-label', t('js.videoPlay'))
     capa.style.backgroundImage = `url(https://i.ytimg.com/vi/${CONFIG.youtubeId}/hqdefault.jpg)`
     capa.innerHTML = `<span class="video__play">${iconePlay}</span>`
     capa.addEventListener('click', () => {
         video.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${CONFIG.youtubeId}?autoplay=1&rel=0" title="Meet Stanley Andrade" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`
     })
-    video.append(capa)
-} else {
-    video.innerHTML = `<div class="video__vazio"><span class="video__vazio-icone">${iconePlay}</span><strong>Meet Stanley</strong><small>Video coming soon</small></div>`
+    video.replaceChildren(capa)
 }
 
 // ===================== Contato: agenda e chat =====================
-const linkAgenda = document.getElementById('contato-agenda')
-linkAgenda.href = CONFIG.agendaUrl || `mailto:${CONFIG.email}?subject=${encodeURIComponent('Book a call')}&body=${encodeURIComponent('Hi Stanley! I would like to book a call. Best days and times for me:')}`
+const linkWhatsapp = () => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(t('js.whatsapp'))}`
+
+// Links com mensagem pronta no idioma da página
+function montarLinksContato() {
+    document.getElementById('contato-agenda').href = CONFIG.agendaUrl || `mailto:${CONFIG.email}?subject=${encodeURIComponent(t('js.agendaAssunto'))}&body=${encodeURIComponent(t('js.agendaCorpo'))}`
+    document.getElementById('contato-email').href = `mailto:${CONFIG.email}?subject=${encodeURIComponent(t('js.emailAssunto'))}`
+    document.getElementById('contato-whatsapp').href = linkWhatsapp()
+}
 
 if (CONFIG.tawkPropertyId && CONFIG.tawkWidgetId) {
     window.Tawk_API = window.Tawk_API || {}
@@ -118,7 +132,7 @@ document.getElementById('contato-chat').addEventListener('click', () => {
         return
     }
     // Sem chat configurado (ou ainda carregando): cai no WhatsApp
-    window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent("Hi Stanley! I'd like a website for my business.")}`, '_blank', 'noopener')
+    window.open(linkWhatsapp(), '_blank', 'noopener')
 })
 
 // ===================== Entrada suave ao rolar =====================
@@ -138,3 +152,11 @@ if ('IntersectionObserver' in window) {
 }
 
 document.getElementById('ano').textContent = new Date().getFullYear()
+
+// ===================== Idioma =====================
+document.addEventListener('idioma-mudou', () => {
+    mostrarAvisoCheckout()
+    montarVideo()
+    montarLinksContato()
+})
+aplicarIdioma(idiomaAtual)
