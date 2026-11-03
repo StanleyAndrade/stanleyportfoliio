@@ -1,6 +1,6 @@
 # stanleyportfolio — landing page de vendas (EUA)
 
-Landing page em **inglês, espanhol e português** (seletor EN/ES/PT no topo) para prospectar pequenos negócios americanos sem site (Craigslist e Google Maps). O Stanley manda e-mail com a copy de venda e o link do site. **Não é SaaS**: uma página só, sem login nem banco.
+Landing page em **inglês, espanhol e português** (seletor EN/ES/PT no topo) para prospectar pequenos negócios americanos (Craigslist e Google Maps). Vende **apps Android/iOS, software sob medida, sites, Perfil da Empresa no Google e monitoramento (ServerFall)**. O Stanley manda e-mail com a copy de venda e o link do site. **Não é SaaS**: uma página só, sem login nem banco.
 
 - No ar: https://stanleyandrade.vercel.app (projeto Vercel `stanleyportfolio`, conta stanleyandrade95@gmail.com, time `stanleyandrades-projects`).
 - GitHub: `StanleyAndrade/stanleyportfoliio` (com dois "i"). **Push na `main` publica sozinho** (ligação refeita em 21/10/2026, depois de o repositório ser recriado).
@@ -29,7 +29,7 @@ Base dos planos e textos: https://webfor99.com/shop/ (lá os sites exigem $39/m�
 Ao mudar preço: alterar no `api/checkout.js`, no texto/botão do `index.html` **e** nas traduções do `i18n.js`.
 
 ## Página (ordem)
-Topo (nav + temas) → hero curto focado na dor → **planos logo no início** → faixa "Secure payment by Stripe" → "Sound familiar?" (dores) → How it works (4 passos) → About (vídeo + Stanley Andrade, Software Engineer, dev desde 2021, clientes nos EUA, Brasil e Espanha) → FAQ → Contato (Google Meet, e-mail stanleyclientes@gmail.com, WhatsApp e Telegram +55 21 99200-2356, chat Tawk.to) → rodapé.
+Topo (nav + temas) → hero com a **apresentação** (Stanley Andrade, Software Engineer, mais de 5 anos, clientes no Brasil e nos EUA, "várias empresas" ajudadas) → **Serviços** (`#services`: apps e software sob medida = só orçamento grátis, sem preço, pelo contato; site, Perfil Google e ServerFall levam aos planos) → planos de sites + extras (`#pricing`, `#extra`) → faixa "Secure payment by Stripe" → "Sound familiar?" (dores de todos os serviços) → How it works (4 passos) → About (vídeo + texto) → FAQ → Contato (Google Meet, e-mail stanleyclientes@gmail.com, WhatsApp e Telegram +55 21 99200-2356, chat Tawk.to) → rodapé.
 
 Volta do Stripe: `?checkout=success` ou `?checkout=cancel` mostra um aviso no topo.
 

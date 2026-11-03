@@ -702,8 +702,140 @@ svg {
     filter: brightness(1.08);
 }
 
+.btn--contorno {
+    background: var(--surface);
+    color: var(--primary);
+    border: 1.5px solid var(--primary-ring);
+}
+
+.btn--contorno:hover:not(:disabled) {
+    transform: translateY(-2px);
+    background: var(--primary-soft);
+}
+
 .btn--bloco {
     width: 100%;
+}
+
+.hero__acoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+/* ===================== Serviços ===================== */
+.servicos {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+}
+
+@media (min-width: 720px) {
+    .servicos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 960px) {
+    .servicos {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    .servico {
+        grid-column: span 2;
+    }
+
+    .servico--destaque {
+        grid-column: span 3;
+    }
+}
+
+.servico {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 22px;
+    border-radius: var(--radius-lg);
+    background: var(--glass-bg);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+
+.servico:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.servico--destaque {
+    border-color: var(--primary-ring);
+    box-shadow: var(--shadow-md);
+}
+
+.servico__icone {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: var(--radius-md);
+    background: var(--primary-soft);
+    color: var(--primary);
+}
+
+.servico__icone svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.servico h3 {
+    font-size: 1.15rem;
+    font-weight: 800;
+}
+
+.servico__para {
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.servico__lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.servico__lista li::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 11px;
+    margin-right: 10px;
+    border: solid var(--success);
+    border-width: 0 2.5px 2.5px 0;
+    transform: translateY(-2px) rotate(45deg);
+}
+
+.servico__preco {
+    font-weight: 700;
+    color: var(--text);
+}
+
+.servico .btn {
+    margin-top: auto;
 }
 
 .btn:disabled {
