@@ -622,6 +622,16 @@ svg {
     flex-shrink: 0;
 }
 
+.plano__lista .plano__item-destaque {
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: var(--primary-soft);
+    border: 1px solid var(--primary-ring);
+    color: var(--text);
+    font-weight: 700;
+}
+
 .plano__erro {
     padding: 10px 12px;
     border-radius: var(--radius-sm);
