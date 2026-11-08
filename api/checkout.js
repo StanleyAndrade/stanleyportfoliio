@@ -94,8 +94,8 @@ export default async function handler(req, res) {
             billing_address_collection: 'auto',
             allow_promotion_codes: true,
             locale: textos.stripe,
-            success_url: `${site}/?checkout=success&plan=${planoId}&lang=${idioma}`,
-            cancel_url: `${site}/?checkout=cancel&lang=${idioma}#pricing`,
+            success_url: `${site}/pages/services.html?checkout=success&plan=${planoId}&lang=${idioma}`,
+            cancel_url: `${site}/pages/services.html?checkout=cancel&lang=${idioma}#pricing`,
         })
         return responder(res, 200, true, { url: sessao.url }, null)
     } catch (error) {

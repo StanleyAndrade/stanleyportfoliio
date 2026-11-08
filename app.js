@@ -67,7 +67,7 @@ const retorno = params.get('checkout')
 const aviso = document.getElementById('aviso-checkout')
 
 function mostrarAvisoCheckout() {
-    if (!retorno) return
+    if (!retorno || !aviso) return
     if (retorno === 'success') {
         aviso.className = 'aviso aviso--sucesso'
         aviso.textContent = t('js.sucesso', { email: CONFIG.email })
@@ -87,6 +87,7 @@ const video = document.getElementById('video')
 const iconePlay = '<svg viewBox="0 0 24 24"><path d="M7 4v16l13-8Z"/></svg>'
 
 function montarVideo() {
+    if (!video) return // página sem vídeo (portfólio)
     if (!CONFIG.youtubeId) {
         video.innerHTML = `<div class="video__vazio"><span class="video__vazio-icone">${iconePlay}</span><strong>${t('js.videoTitulo')}</strong><small>${t('js.videoEmBreve')}</small></div>`
         return
@@ -108,14 +109,18 @@ function montarVideo() {
 // ===================== Contato: agenda e chat =====================
 const linkWhatsapp = () => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(t('js.whatsapp'))}`
 
-// Links com mensagem pronta no idioma da página
+// Links com mensagem pronta no idioma da página (só nas páginas de serviços, que têm esses contatos)
+const botaoChat = document.getElementById('contato-chat')
+
 function montarLinksContato() {
+    if (!botaoChat) return
     document.getElementById('contato-agenda').href = CONFIG.agendaUrl || `mailto:${CONFIG.email}?subject=${encodeURIComponent(t('js.agendaAssunto'))}&body=${encodeURIComponent(t('js.agendaCorpo'))}`
     document.getElementById('contato-email').href = `mailto:${CONFIG.email}?subject=${encodeURIComponent(t('js.emailAssunto'))}`
     document.getElementById('contato-whatsapp').href = linkWhatsapp()
 }
 
-if (CONFIG.tawkPropertyId && CONFIG.tawkWidgetId) {
+// O chat do Tawk.to é para clientes: só carrega nas páginas de serviços
+if (botaoChat && CONFIG.tawkPropertyId && CONFIG.tawkWidgetId) {
     window.Tawk_API = window.Tawk_API || {}
     window.Tawk_LoadStart = new Date()
     const script = document.createElement('script')
@@ -126,7 +131,7 @@ if (CONFIG.tawkPropertyId && CONFIG.tawkWidgetId) {
     document.body.append(script)
 }
 
-document.getElementById('contato-chat').addEventListener('click', () => {
+botaoChat?.addEventListener('click', () => {
     if (window.Tawk_API?.maximize) {
         window.Tawk_API.maximize()
         return
@@ -134,6 +139,20 @@ document.getElementById('contato-chat').addEventListener('click', () => {
     // Sem chat configurado (ou ainda carregando): cai no WhatsApp
     window.open(linkWhatsapp(), '_blank', 'noopener')
 })
+
+// ===================== Menu "Serviços": fecha ao clicar fora ou apertar Esc =====================
+const menuServicos = document.querySelector('.menu-servicos')
+if (menuServicos) {
+    document.addEventListener('click', (e) => {
+        if (!menuServicos.contains(e.target)) menuServicos.open = false
+    })
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menuServicos.open) {
+            menuServicos.open = false
+            menuServicos.querySelector('summary').focus()
+        }
+    })
+}
 
 // ===================== Entrada suave ao rolar =====================
 const revelaveis = document.querySelectorAll('.revelar')

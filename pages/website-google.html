@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website + Google Business Profile for Your Business · Stanley Andrade</title>
+    <meta name="description" content="A professional website and your Google Business Profile set up, so people near you find you on Google and Maps and call you. One-time payment, no monthly fees. Secure payment by Stripe.">
+    <meta name="theme-color" content="#2f5bea">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Customers are searching for you right now. Can they find you?">
+    <meta property="og:description" content="A professional website and your Google Business Profile set up, so people near you find you and call you. One-time payment, no monthly fees.">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%234f7cff'/%3E%3Cstop offset='1' stop-color='%232340c9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3ESA%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        // Aplica o tema salvo antes de pintar a página (evita piscar)
+        try {
+            const tema = localStorage.getItem('theme-preference')
+            if (['light', 'rosa', 'dark', 'system'].includes(tema)) document.documentElement.dataset.theme = tema
+        } catch { /* sem localStorage: segue o sistema */ }
+        document.documentElement.classList.add('js')
+    </script>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="manchas" aria-hidden="true"><span></span><span></span><span></span></div>
+
+    <header class="topo">
+        <div class="topo__dentro">
+            <a href="services.html" class="marca" aria-label="Stanley Andrade — home" data-i18n-aria="aria.home">
+                <span class="marca__logo">SA</span>
+                <span class="marca__nome">Stanley Andrade</span>
+            </a>
+            <nav class="topo__nav" aria-label="Main">
+                <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+                <a href="#how" data-i18n="nav.how">How it works</a>
+                <a href="#about" data-i18n="nav.about">About me</a>
+                <a href="#faq" data-i18n="nav.faq">FAQ</a>
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
+            </nav>
+            <details class="menu-servicos">
+                <summary aria-label="Services" data-i18n-aria="menu.servicos">
+                    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+                    <span class="menu-servicos__texto" data-i18n="menu.servicos">Services</span>
+                    <svg class="menu-servicos__seta" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+                </summary>
+                <div class="menu-servicos__lista">
+                    <a href="services.html"><strong data-i18n="menu.todos">All services</strong><small data-i18n="menu.todos.sub">Apps, software, websites and more</small></a>
+                    <a href="website-google.html"><strong data-i18n="menu.site">Websites + Google Business Profile</strong><small data-i18n="menu.site.sub">Get found on Google and Maps</small></a>
+                    <a href="apps.html"><strong data-i18n="menu.apps">Android &amp; iPhone apps</strong><small data-i18n="menu.apps.sub">Bookings, orders and payments</small></a>
+                    <a href="software.html"><strong data-i18n="menu.software">Custom software</strong><small data-i18n="menu.software.sub">Systems, reports and automations</small></a>
+                </div>
+            </details>
+            <div class="tema idioma" role="group" aria-label="Language" data-i18n-aria="aria.idioma">
+                <button type="button" class="tema__btn idioma__btn" data-idioma="en" lang="en" aria-label="English" title="English">EN</button>
+                <button type="button" class="tema__btn idioma__btn" data-idioma="es" lang="es" aria-label="Español" title="Español">ES</button>
+                <button type="button" class="tema__btn idioma__btn" data-idioma="pt" lang="pt-BR" aria-label="Português" title="Português">PT</button>
+            </div>
+            <div class="tema" role="group" aria-label="Color theme" data-i18n-aria="aria.tema">
+                <button type="button" class="tema__btn" data-tema="light" aria-label="Light theme" title="Light theme" data-i18n-aria="tema.light">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                </button>
+                <button type="button" class="tema__btn" data-tema="rosa" aria-label="Pink theme" title="Pink theme" data-i18n-aria="tema.rosa">
+                    <svg viewBox="0 0 24 24"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7Z"/></svg>
+                </button>
+                <button type="button" class="tema__btn" data-tema="dark" aria-label="Dark theme" title="Dark theme" data-i18n-aria="tema.dark">
+                    <svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                </button>
+                <button type="button" class="tema__btn" data-tema="system" aria-label="Automatic (follows your device)" title="Automatic (follows your device)" data-i18n-aria="tema.system">
+                    <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="top">
+        <div id="aviso-checkout" class="aviso" role="status" hidden></div>
+
+        <!-- HERO: headline + imagem do Google Maps e do site -->
+        <section class="lp-hero">
+            <div class="lp-hero__texto">
+                <p class="selo"><span class="selo__ponto"></span> <span data-i18n="lpw.hero.selo">Websites + Google Business Profile</span></p>
+                <h1 class="hero__titulo" data-i18n="lpw.hero.titulo">Customers are searching for you right now. <span class="degrade">Can they find you?</span></h1>
+                <p class="hero__texto" data-i18n="lpw.hero.texto">
+                    I build a <strong>professional website</strong> and set up your <strong>Google Business Profile</strong>,
+                    so people near you find you on Google and Maps — and call you. One-time payment, no monthly fees.
+                </p>
+                <div class="hero__acoes">
+                    <a class="btn btn--primario" href="#pricing" data-i18n="lpw.cta.planos">See plans and prices</a>
+                    <a class="btn btn--contorno" href="#contact" data-i18n="hero.btn2">Book a free call</a>
+                </div>
+                <ul class="hero__garantias">
+                    <li data-i18n="lpw.hero.g1">No monthly fees</li>
+                    <li data-i18n="lpw.hero.g2">Unlimited revisions</li>
+                    <li data-i18n="hero.g2">Secure payment by Stripe</li>
+                </ul>
+            </div>
+
+            <div class="vitrine" role="img" aria-label="Your business website on a laptop and your Google Maps listing on a phone" data-i18n-aria="lpw.vitrine.aria">
+                <div class="janela" aria-hidden="true">
+                    <div class="janela__barra"><span></span><span></span><span></span><p class="janela__url" data-i18n="mk.url">yourbusiness.com</p></div>
+                    <div class="janela__site">
+                        <div class="mk-site__topo"><span class="mk-site__logo"></span><span class="mk-linha mk-linha--curta"></span><span class="mk-site__ligar" data-i18n="mk.ligar">Call</span></div>
+                        <p class="mk-site__titulo" data-i18n="mk.siteTitulo">Fast, friendly plumbing</p>
+                        <span class="mk-linha"></span>
+                        <span class="mk-linha mk-linha--media"></span>
+                        <span class="mk-site__botao" data-i18n="mk.orcamento">Request a quote</span>
+                        <div class="mk-site__fotos"><span></span><span></span><span></span></div>
+                    </div>
+                </div>
+
+                <div class="celular" aria-hidden="true">
+                    <div class="celular__tela">
+                        <p class="mk-busca"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span data-i18n="mk.busca">plumber near me</span></p>
+                        <div class="mk-mapa">
+                            <span class="mk-pino" style="--x:22%; --y:30%"></span>
+                            <span class="mk-pino" style="--x:70%; --y:62%"></span>
+                            <span class="mk-pino mk-pino--seu" style="--x:48%; --y:42%"></span>
+                        </div>
+                        <div class="mk-ficha">
+                            <p class="mk-ficha__nome" data-i18n="mk.negocio">Your Business</p>
+                            <p class="mk-ficha__nota">4.9 <span class="mk-estrelas" aria-hidden="true">★★★★★</span> <span>(127)</span></p>
+                            <p class="mk-ficha__info" data-i18n="mk.aberto">Plumber · Open now</p>
+                            <div class="mk-acoes">
+                                <span class="mk-acao mk-acao--principal"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg><span data-i18n="mk.ligar">Call</span></span>
+                                <span class="mk-acao"><svg viewBox="0 0 24 24"><path d="m3 11 19-9-9 19-2-8-8-2Z"/></svg><span data-i18n="mk.rota">Directions</span></span>
+                                <span class="mk-acao"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg><span data-i18n="mk.site">Website</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="mk-aviso" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg><span data-i18n="mk.chamada">New call from Google</span></p>
+            </div>
+        </section>
+
+        <!-- DOR: sem e com site e perfil no Google -->
+        <section class="secao">
+            <div class="secao__cabeca">
+                <h2 data-i18n="lpw.dor.titulo">Every day you're not on Google, <span class="degrade">your competitor gets your calls.</span></h2>
+                <p data-i18n="lpw.dor.sub">Most people call the first business they find on Google. If that isn't you, it's someone else.</p>
+            </div>
+
+            <div class="comparar">
+                <div class="busca busca--sem revelar" style="--i:0" role="img" aria-label="Without a website and Google profile, people only see your competitors" data-i18n-aria="lpw.sem.aria">
+                    <p class="busca__rotulo" aria-hidden="true"><span>✗</span> <span data-i18n="mk.sem">Without a website and Google profile</span></p>
+                    <p class="mk-busca" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span data-i18n="mk.busca">plumber near me</span></p>
+                    <ul class="mk-resultados" aria-hidden="true">
+                        <li class="mk-resultado"><span class="mk-resultado__foto"></span><span><strong data-i18n="mk.concorrente1">Competitor A</strong><small>4.7 <span class="mk-estrelas" aria-hidden="true">★★★★★</span></small></span></li>
+                        <li class="mk-resultado"><span class="mk-resultado__foto"></span><span><strong data-i18n="mk.concorrente2">Competitor B</strong><small>4.5 <span class="mk-estrelas" aria-hidden="true">★★★★★</span></small></span></li>
+                        <li class="mk-resultado mk-resultado--vazio" data-i18n="mk.naoAchou">Your business isn't here</li>
+                    </ul>
+                </div>
+                <div class="busca busca--com revelar" style="--i:1" role="img" aria-label="With a website and Google profile, your business shows up first" data-i18n-aria="lpw.com.aria">
+                    <p class="busca__rotulo" aria-hidden="true"><span>✓</span> <span data-i18n="mk.com">With a website and Google profile</span></p>
+                    <p class="mk-busca" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span data-i18n="mk.busca">plumber near me</span></p>
+                    <ul class="mk-resultados" aria-hidden="true">
+                        <li class="mk-resultado mk-resultado--seu"><span class="mk-resultado__foto"></span><span><strong data-i18n="mk.negocio">Your Business</strong><small>4.9 <span class="mk-estrelas" aria-hidden="true">★★★★★</span></small></span><span class="mk-acao mk-acao--principal" data-i18n="mk.ligar">Call</span></li>
+                        <li class="mk-resultado"><span class="mk-resultado__foto"></span><span><strong data-i18n="mk.concorrente1">Competitor A</strong><small>4.7 <span class="mk-estrelas" aria-hidden="true">★★★★★</span></small></span></li>
+                        <li class="mk-resultado"><span class="mk-resultado__foto"></span><span><strong data-i18n="mk.concorrente2">Competitor B</strong><small>4.5 <span class="mk-estrelas" aria-hidden="true">★★★★★</span></small></span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dores lp-dores">
+                <div class="dor revelar" style="--i:0">
+                    <p class="dor__frase" data-i18n="lpw.d1.frase">"I only get customers by word of mouth."</p>
+                    <p data-i18n="lpw.d1.texto">Word of mouth is great, but it's slow. A website and a Google profile bring you new customers every week, even while you sleep.</p>
+                </div>
+                <div class="dor revelar" style="--i:1">
+                    <p class="dor__frase" data-i18n="lpw.d2.frase">"I have a Facebook page. Isn't that enough?"</p>
+                    <p data-i18n="lpw.d2.texto">People search on Google first. Without a website and a Maps profile, most of them never see your Facebook page.</p>
+                </div>
+                <div class="dor revelar" style="--i:2">
+                    <p class="dor__frase" data-i18n="lpw.d3.frase">"My old website looks outdated on phones."</p>
+                    <p data-i18n="lpw.d3.texto">Most people search on their phone. A clean, fast website makes them trust you and call you.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOLUÇÃO: site + perfil no Google, cada um com a sua imagem -->
+        <section class="secao">
+            <div class="secao__cabeca">
+                <h2 data-i18n="lpw.sol.titulo">Two tools that bring you customers</h2>
+                <p data-i18n="lpw.sol.sub">Your website shows you're the real deal. Your Google Business Profile puts you on the map. Together, they turn searches into calls.</p>
+            </div>
+
+            <div class="lp-bloco">
+                <div class="lp-bloco__imagem revelar" role="img" aria-label="Your business website on a phone and on a computer" data-i18n-aria="lpw.sol1.aria">
+                    <div class="janela janela--grande" aria-hidden="true">
+                        <div class="janela__barra"><span></span><span></span><span></span><p class="janela__url" data-i18n="mk.url">yourbusiness.com</p></div>
+                        <div class="janela__site">
+                            <div class="mk-site__topo"><span class="mk-site__logo"></span><span class="mk-linha mk-linha--curta"></span><span class="mk-site__ligar" data-i18n="mk.ligar">Call</span></div>
+                            <p class="mk-site__titulo" data-i18n="mk.siteTitulo">Fast, friendly plumbing</p>
+                            <span class="mk-linha"></span>
+                            <span class="mk-linha mk-linha--media"></span>
+                            <span class="mk-site__botao" data-i18n="mk.orcamento">Request a quote</span>
+                            <div class="mk-site__servicos"><span></span><span></span><span></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lp-bloco__texto revelar" style="--i:1">
+                    <span class="servico__icone"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg></span>
+                    <h3 data-i18n="lpw.sol1.titulo">A website that makes people call you</h3>
+                    <ul class="plano__lista">
+                        <li data-i18n="lpw.sol1.l1">Looks great on phones, where most people search</li>
+                        <li data-i18n="lpw.sol1.l2">Tap-to-call and "Request a quote" buttons</li>
+                        <li data-i18n="lpw.sol1.l3">Local SEO so people near you find you</li>
+                        <li data-i18n="lpw.sol1.l4">Your own address, like yourbusiness.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="lp-bloco lp-bloco--inverso">
+                <div class="lp-bloco__imagem revelar" role="img" aria-label="Your Google Business Profile with reviews, hours and a call button" data-i18n-aria="lpw.sol2.aria">
+                    <div class="perfil" aria-hidden="true">
+                        <div class="perfil__fotos"><span></span><span></span><span></span></div>
+                        <div class="perfil__corpo">
+                            <p class="mk-ficha__nome" data-i18n="mk.negocio">Your Business</p>
+                            <p class="mk-ficha__nota">4.9 <span class="mk-estrelas" aria-hidden="true">★★★★★</span> <span data-i18n="mk.avaliacoes">(127 reviews)</span></p>
+                            <p class="mk-ficha__info" data-i18n="mk.aberto">Plumber · Open now</p>
+                            <div class="mk-acoes">
+                                <span class="mk-acao mk-acao--principal" data-i18n="mk.ligar">Call</span>
+                                <span class="mk-acao" data-i18n="mk.rota">Directions</span>
+                                <span class="mk-acao" data-i18n="mk.site">Website</span>
+                            </div>
+                            <p class="perfil__linha"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-i18n="mk.horario">Open · Closes 6 PM</span></p>
+                            <p class="perfil__linha"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg><span class="mk-linha mk-linha--media"></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lp-bloco__texto revelar" style="--i:1">
+                    <span class="servico__icone"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+                    <h3 data-i18n="lpw.sol2.titulo">Your business on Google Maps</h3>
+                    <ul class="plano__lista">
+                        <li data-i18n="lpw.sol2.l1">Show up when people search near you</li>
+                        <li data-i18n="lpw.sol2.l2">Hours, phone, directions and photos in one place</li>
+                        <li data-i18n="lpw.sol2.l3">Ready to collect Google reviews from happy customers</li>
+                        <li class="plano__item-destaque" data-i18n="lpw.sol2.l4">Included in the Standard and Business plans</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- PLANOS -->
+        <section id="pricing" class="secao secao--planos">
+            <div class="secao__cabeca">
+                <h2 data-i18n="lpw.precos.titulo">Pick your plan</h2>
+                <p data-i18n="lpw.precos.sub">Fixed prices. Pay once, you own it. The Standard and Business plans already include your Google Business Profile setup.</p>
+            </div>
+
+            <div class="planos">
+                <article class="plano revelar" style="--i:0">
+                    <div class="plano__topo">
+                        <h3 data-i18n="p1.nome">Essential Page</h3>
+                        <p class="plano__para" data-i18n="p1.para">Perfect to get online fast</p>
+                    </div>
+                    <p class="plano__preco"><span class="plano__valor">$99</span><span class="plano__periodo" data-i18n="plano.unico">one-time</span></p>
+                    <ul class="plano__lista">
+                        <li data-i18n="p1.l1">1 custom page made for your business</li>
+                        <li data-i18n="plano.telas">Looks great on phones, tablets and computers</li>
+                        <li data-i18n="p1.l2">Tap-to-call, email and social media buttons</li>
+                        <li data-i18n="p1.l3">Up to 300 words and 3 photos</li>
+                        <li data-i18n="p1.l4">I can help write the text and pick photos</li>
+                        <li data-i18n="plano.revisoes">Unlimited revisions until you love it</li>
+                        <li data-i18n="p1.l5">Extra pages: $100 each</li>
+                    </ul>
+                    <button type="button" class="btn btn--primario btn--bloco" data-plano="essential" data-i18n="p1.btn">Get my page — $99</button>
+                    <p class="plano__erro" role="alert" hidden></p>
+                </article>
+
+                <article class="plano plano--destaque revelar" style="--i:1">
+                    <span class="plano__selo" data-i18n="p2.selo">Most popular</span>
+                    <div class="plano__topo">
+                        <h3 data-i18n="p2.nome">Standard Website</h3>
+                        <p class="plano__para" data-i18n="p2.para">Get found on Google and get more calls</p>
+                    </div>
+                    <p class="plano__preco"><span class="plano__valor">$499</span><span class="plano__periodo" data-i18n="plano.unico">one-time</span></p>
+                    <ul class="plano__lista">
+                        <li data-i18n="p2.l1">Up to 5 custom pages (Home, Services, About, Gallery, Contact…)</li>
+                        <li data-i18n="plano.telas">Looks great on phones, tablets and computers</li>
+                        <li data-i18n="p2.l2">Contact and "Request a quote" forms</li>
+                        <li data-i18n="p2.l3">Local SEO setup so people near you find you</li>
+                        <li data-i18n="p2.l5">Up to 1,500 words and 15 photos</li>
+                        <li data-i18n="plano.revisoes">Unlimited revisions until you love it</li>
+                        <li class="plano__item-destaque" data-i18n="p2.gmb">Includes Google Business Profile setup</li>
+                    </ul>
+                    <button type="button" class="btn btn--primario btn--bloco" data-plano="standard" data-i18n="p2.btn">Get my website — $499</button>
+                    <p class="plano__erro" role="alert" hidden></p>
+                </article>
+
+                <article class="plano revelar" style="--i:2">
+                    <div class="plano__topo">
+                        <h3 data-i18n="p3.nome">Business Website</h3>
+                        <p class="plano__para" data-i18n="p3.para">Sell your products online, 24/7</p>
+                    </div>
+                    <p class="plano__preco"><span class="plano__valor">$999</span><span class="plano__periodo" data-i18n="plano.unico">one-time</span></p>
+                    <ul class="plano__lista">
+                        <li data-i18n="p3.l1">Complete online store</li>
+                        <li data-i18n="p3.l2">Shopping cart and checkout</li>
+                        <li data-i18n="p3.l3">Accept credit cards, Stripe and PayPal</li>
+                        <li data-i18n="p3.l4">Inventory-ready product layout</li>
+                        <li data-i18n="p3.l5">Setup of 10 simple products or 5 with options (size, color)</li>
+                        <li data-i18n="p3.l6">Automatic order and receipt emails</li>
+                        <li data-i18n="plano.revisoes">Unlimited revisions until you love it</li>
+                        <li class="plano__item-destaque" data-i18n="p2.gmb">Includes Google Business Profile setup</li>
+                    </ul>
+                    <button type="button" class="btn btn--primario btn--bloco" data-plano="business" data-i18n="p3.btn">Get my store — $999</button>
+                    <p class="plano__erro" role="alert" hidden></p>
+                </article>
+            </div>
+
+            <div class="secao__cabeca secao__cabeca--extra">
+                <h2 data-i18n="lpw.extra.titulo">Already have a website?</h2>
+                <p data-i18n="lpw.extra.sub">Get just the Google Business Profile setup and start showing up on Google Maps.</p>
+            </div>
+
+            <div class="planos planos--um">
+                <article class="plano revelar" style="--i:0" id="gmb">
+                    <div class="plano__topo">
+                        <h3 data-i18n="gmb.nome">Google Business Profile</h3>
+                        <p class="plano__para" data-i18n="gmb.para">Show up on Google Maps when people search near you</p>
+                    </div>
+                    <p class="plano__preco"><span class="plano__valor">$199</span><span class="plano__periodo" data-i18n="plano.unico">one-time</span></p>
+                    <ul class="plano__lista">
+                        <li data-i18n="gmb.l1">Complete profile: hours, service areas and contact info</li>
+                        <li data-i18n="gmb.l2">The right main and extra categories for your business</li>
+                        <li data-i18n="gmb.l3">Photos, logo and description that match your brand</li>
+                        <li data-i18n="gmb.l4">Ready to collect Google reviews from happy customers</li>
+                        <li data-i18n="gmb.l5">30 days of free support after launch</li>
+                    </ul>
+                    <button type="button" class="btn btn--primario btn--bloco" data-plano="gmb" data-i18n="gmb.btn">Set up my profile — $199</button>
+                    <p class="plano__erro" role="alert" hidden></p>
+            </div>
+
+            <div class="stripe-faixa">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <p data-i18n="stripe.faixa"><strong>Secure payment by Stripe.</strong> Trusted by millions of businesses worldwide. Your card goes straight to Stripe — I never see it.</p>
+            </div>
+            <p class="planos__duvida" data-i18n="planos.duvida">Not sure which one fits you? <a href="#contact">Talk to me first</a> — it's free.</p>
+        </section>
+
+        <!-- COMO FUNCIONA -->
+        <section id="how" class="secao">
+            <div class="secao__cabeca">
+                <h2 data-i18n="como.titulo">How it works</h2>
+                <p data-i18n="lpw.como.sub">Four simple steps. You focus on your business, I handle the tech.</p>
+            </div>
+            <ol class="passos">
+                <li class="passo revelar" style="--i:0">
+                    <span class="passo__num">1</span>
+                    <h3 data-i18n="lpw.passo1.t">Choose your plan</h3>
+                    <p data-i18n="lpw.passo1.p">Pick a plan above and pay securely with Stripe. Not sure which one? Book a free call first.</p>
+                </li>
+                <li class="passo revelar" style="--i:1">
+                    <span class="passo__num">2</span>
+                    <h3 data-i18n="lpw.passo2.t">Send me your info</h3>
+                    <p data-i18n="lpw.passo2.p">Your business name, services, area, phone and a few photos. I help with the text.</p>
+                </li>
+                <li class="passo revelar" style="--i:2">
+                    <span class="passo__num">3</span>
+                    <h3 data-i18n="lpw.passo3.t">I build it, you review</h3>
+                    <p data-i18n="lpw.passo3.p">I send you a preview. You ask for changes until you love it.</p>
+                </li>
+                <li class="passo revelar" style="--i:3">
+                    <span class="passo__num">4</span>
+                    <h3 data-i18n="lpw.passo4.t">Go live on Google</h3>
+                    <p data-i18n="lpw.passo4.p">Your website goes live, your Google profile is ready, and customers start finding you.</p>
+                </li>
+            </ol>
+        </section>
+
+        <!-- SOBRE + VÍDEO -->
+        <section id="about" class="secao">
+            <div class="sobre">
+                <div class="sobre__video revelar" id="video"></div>
+                <div class="sobre__texto revelar" style="--i:1">
+                    <p class="selo selo--pequeno" data-i18n="sobre.selo">Who's building it</p>
+                    <h2 data-i18n="sobre.titulo">Hi, I'm Stanley Andrade</h2>
+                    <p data-i18n="sobre.p1">
+                        I'm a Software Engineer with <strong>more than 5 years</strong> of experience building apps, systems and websites.
+                        I work with business owners in <strong>Brazil</strong> and the <strong>United States</strong>, and I've helped several companies.
+                    </p>
+                    <p data-i18n="sobre.p2">
+                        You talk directly to me — no sales team, no middleman. I keep things simple,
+                        explain everything in plain words and make sure you're happy before we finish.
+                    </p>
+                    <ul class="sobre__numeros">
+                        <li data-i18n="sobre.n1"><strong>5+ years</strong><span>building software</span></li>
+                        <li data-i18n="sobre.n2"><strong>2 countries</strong><span>Brazil, US</span></li>
+                        <li data-i18n="sobre.n3"><strong>1 person</strong><span>you talk to</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- DÚVIDAS -->
+        <section id="faq" class="secao">
+            <div class="secao__cabeca">
+                <h2 data-i18n="faq.titulo">Questions people ask me</h2>
+            </div>
+            <div class="faq">
+                <details class="faq__item">
+                    <summary data-i18n="lpw.faq.q1">Is there a monthly fee?</summary>
+                    <p data-i18n="lpw.faq.a1">No. You pay once and the website is yours. The only yearly cost is your domain name (like yourbusiness.com), usually around $12–20 per year, paid to the registrar and registered in your name.</p>
+                </details>
+                <details class="faq__item">
+                    <summary data-i18n="lpw.faq.q2">What is a Google Business Profile?</summary>
+                    <p data-i18n="lpw.faq.a2">It's the free listing that shows your business on Google Search and Google Maps, with your hours, phone, address, photos and reviews. It's often the first thing people see before they call you.</p>
+                </details>
+                <details class="faq__item">
+                    <summary data-i18n="lpw.faq.q3">I already have a website. Can I get just the Google profile?</summary>
+                    <p data-i18n="lpw.faq.a3">Yes. The Google Business Profile setup alone is $199, one-time. It also comes included in the Standard and Business website plans.</p>
+                </details>
+                <details class="faq__item">
+                    <summary data-i18n="lpw.faq.q4">What do I need to send you?</summary>
+                    <p data-i18n="lpw.faq.a4">Your business name, what you do, the area you serve, your phone and email. Photos and a logo help, but I can help with that too.</p>
+                </details>
+                <details class="faq__item">
+                    <summary data-i18n="lpw.faq.q5">How long does it take?</summary>
+                    <p data-i18n="lpw.faq.a5">It depends on the plan and on how fast you send me your info. After our first talk, I'll give you a clear date.</p>
+                </details>
+                <details class="faq__item">
+                    <summary data-i18n="lpw.faq.q6">What if I don't like it?</summary>
+                    <p data-i18n="lpw.faq.a6">Every website plan comes with unlimited revisions. I adjust it until you love it.</p>
+                </details>
+                <details class="faq__item">
+                    <summary data-i18n="faq.q6">Is it safe to pay on your website?</summary>
+                    <p data-i18n="faq.a6">Yes. Payments are processed by Stripe, one of the most trusted payment companies in the world. Your card details go straight to Stripe — I never see them.</p>
+                </details>
+                <details class="faq__item">
+                    <summary data-i18n="faq.q7">You're not in the US. Is that okay?</summary>
+                    <p data-i18n="faq.a7">Yes. I already work with clients in the United States and Brazil. We talk by email, chat, WhatsApp or video call, at a time that works for you.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- CHAMADA FINAL -->
+        <section class="secao">
+            <div class="lp-final revelar">
+                <h2 data-i18n="lpw.final.titulo">Customers are searching right now. Make sure they find you.</h2>
+                <p data-i18n="lpw.final.sub">Pick your plan today, or book a free call if you have questions first.</p>
+                <div class="hero__acoes">
+                    <a class="btn lp-final__btn" href="#pricing" data-i18n="lpw.cta.planos">See plans and prices</a>
+                    <a class="btn lp-final__btn lp-final__btn--contorno" href="#contact" data-i18n="hero.btn2">Book a free call</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section id="contact" class="secao">
+            <div class="secao__cabeca">
+                <h2 data-i18n="contato.titulo">Let's talk</h2>
+                <p data-i18n="contato.sub">Have a project in mind or a question before you buy? Reach me the way you like. I usually reply within a few hours.</p>
+            </div>
+            <div class="contatos">
+                <a class="contato revelar" style="--i:0" id="contato-agenda" href="#" target="_blank" rel="noopener">
+                    <span class="contato__icone"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+                    <span><strong data-i18n="contato.agenda">Book a free call</strong><small data-i18n="contato.agenda.sub">Google Meet · pick a day and time</small></span>
+                </a>
+                <a class="contato revelar" style="--i:1" id="contato-email" href="mailto:stanleyclientes@gmail.com?subject=Project%20for%20my%20business">
+                    <span class="contato__icone"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+                    <span><strong data-i18n="contato.email">Email</strong><small>stanleyclientes@gmail.com</small></span>
+                </a>
+                <a class="contato revelar" style="--i:2" id="contato-whatsapp" href="https://wa.me/5521992002356?text=Hi%20Stanley!%20I%27d%20like%20to%20talk%20about%20a%20project%20for%20my%20business." target="_blank" rel="noopener">
+                    <span class="contato__icone contato__icone--zap"><svg viewBox="0 0 24 24"><path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.3Z"/><path d="M9 10c0 3 2 5 5 5l1.2-1.2-2-1-1 .8c-1-.4-1.8-1.2-2.2-2.2l.8-1-1-2Z"/></svg></span>
+                    <span><strong>WhatsApp</strong><small>+55 21 99200-2356</small></span>
+                </a>
+                <a class="contato revelar" style="--i:3" href="https://t.me/+5521992002356" target="_blank" rel="noopener">
+                    <span class="contato__icone contato__icone--telegram"><svg viewBox="0 0 24 24"><path d="m22 3-20 8 7 3 3 7 10-18Z"/><path d="m9 14 13-11"/></svg></span>
+                    <span><strong>Telegram</strong><small>+55 21 99200-2356</small></span>
+                </a>
+                <button type="button" class="contato revelar" style="--i:4" id="contato-chat">
+                    <span class="contato__icone"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12Z"/></svg></span>
+                    <span><strong data-i18n="contato.chat">Live chat</strong><small data-i18n="contato.chat.sub">Chat with me right here</small></span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>© <span id="ano">2026</span> Stanley Andrade · <span data-i18n="rodape.cargo">Software Engineer</span></p>
+        <p><span data-i18n="rodape.stripe">Secure payments by Stripe</span> · <a href="mailto:stanleyclientes@gmail.com">stanleyclientes@gmail.com</a></p>
+    </footer>
+
+    <script src="../i18n.js"></script>
+    <script src="website-google.i18n.js"></script>
+    <script src="../app.js"></script>
+</body>
+</html>

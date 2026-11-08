@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stanley Andrade · Apps, Software and Websites for Your Business</title>
-    <meta name="description" content="Software Engineer with 5+ years of experience. Android and iOS apps, custom software, websites and more for businesses in the US and Brazil. Free call, clear quote, secure payment by Stripe.">
+    <title>Stanley Andrade · Full Stack Developer</title>
+    <meta name="description" content="Stanley Andrade, Full Stack Developer with 5 years of experience: Java, Spring Boot, Node.js, Fastify, MongoDB, React, React Native and Flutter. SaaS products with paying customers, cloud servers and CI/CD.">
     <meta name="theme-color" content="#2f5bea">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Apps, software and websites for your business">
-    <meta property="og:description" content="Hi, I'm Stanley Andrade, a Software Engineer with 5+ years of experience. I build Android and iOS apps, custom software and websites that help your business grow.">
+    <meta property="og:title" content="Stanley Andrade · Full Stack Developer">
+    <meta property="og:description" content="Full Stack Developer with 5 years of experience building web applications, SaaS products and mobile apps, from requirements to production.">
 
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%234f7cff'/%3E%3Cstop offset='1' stop-color='%232340c9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3ESA%3C/text%3E%3C/svg%3E">
 
@@ -37,13 +37,25 @@
                 <span class="marca__nome">Stanley Andrade</span>
             </a>
             <nav class="topo__nav" aria-label="Main">
-                <a href="#services" data-i18n="nav.services">Services</a>
-                <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
-                <a href="#how" data-i18n="nav.how">How it works</a>
                 <a href="#about" data-i18n="nav.about">About me</a>
-                <a href="#faq" data-i18n="nav.faq">FAQ</a>
+                <a href="#experience" data-i18n="nav.experience">Experience</a>
+                <a href="#projects" data-i18n="nav.projects">Projects</a>
+                <a href="#skills" data-i18n="nav.skills">Skills</a>
                 <a href="#contact" data-i18n="nav.contact">Contact</a>
             </nav>
+            <details class="menu-servicos">
+                <summary aria-label="Services" data-i18n-aria="menu.servicos">
+                    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+                    <span class="menu-servicos__texto" data-i18n="menu.servicos">Services</span>
+                    <svg class="menu-servicos__seta" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+                </summary>
+                <div class="menu-servicos__lista">
+                    <a href="pages/services.html"><strong data-i18n="menu.todos">All services</strong><small data-i18n="menu.todos.sub">Apps, software, websites and more</small></a>
+                    <a href="pages/website-google.html"><strong data-i18n="menu.site">Websites + Google Business Profile</strong><small data-i18n="menu.site.sub">Get found on Google and Maps</small></a>
+                    <a href="pages/apps.html"><strong data-i18n="menu.apps">Android &amp; iPhone apps</strong><small data-i18n="menu.apps.sub">Bookings, orders and payments</small></a>
+                    <a href="pages/software.html"><strong data-i18n="menu.software">Custom software</strong><small data-i18n="menu.software.sub">Systems, reports and automations</small></a>
+                </div>
+            </details>
             <div class="tema idioma" role="group" aria-label="Language" data-i18n-aria="aria.idioma">
                 <button type="button" class="tema__btn idioma__btn" data-idioma="en" lang="en" aria-label="English" title="English">EN</button>
                 <button type="button" class="tema__btn idioma__btn" data-idioma="es" lang="es" aria-label="Español" title="Español">ES</button>
@@ -67,372 +79,227 @@
     </header>
 
     <main id="top">
-        <div id="aviso-checkout" class="aviso" role="status" hidden></div>
-
-        <!-- HERO: apresentação do Stanley, os serviços vêm logo em seguida -->
-        <section class="hero">
-            <p class="selo"><span class="selo__ponto"></span> <span data-i18n="hero.selo">Hi, I'm Stanley Andrade · Software Engineer</span></p>
-            <h1 class="hero__titulo" data-i18n="hero.titulo">Apps, software and websites <span class="degrade">that make your business grow.</span></h1>
-            <p class="hero__texto" data-i18n="hero.texto">
-                I've been building software for <strong>more than 5 years</strong>, with clients in <strong>Brazil</strong> and the <strong>United States</strong>,
-                and I've helped several companies save time, look professional and win more customers.
-                You talk directly to me: no sales team, no middleman.
-            </p>
-            <div class="hero__acoes">
-                <a class="btn btn--primario" href="#services" data-i18n="hero.btn1">See what I build</a>
-                <a class="btn btn--contorno" href="#contact" data-i18n="hero.btn2">Book a free call</a>
+        <!-- HERO: quem é, cargo e o resumo do currículo -->
+        <section class="lp-hero">
+            <div class="lp-hero__texto">
+                <p class="selo"><span class="selo__ponto"></span> <span data-i18n="pf.hero.selo">Open to work · Full Stack Developer</span></p>
+                <h1 class="hero__titulo" data-i18n="pf.hero.titulo">Hi, I'm Stanley Andrade. <span class="degrade">Full Stack Developer.</span></h1>
+                <p class="hero__texto" data-i18n="pf.hero.texto">
+                    I build web applications, SaaS products and mobile apps for real clients — with a strong
+                    <strong>Java (Spring Boot), Node.js and MongoDB</strong> backend and <strong>React, React Native and Flutter</strong> on the front.
+                    I own projects end to end, from requirements to production.
+                </p>
+                <div class="hero__acoes">
+                    <a class="btn btn--primario" href="stanley-andrade-resume.pdf" download data-i18n="pf.btn.curriculo">Download resume</a>
+                    <a class="btn btn--contorno" href="#contact" data-i18n="pf.btn.contato">Contact me</a>
+                </div>
+                <ul class="pf-redes">
+                    <li><a href="https://github.com/StanleyAndrade" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.3 6.4-1.5 6.4-7a5.4 5.4 0 0 0-1.5-3.8 5 5 0 0 0-.1-3.8s-1.2-.3-3.9 1.5a13.4 13.4 0 0 0-7 0C6.3 1.6 5.1 1.9 5.1 1.9A5 5 0 0 0 5 5.7a5.4 5.4 0 0 0-1.5 3.8c0 5.4 3.3 6.6 6.4 7a3.4 3.4 0 0 0-.9 2.6V22"/></svg></a></li>
+                    <li><a href="https://linkedin.com/in/stanleyandrade" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></li>
+                    <li class="pf-redes__local"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg><span data-i18n="pf.hero.local">Rio de Janeiro, Brazil · Open to remote work</span></li>
+                </ul>
             </div>
-            <ul class="hero__garantias">
-                <li data-i18n="hero.g1">Free quote, no obligation</li>
-                <li data-i18n="hero.g2">Secure payment by Stripe</li>
+
+            <div class="vitrine vitrine--codigo" role="img" aria-label="Code of an API route written in Node.js with Fastify" data-i18n-aria="pf.vitrine.aria">
+                <div class="janela" aria-hidden="true">
+                    <div class="janela__barra"><span></span><span></span><span></span><p class="janela__url">appointment.routes.js</p></div>
+                    <pre class="codigo"><code><span class="codigo__comentario">// Fastify · MVC · multi-tenant</span>
+<span class="codigo__palavra">export default async function</span> <span class="codigo__funcao">routes</span>(app) {
+  app.<span class="codigo__funcao">post</span>(<span class="codigo__texto">'/api/appointments'</span>, {
+    preHandler: [app.<span class="codigo__funcao">authenticate</span>],
+  }, <span class="codigo__palavra">async</span> (req) =&gt; {
+    <span class="codigo__palavra">const</span> data = <span class="codigo__palavra">await</span> service.<span class="codigo__funcao">create</span>(
+      req.user.tenantId, req.body,
+    )
+    <span class="codigo__palavra">return</span> { success: <span class="codigo__palavra">true</span>, data }
+  })
+}</code></pre>
+                </div>
+                <p class="mk-aviso" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></svg><span data-i18n="pf.vitrine.aviso">Deployed to production</span></p>
+            </div>
+        </section>
+
+        <!-- NÚMEROS -->
+        <section class="secao pf-numeros-secao">
+            <ul class="pf-numeros">
+                <li class="revelar" style="--i:0" data-i18n="pf.n1"><strong>5 years</strong><span>building software for real clients</span></li>
+                <li class="revelar" style="--i:1" data-i18n="pf.n2"><strong>2 SaaS products</strong><span>live, with paying customers</span></li>
+                <li class="revelar" style="--i:2" data-i18n="pf.n3"><strong>End to end</strong><span>from requirements to production</span></li>
             </ul>
         </section>
 
-        <!-- SERVIÇOS -->
-        <section id="services" class="secao">
-            <div class="secao__cabeca">
-                <h2 data-i18n="serv.titulo">What I can build for you</h2>
-                <p data-i18n="serv.sub">From a mobile app to a full system. One person, one conversation, everything in one place.</p>
-            </div>
-            <div class="servicos">
-                <article class="servico servico--destaque revelar" style="--i:0">
-                    <span class="servico__icone"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg></span>
-                    <h3 data-i18n="sv1.nome">Android &amp; iOS apps</h3>
-                    <p class="servico__para" data-i18n="sv1.para">Put your business in your customers' pocket.</p>
-                    <ul class="servico__lista">
-                        <li data-i18n="sv1.l1">One app that works on Android and iPhone</li>
-                        <li data-i18n="sv1.l2">Published on Google Play and the App Store</li>
-                        <li data-i18n="sv1.l3">Bookings, orders, payments, notifications and more</li>
-                    </ul>
-                    <a class="btn btn--primario btn--bloco" href="#contact" data-i18n="serv.orcamento">Get a free quote</a>
-                </article>
-
-                <article class="servico servico--destaque revelar" style="--i:1">
-                    <span class="servico__icone"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M7 9l2 2-2 2M12 13h4"/></svg></span>
-                    <h3 data-i18n="sv2.nome">Custom software</h3>
-                    <p class="servico__para" data-i18n="sv2.para">Stop doing everything by hand. Let a system do it.</p>
-                    <ul class="servico__lista">
-                        <li data-i18n="sv2.l1">Management systems for customers, orders, schedules and stock</li>
-                        <li data-i18n="sv2.l2">Dashboards, reports and automations that save hours</li>
-                        <li data-i18n="sv2.l3">Online payments and connections with the tools you already use</li>
-                    </ul>
-                    <a class="btn btn--primario btn--bloco" href="#contact" data-i18n="serv.orcamento">Get a free quote</a>
-                </article>
-
-                <article class="servico revelar" style="--i:2">
-                    <span class="servico__icone"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg></span>
-                    <h3 data-i18n="sv3.nome">Websites and online stores</h3>
-                    <p class="servico__para" data-i18n="sv3.para">Be found on Google and look professional.</p>
-                    <p class="servico__preco" data-i18n="sv3.preco">From $99 · one-time</p>
-                    <a class="btn btn--contorno btn--bloco" href="#pricing" data-i18n="sv3.btn">See website plans</a>
-                </article>
-
-                <article class="servico revelar" style="--i:3">
-                    <span class="servico__icone"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
-                    <h3 data-i18n="sv4.nome">Google Business Profile</h3>
-                    <p class="servico__para" data-i18n="sv4.para">Show up on Google Maps when people search near you.</p>
-                    <p class="servico__preco" data-i18n="sv4.preco">$199 · one-time</p>
-                    <a class="btn btn--contorno btn--bloco" href="#extra" data-i18n="sv4.btn">See details</a>
-                </article>
-
-                <article class="servico revelar" style="--i:4">
-                    <span class="servico__icone"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></span>
-                    <h3 data-i18n="sv5.nome">Website monitoring</h3>
-                    <p class="servico__para" data-i18n="sv5.para">Know right away if your website goes down.</p>
-                    <p class="servico__preco" data-i18n="sv5.preco">$19 / month · cancel anytime</p>
-                    <a class="btn btn--contorno btn--bloco" href="#extra" data-i18n="sv5.btn">See details</a>
-                </article>
-            </div>
-            <p class="planos__duvida" data-i18n="serv.duvida">Every app and system is different, so I send you a <strong>clear, fixed quote</strong> after a free call. No surprise charges.</p>
-        </section>
-
-        <!-- PLANOS -->
-        <section id="pricing" class="secao secao--planos">
-            <div class="secao__cabeca">
-                <h2 data-i18n="precos.titulo">Website plans</h2>
-                <p data-i18n="precos.sub">Fixed prices. Pay once, you own it. I handle the tech, you handle your customers.</p>
-            </div>
-
-            <div class="planos">
-                <article class="plano revelar" style="--i:0">
-                    <div class="plano__topo">
-                        <h3 data-i18n="p1.nome">Essential Page</h3>
-                        <p class="plano__para" data-i18n="p1.para">Perfect to get online fast</p>
-                    </div>
-                    <p class="plano__preco"><span class="plano__valor">$99</span><span class="plano__periodo" data-i18n="plano.unico">one-time</span></p>
-                    <ul class="plano__lista">
-                        <li data-i18n="p1.l1">1 custom page made for your business</li>
-                        <li data-i18n="plano.telas">Looks great on phones, tablets and computers</li>
-                        <li data-i18n="p1.l2">Tap-to-call, email and social media buttons</li>
-                        <li data-i18n="p1.l3">Up to 300 words and 3 photos</li>
-                        <li data-i18n="p1.l4">I can help write the text and pick photos</li>
-                        <li data-i18n="plano.revisoes">Unlimited revisions until you love it</li>
-                        <li data-i18n="p1.l5">Extra pages: $100 each</li>
-                    </ul>
-                    <button type="button" class="btn btn--primario btn--bloco" data-plano="essential" data-i18n="p1.btn">Get my page — $99</button>
-                    <p class="plano__erro" role="alert" hidden></p>
-                </article>
-
-                <article class="plano plano--destaque revelar" style="--i:1">
-                    <span class="plano__selo" data-i18n="p2.selo">Most popular</span>
-                    <div class="plano__topo">
-                        <h3 data-i18n="p2.nome">Standard Website</h3>
-                        <p class="plano__para" data-i18n="p2.para">Get found on Google and get more calls</p>
-                    </div>
-                    <p class="plano__preco"><span class="plano__valor">$499</span><span class="plano__periodo" data-i18n="plano.unico">one-time</span></p>
-                    <ul class="plano__lista">
-                        <li data-i18n="p2.l1">Up to 5 custom pages (Home, Services, About, Gallery, Contact…)</li>
-                        <li data-i18n="plano.telas">Looks great on phones, tablets and computers</li>
-                        <li data-i18n="p2.l2">Contact and "Request a quote" forms</li>
-                        <li data-i18n="p2.l3">Local SEO setup so people near you find you</li>
-                        <li data-i18n="p2.l5">Up to 1,500 words and 15 photos</li>
-                        <li data-i18n="plano.revisoes">Unlimited revisions until you love it</li>
-                        <li class="plano__item-destaque" data-i18n="p2.gmb">Includes Google Business Profile setup</li>
-                    </ul>
-                    <button type="button" class="btn btn--primario btn--bloco" data-plano="standard" data-i18n="p2.btn">Get my website — $499</button>
-                    <p class="plano__erro" role="alert" hidden></p>
-                </article>
-
-                <article class="plano revelar" style="--i:2">
-                    <div class="plano__topo">
-                        <h3 data-i18n="p3.nome">Business Website</h3>
-                        <p class="plano__para" data-i18n="p3.para">Sell your products online, 24/7</p>
-                    </div>
-                    <p class="plano__preco"><span class="plano__valor">$999</span><span class="plano__periodo" data-i18n="plano.unico">one-time</span></p>
-                    <ul class="plano__lista">
-                        <li data-i18n="p3.l1">Complete online store</li>
-                        <li data-i18n="p3.l2">Shopping cart and checkout</li>
-                        <li data-i18n="p3.l3">Accept credit cards, Stripe and PayPal</li>
-                        <li data-i18n="p3.l4">Inventory-ready product layout</li>
-                        <li data-i18n="p3.l5">Setup of 10 simple products or 5 with options (size, color)</li>
-                        <li data-i18n="p3.l6">Automatic order and receipt emails</li>
-                        <li data-i18n="plano.revisoes">Unlimited revisions until you love it</li>
-                        <li class="plano__item-destaque" data-i18n="p2.gmb">Includes Google Business Profile setup</li>
-                    </ul>
-                    <button type="button" class="btn btn--primario btn--bloco" data-plano="business" data-i18n="p3.btn">Get my store — $999</button>
-                    <p class="plano__erro" role="alert" hidden></p>
-                </article>
-            </div>
-
-            <div id="extra" class="secao__cabeca secao__cabeca--extra">
-                <h2 data-i18n="extra.titulo">More ways to grow</h2>
-                <p data-i18n="extra.sub">Show up on Google Maps and keep your website up and running.</p>
-            </div>
-
-            <div class="planos planos--dois">
-                <article class="plano revelar" style="--i:0">
-                    <div class="plano__topo">
-                        <h3 data-i18n="gmb.nome">Google Business Profile</h3>
-                        <p class="plano__para" data-i18n="gmb.para">Show up on Google Maps when people search near you</p>
-                    </div>
-                    <p class="plano__preco"><span class="plano__valor">$199</span><span class="plano__periodo" data-i18n="plano.unico">one-time</span></p>
-                    <ul class="plano__lista">
-                        <li data-i18n="gmb.l1">Complete profile: hours, service areas and contact info</li>
-                        <li data-i18n="gmb.l2">The right main and extra categories for your business</li>
-                        <li data-i18n="gmb.l3">Photos, logo and description that match your brand</li>
-                        <li data-i18n="gmb.l4">Ready to collect Google reviews from happy customers</li>
-                        <li data-i18n="gmb.l5">30 days of free support after launch</li>
-                    </ul>
-                    <button type="button" class="btn btn--primario btn--bloco" data-plano="gmb" data-i18n="gmb.btn">Set up my profile — $199</button>
-                    <p class="plano__erro" role="alert" hidden></p>
-                </article>
-
-                <article class="plano revelar" style="--i:1">
-                    <div class="plano__topo">
-                        <h3 data-i18n="sf.nome">ServerFall Website Monitoring</h3>
-                        <p class="plano__para" data-i18n="sf.para">Know right away if your website goes down</p>
-                    </div>
-                    <p class="plano__preco"><span class="plano__valor">$19</span><span class="plano__periodo" data-i18n="sf.periodo">/ month</span></p>
-                    <ul class="plano__lista">
-                        <li data-i18n="sf.l1">Your website checked every minute, 24/7</li>
-                        <li data-i18n="sf.l2">Instant alert when it goes down or gets slow</li>
-                        <li data-i18n="sf.l3">Reminders before your domain and SSL expire</li>
-                        <li data-i18n="sf.l4">Simple dashboard to see everything in one place</li>
-                        <li data-i18n="sf.l5">Cancel anytime</li>
-                    </ul>
-                    <button type="button" class="btn btn--primario btn--bloco" data-plano="serverfall" data-i18n="sf.btn">Start monitoring — $19/mo</button>
-                    <p class="plano__erro" role="alert" hidden></p>
-                    <a class="plano__link" href="https://serverfall.vercel.app/" target="_blank" rel="noopener" data-i18n="sf.link">Learn more about ServerFall →</a>
-                </article>
-            </div>
-
-            <div class="stripe-faixa">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                <p data-i18n="stripe.faixa"><strong>Secure payment by Stripe.</strong> Trusted by millions of businesses worldwide. Your card goes straight to Stripe — I never see it.</p>
-            </div>
-            <p class="planos__duvida" data-i18n="planos.duvida">Not sure which one fits you? <a href="#contact">Talk to me first</a> — it's free.</p>
-        </section>
-
-        <!-- DOR -->
-        <section class="secao">
-            <div class="secao__cabeca">
-                <h2 data-i18n="dores.titulo">Sound familiar?</h2>
-                <p data-i18n="dores.sub">Most small business owners I talk to say the same things.</p>
-            </div>
-            <div class="dores">
-                <div class="dor revelar" style="--i:0">
-                    <p class="dor__frase" data-i18n="d1.frase">"I do everything by hand, in spreadsheets and messages."</p>
-                    <p data-i18n="d1.texto">A custom system keeps orders, bookings, customers and reports in one place, and does the boring work for you.</p>
-                </div>
-                <div class="dor revelar" style="--i:1">
-                    <p class="dor__frase" data-i18n="d2.frase">"My customers keep asking if I have an app."</p>
-                    <p data-i18n="d2.texto">An Android and iPhone app puts your business one tap away from them, with bookings, orders and notifications.</p>
-                </div>
-                <div class="dor revelar" style="--i:2">
-                    <p class="dor__frase" data-i18n="d3.frase">"Off-the-shelf software doesn't fit how I work."</p>
-                    <p data-i18n="d3.texto">I build it around your business, not the other way around. You get exactly what you need, nothing extra.</p>
-                </div>
-                <div class="dor revelar" style="--i:3">
-                    <p class="dor__frase" data-i18n="d4.frase">"People search for me and can't find me."</p>
-                    <p data-i18n="d4.texto">A clean website and a complete Google Maps profile show you're the real deal, right when customers are looking.</p>
-                </div>
-                <div class="dor revelar" style="--i:4">
-                    <p class="dor__frase" data-i18n="d5.frase">"Agencies want tens of thousands of dollars."</p>
-                    <p data-i18n="d5.texto">You work directly with one engineer. Fair prices, a clear quote before we start and no long contracts.</p>
-                </div>
-                <div class="dor revelar" style="--i:5">
-                    <p class="dor__frase" data-i18n="d6.frase">"I don't have time for tech stuff."</p>
-                    <p data-i18n="d6.texto">You don't need to. You tell me what you need, I do the rest and keep you in the loop.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- COMO FUNCIONA -->
-        <section id="how" class="secao">
-            <div class="secao__cabeca">
-                <h2 data-i18n="como.titulo">How it works</h2>
-                <p data-i18n="como.sub">Four simple steps. No meetings you don't need.</p>
-            </div>
-            <ol class="passos">
-                <li class="passo revelar" style="--i:0">
-                    <span class="passo__num">1</span>
-                    <h3 data-i18n="passo1.t">Tell me what you need</h3>
-                    <p data-i18n="passo1.p">Book a free call or send me a message. Tell me about your business and your idea.</p>
-                </li>
-                <li class="passo revelar" style="--i:1">
-                    <span class="passo__num">2</span>
-                    <h3 data-i18n="passo2.t">Get a clear price</h3>
-                    <p data-i18n="passo2.p">Websites and extras have fixed prices on this page. For apps and software I send a fixed quote. Pay securely with Stripe.</p>
-                </li>
-                <li class="passo revelar" style="--i:2">
-                    <span class="passo__num">3</span>
-                    <h3 data-i18n="passo3.t">I build it, you review</h3>
-                    <p data-i18n="passo3.p">I send you a preview or a test version along the way. You ask for changes until it's right.</p>
-                </li>
-                <li class="passo revelar" style="--i:3">
-                    <span class="passo__num">4</span>
-                    <h3 data-i18n="passo4.t">Launch and grow</h3>
-                    <p data-i18n="passo4.p">Your app, system or website goes live and starts saving you time and bringing customers.</p>
-                </li>
-            </ol>
-        </section>
-
-        <!-- SOBRE + VÍDEO -->
+        <!-- SOBRE -->
         <section id="about" class="secao">
-            <div class="sobre">
-                <div class="sobre__video revelar" id="video"></div>
-                <div class="sobre__texto revelar" style="--i:1">
-                    <p class="selo selo--pequeno" data-i18n="sobre.selo">Who's building it</p>
-                    <h2 data-i18n="sobre.titulo">Hi, I'm Stanley Andrade</h2>
-                    <p data-i18n="sobre.p1">
-                        I'm a Software Engineer with <strong>more than 5 years</strong> of experience building apps, systems and websites.
-                        I work with business owners in <strong>Brazil</strong> and the <strong>United States</strong>, and I've helped several companies.
-                    </p>
-                    <p data-i18n="sobre.p2">
-                        You talk directly to me — no sales team, no middleman. I keep things simple,
-                        explain everything in plain words and make sure you're happy before we finish.
-                    </p>
-                    <ul class="sobre__numeros">
-                        <li data-i18n="sobre.n1"><strong>5+ years</strong><span>building software</span></li>
-                        <li data-i18n="sobre.n2"><strong>2 countries</strong><span>Brazil, US</span></li>
-                        <li data-i18n="sobre.n3"><strong>1 person</strong><span>you talk to</span></li>
-                    </ul>
-                </div>
+            <div class="secao__cabeca">
+                <h2 data-i18n="pf.sobre.titulo">About me</h2>
+            </div>
+            <div class="pf-cartao pf-sobre revelar">
+                <p data-i18n="pf.sobre.p1">
+                    I'm a <strong>Full Stack Developer with 5 years of experience</strong> building web applications and SaaS products for real clients.
+                    My strongest side is the backend: <strong>Java with Spring Boot, Node.js (Express, Fastify) and MongoDB</strong>, with REST APIs, authentication and third-party integrations.
+                </p>
+                <p data-i18n="pf.sobre.p2">
+                    On the frontend and mobile side I work with <strong>React, TypeScript, React Native and Flutter</strong>.
+                    I also set up and maintain cloud servers (AWS, OVHcloud, Hostinger) and CI/CD pipelines with GitHub Actions.
+                </p>
+                <p data-i18n="pf.sobre.p3">
+                    I'm used to owning projects end to end: talking to the client, understanding the business, building, deploying and keeping it running in production.
+                </p>
             </div>
         </section>
 
-        <!-- DÚVIDAS -->
-        <section id="faq" class="secao">
+        <!-- EXPERIÊNCIA -->
+        <section id="experience" class="secao">
             <div class="secao__cabeca">
-                <h2 data-i18n="faq.titulo">Questions people ask me</h2>
+                <h2 data-i18n="pf.exp.titulo">Experience</h2>
             </div>
-            <div class="faq">
-                <details class="faq__item">
-                    <summary data-i18n="faq.q1">Is the price really one-time?</summary>
-                    <p data-i18n="faq.a1">Yes. The website plans and the Google Business Profile setup are a one-time payment. The only monthly plan on this page is ServerFall Monitoring ($19/month), and it's optional. You can cancel it anytime.</p>
-                </details>
-                <details class="faq__item">
-                    <summary data-i18n="faq.q8">How much does an app or custom software cost?</summary>
-                    <p data-i18n="faq.a8">It depends on what it needs to do. After a free call I send you a clear, fixed quote, so you know the full price before we start. No surprise charges.</p>
-                </details>
-                <details class="faq__item">
-                    <summary data-i18n="faq.q9">Do I get one app for both Android and iPhone?</summary>
-                    <p data-i18n="faq.a9">Yes. I build one app that works on both and help you publish it on Google Play and the App Store. The store accounts (Google Play and Apple Developer) are created in your name, so the app is always yours.</p>
-                </details>
-                <details class="faq__item">
-                    <summary data-i18n="faq.q2">What do I need to send you?</summary>
-                    <p data-i18n="faq.a2">For an app or system, a simple description of your idea or of what you do by hand today is enough. I ask the right questions. For a website: your business name, what you do, the area you serve, your phone and email. Photos and a logo help, but I can help with that too.</p>
-                </details>
-                <details class="faq__item">
-                    <summary data-i18n="faq.q3">I don't have a domain name (like mybusiness.com). Is that a problem?</summary>
-                    <p data-i18n="faq.a3">Not at all. I'll help you choose and set up your domain. The domain itself is paid to the registrar (usually around $12–20 per year) and it's registered in your name, so it's always yours.</p>
-                </details>
-                <details class="faq__item">
-                    <summary data-i18n="faq.q4">How long does it take?</summary>
-                    <p data-i18n="faq.a4">It depends on the project and on how fast you send me your info. A one-page website is the quickest; apps and systems take longer. After our first talk, I'll give you a clear date.</p>
-                </details>
-                <details class="faq__item">
-                    <summary data-i18n="faq.q5">What if I don't like it?</summary>
-                    <p data-i18n="faq.a5">Every website plan comes with unlimited revisions. For apps and software, you review it along the way and I adjust it before launch, until you're happy with it.</p>
-                </details>
-                <details class="faq__item">
-                    <summary data-i18n="faq.q6">Is it safe to pay on your website?</summary>
-                    <p data-i18n="faq.a6">Yes. Payments are processed by Stripe, one of the most trusted payment companies in the world. Your card details go straight to Stripe — I never see them.</p>
-                </details>
-                <details class="faq__item">
-                    <summary data-i18n="faq.q7">You're not in the US. Is that okay?</summary>
-                    <p data-i18n="faq.a7">Yes. I already work with clients in the United States and Brazil. We talk by email, chat, WhatsApp or video call, at a time that works for you.</p>
-                </details>
+            <article class="pf-cartao pf-exp revelar">
+                <div class="pf-exp__topo">
+                    <span class="servico__icone"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M7 9l2 2-2 2M12 13h4"/></svg></span>
+                    <div>
+                        <h3 data-i18n="pf.exp.cargo">Full Stack Developer — Freelance &amp; Own Products</h3>
+                        <p class="pf-exp__onde" data-i18n="pf.exp.onde">Rio de Janeiro, Brazil · 2021 – Present</p>
+                    </div>
+                </div>
+                <ul class="plano__lista">
+                    <li data-i18n="pf.exp.l1">Built and maintain a business management system for a beauty salon (Lolita Bronze), covering scheduling, clients and day-to-day operations, as the sole developer.</li>
+                    <li data-i18n="pf.exp.l2">Created and operate Sonélia, a multi-tenant SaaS for multidisciplinary clinics (scheduling, patient management and medical records), offered by subscription with paying customers.</li>
+                    <li data-i18n="pf.exp.l3">Created and operate Server Fall, a server monitoring product offered by subscription with paying customers.</li>
+                    <li data-i18n="pf.exp.l4">Deployed and maintain production servers on AWS, OVHcloud and Hostinger.</li>
+                    <li data-i18n="pf.exp.l5">Familiar with the Google Play and App Store publishing process.</li>
+                </ul>
+                <ul class="pf-chips" aria-label="Technologies used" data-i18n-aria="pf.exp.tecnologias">
+                    <li>Node.js</li><li>Fastify</li><li>Express</li><li>MongoDB</li><li>React</li><li>TypeScript</li><li>React Native</li><li>Flutter</li><li>AWS</li><li>GitHub Actions</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- PROJETOS: ainda vazio (o Stanley vai criar os projetos) -->
+        <section id="projects" class="secao">
+            <div class="secao__cabeca">
+                <h2 data-i18n="pf.proj.titulo">Projects</h2>
+            </div>
+            <div class="pf-cartao pf-vazio revelar">
+                <span class="servico__icone"><svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M12 11v4M10 13h4"/></svg></span>
+                <h3 data-i18n="pf.proj.vazio">Projects coming soon</h3>
+                <p data-i18n="pf.proj.vazio.sub">I'm preparing detailed case studies of my work. In the meantime, you can check out my code on GitHub.</p>
+                <a class="btn btn--contorno" href="https://github.com/StanleyAndrade" target="_blank" rel="noopener" data-i18n="pf.proj.btn">View my GitHub</a>
+            </div>
+        </section>
+
+        <!-- HABILIDADES -->
+        <section id="skills" class="secao">
+            <div class="secao__cabeca">
+                <h2 data-i18n="pf.hab.titulo">Technical skills</h2>
+            </div>
+            <div class="pf-habilidades">
+                <article class="pf-cartao pf-habilidade revelar" style="--i:0">
+                    <h3 data-i18n="pf.hab.g1">Languages</h3>
+                    <ul class="pf-chips"><li>JavaScript</li><li>TypeScript</li><li>Java</li><li>Dart</li></ul>
+                </article>
+                <article class="pf-cartao pf-habilidade revelar" style="--i:1">
+                    <h3 data-i18n="pf.hab.g2">Frontend</h3>
+                    <ul class="pf-chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li></ul>
+                </article>
+                <article class="pf-cartao pf-habilidade revelar" style="--i:2">
+                    <h3 data-i18n="pf.hab.g3">Mobile</h3>
+                    <ul class="pf-chips"><li>React Native</li><li>Flutter</li></ul>
+                </article>
+                <article class="pf-cartao pf-habilidade revelar" style="--i:0">
+                    <h3 data-i18n="pf.hab.g4">Backend</h3>
+                    <ul class="pf-chips"><li>Java</li><li>Spring Boot</li><li>Node.js</li><li>Express</li><li>Fastify</li><li>REST APIs</li><li>CRUD</li><li>Authentication</li><li>Error Handling</li><li>Third-Party Integrations</li></ul>
+                </article>
+                <article class="pf-cartao pf-habilidade revelar" style="--i:1">
+                    <h3 data-i18n="pf.hab.g5">Databases</h3>
+                    <ul class="pf-chips"><li>MongoDB (NoSQL)</li></ul>
+                </article>
+                <article class="pf-cartao pf-habilidade revelar" style="--i:2">
+                    <h3 data-i18n="pf.hab.g6">Architecture &amp; Quality</h3>
+                    <ul class="pf-chips"><li>Object-Oriented Programming (OOP)</li><li>MVC Architecture</li><li>Clean Code</li><li>Unit Testing</li></ul>
+                </article>
+                <article class="pf-cartao pf-habilidade revelar" style="--i:0">
+                    <h3 data-i18n="pf.hab.g7">Version Control &amp; Collaboration</h3>
+                    <ul class="pf-chips"><li>Git</li><li>GitHub (Pull Requests, Code Review, Merges, Releases)</li><li>Collaborative Development Workflow</li></ul>
+                </article>
+                <article class="pf-cartao pf-habilidade revelar" style="--i:1">
+                    <h3 data-i18n="pf.hab.g8">DevOps &amp; Cloud</h3>
+                    <ul class="pf-chips"><li>AWS</li><li>OVHcloud</li><li>Hostinger</li><li>CI/CD with GitHub Actions (basic)</li></ul>
+                </article>
+                <article class="pf-cartao pf-habilidade revelar" style="--i:2">
+                    <h3 data-i18n="pf.hab.g9">Methodologies</h3>
+                    <ul class="pf-chips"><li>Agile (Kanban)</li></ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- FORMAÇÃO E IDIOMAS -->
+        <section class="secao">
+            <div class="pf-duplo">
+                <article class="pf-cartao revelar">
+                    <span class="servico__icone"><svg viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></span>
+                    <h3 data-i18n="pf.edu.titulo">Education</h3>
+                    <p><strong data-i18n="pf.edu.curso">B.Sc. in Software Engineering — Unicesumar</strong></p>
+                    <p class="pf-cartao__sub" data-i18n="pf.edu.quando">In progress, expected 2029</p>
+                </article>
+                <article class="pf-cartao revelar" style="--i:1">
+                    <span class="servico__icone"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg></span>
+                    <h3 data-i18n="pf.idi.titulo">Languages</h3>
+                    <p data-i18n="pf.idi.pt"><strong>Portuguese</strong> — Native</p>
+                    <p data-i18n="pf.idi.en"><strong>English</strong> — B1 (intermediate)</p>
+                </article>
             </div>
         </section>
 
         <!-- CONTATO -->
         <section id="contact" class="secao">
             <div class="secao__cabeca">
-                <h2 data-i18n="contato.titulo">Let's talk</h2>
-                <p data-i18n="contato.sub">Have a project in mind or a question before you buy? Reach me the way you like. I usually reply within a few hours.</p>
+                <h2 data-i18n="pf.contato.titulo">Let's work together</h2>
+                <p data-i18n="pf.contato.sub">I'm open to full-time and remote roles. The best way to reach me is by email or LinkedIn.</p>
             </div>
             <div class="contatos">
-                <a class="contato revelar" style="--i:0" id="contato-agenda" href="#" target="_blank" rel="noopener">
-                    <span class="contato__icone"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
-                    <span><strong data-i18n="contato.agenda">Book a free call</strong><small data-i18n="contato.agenda.sub">Google Meet · pick a day and time</small></span>
-                </a>
-                <a class="contato revelar" style="--i:1" id="contato-email" href="mailto:stanleyclientes@gmail.com?subject=Project%20for%20my%20business">
+                <a class="contato revelar" style="--i:0" href="mailto:stanleyandrade@gmail.com">
                     <span class="contato__icone"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
-                    <span><strong data-i18n="contato.email">Email</strong><small>stanleyclientes@gmail.com</small></span>
+                    <span><strong data-i18n="contato.email">Email</strong><small>stanleyandrade@gmail.com</small></span>
                 </a>
-                <a class="contato revelar" style="--i:2" id="contato-whatsapp" href="https://wa.me/5521992002356?text=Hi%20Stanley!%20I%27d%20like%20to%20talk%20about%20a%20project%20for%20my%20business." target="_blank" rel="noopener">
+                <a class="contato revelar" style="--i:1" href="https://linkedin.com/in/stanleyandrade" target="_blank" rel="noopener">
+                    <span class="contato__icone"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
+                    <span><strong>LinkedIn</strong><small>linkedin.com/in/stanleyandrade</small></span>
+                </a>
+                <a class="contato revelar" style="--i:2" href="https://github.com/StanleyAndrade" target="_blank" rel="noopener">
+                    <span class="contato__icone"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.3 6.4-1.5 6.4-7a5.4 5.4 0 0 0-1.5-3.8 5 5 0 0 0-.1-3.8s-1.2-.3-3.9 1.5a13.4 13.4 0 0 0-7 0C6.3 1.6 5.1 1.9 5.1 1.9A5 5 0 0 0 5 5.7a5.4 5.4 0 0 0-1.5 3.8c0 5.4 3.3 6.6 6.4 7a3.4 3.4 0 0 0-.9 2.6V22"/></svg></span>
+                    <span><strong>GitHub</strong><small>github.com/StanleyAndrade</small></span>
+                </a>
+                <a class="contato revelar" style="--i:3" href="https://wa.me/5521992002356" target="_blank" rel="noopener">
                     <span class="contato__icone contato__icone--zap"><svg viewBox="0 0 24 24"><path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.3Z"/><path d="M9 10c0 3 2 5 5 5l1.2-1.2-2-1-1 .8c-1-.4-1.8-1.2-2.2-2.2l.8-1-1-2Z"/></svg></span>
                     <span><strong>WhatsApp</strong><small>+55 21 99200-2356</small></span>
                 </a>
-                <a class="contato revelar" style="--i:3" href="https://t.me/+5521992002356" target="_blank" rel="noopener">
+                <a class="contato revelar" style="--i:4" href="https://t.me/+5521992002356" target="_blank" rel="noopener">
                     <span class="contato__icone contato__icone--telegram"><svg viewBox="0 0 24 24"><path d="m22 3-20 8 7 3 3 7 10-18Z"/><path d="m9 14 13-11"/></svg></span>
                     <span><strong>Telegram</strong><small>+55 21 99200-2356</small></span>
                 </a>
-                <button type="button" class="contato revelar" style="--i:4" id="contato-chat">
-                    <span class="contato__icone"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12Z"/></svg></span>
-                    <span><strong data-i18n="contato.chat">Live chat</strong><small data-i18n="contato.chat.sub">Chat with me right here</small></span>
-                </button>
+                <a class="contato revelar" style="--i:5" href="stanley-andrade-resume.pdf" download>
+                    <span class="contato__icone"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M12 12v6M9 15l3 3 3-3"/></svg></span>
+                    <span><strong data-i18n="pf.contato.curriculo">Resume (PDF)</strong><small data-i18n="pf.contato.curriculo.sub">Download my resume</small></span>
+                </a>
             </div>
+        </section>
+
+        <!-- FREELANCE: leva para as páginas de serviços -->
+        <section class="secao">
+            <a class="pf-freela revelar" href="pages/services.html">
+                <span class="servico__icone"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+                <span><strong data-i18n="pf.freela.titulo">Need an app, a system or a website for your business?</strong><small data-i18n="pf.freela.sub">I also take freelance projects. See my services and prices →</small></span>
+            </a>
         </section>
     </main>
 
     <footer class="rodape">
-        <p>© <span id="ano">2026</span> Stanley Andrade · <span data-i18n="rodape.cargo">Software Engineer</span></p>
-        <p><span data-i18n="rodape.stripe">Secure payments by Stripe</span> · <a href="mailto:stanleyclientes@gmail.com">stanleyclientes@gmail.com</a></p>
+        <p>© <span id="ano">2026</span> Stanley Andrade · <span data-i18n="pf.rodape.cargo">Full Stack Developer</span></p>
+        <p><a href="mailto:stanleyandrade@gmail.com">stanleyandrade@gmail.com</a> · <a href="https://linkedin.com/in/stanleyandrade" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/StanleyAndrade" target="_blank" rel="noopener">GitHub</a></p>
     </footer>
 
     <script src="i18n.js"></script>
+    <script src="portfolio.i18n.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

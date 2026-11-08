@@ -1,0 +1,133 @@
+// Traduções desta página (apps Android e iPhone). Carrega depois do ../i18n.js:
+// o inglês dos data-i18n vem do HTML; aqui ficam o título/descrição da página e o espanhol e o português.
+// Chaves que já existem no ../i18n.js (orçamento, ilustrações, contato, sobre...) são reaproveitadas de lá.
+Object.assign(TRADUCOES.en, {
+    'meta.titulo': 'Android & iPhone Apps for Your Business · Stanley Andrade',
+    'meta.descricao': 'One app for Android and iPhone with your name and logo: bookings, orders, payments and notifications. Free call and a clear, fixed quote.',
+})
+
+Object.assign(TRADUCOES.es, {
+    'meta.titulo': 'Apps para Android y iPhone para tu negocio · Stanley Andrade',
+    'meta.descricao': 'Una app para Android y iPhone con tu nombre y tu logo: reservas, pedidos, pagos y notificaciones. Llamada gratis y cotización clara y cerrada.',
+
+    'lpa.hero.selo': 'Apps para Android y iPhone',
+    'lpa.hero.titulo': 'Tus clientes viven en el celular. <span class="degrade">¿Tu negocio está ahí?</span>',
+    'lpa.hero.texto': 'Hago <strong>una app para Android y iPhone</strong> con tu nombre y tu logo, para que tus clientes reserven, pidan y paguen en pocos toques — y vuelvan una y otra vez.',
+    'lpa.hero.g2': 'Publicada a tu nombre',
+    'lpa.vitrine.aria': 'La app de tu negocio en dos celulares: reservando una cita y siguiendo un pedido',
+
+    'lpa.dor.titulo': 'Si reservar contigo toma 20 mensajes, <span class="degrade">el cliente se va a otro lado.</span>',
+    'lpa.dor.sub': 'La gente quiere reservar, pedir y pagar en segundos, a cualquier hora. Si no puede, llama al siguiente negocio de la lista.',
+    'lpa.sem.aria': 'Sin app, reservar toma días de mensajes',
+    'lpa.com.aria': 'Con tu app, reservar toma tres toques',
+    'lpa.d1.frase': '"Paso el día respondiendo los mismos mensajes."',
+    'lpa.d1.texto': 'Tu app responde por ti: precios, horarios, reservas y estado de los pedidos, 24/7.',
+    'lpa.d2.frase': '"Los clientes se olvidan de volver."',
+    'lpa.d2.texto': 'Las notificaciones les recuerdan citas, ofertas y novedades, directo en su celular.',
+    'lpa.d3.frase': '"Las apps son solo para empresas grandes."',
+    'lpa.d3.texto': 'Ya no. Una app para Android y iPhone, hecha para tu negocio, a un precio justo.',
+
+    'lpa.sol.titulo': 'Una app hecha para tu negocio',
+    'lpa.sol.sub': 'Tu nombre, tu logo, tus colores. Todo lo que tus clientes necesitan, a un toque.',
+    'lpa.sol1.aria': 'Pantalla de reservas de tu app',
+    'lpa.sol1.titulo': 'Reservas, pedidos y pagos en pocos toques',
+    'lpa.sol1.l1': 'Reservas en línea, pedidos o una tienda completa',
+    'lpa.sol1.l2': 'Pagos con tarjeta dentro de la app',
+    'lpa.sol1.l3': 'Cuentas de clientes con su historial',
+    'lpa.sol1.l4': 'Un panel de administración simple para ti',
+    'lpa.sol2.aria': 'Notificaciones de tu app en la pantalla de bloqueo de un celular',
+    'lpa.sol2.titulo': 'Notificaciones que hacen volver a tus clientes',
+    'lpa.sol2.l1': 'Recordatorios de citas para que nadie falte',
+    'lpa.sol2.l2': 'Ofertas y novedades directo al celular de tus clientes',
+    'lpa.sol2.l3': 'Tarjetas de fidelidad y recompensas',
+    'lpa.sol2.l4': 'Una app para Android y iPhone, publicada a tu nombre',
+
+    'lpa.precos.titulo': '¿Cuánto cuesta una app?',
+    'lpa.precos.sub': 'Cada app es distinta, así que no hay un precio único para todos. Así funciona:',
+    'lpa.orc.destaque': 'La app y las cuentas de las tiendas son tuyas',
+
+    'lpa.como.sub': 'Cuatro pasos simples. Pruebas todo antes de publicarlo.',
+    'lpa.passo1.t': 'Cuéntame tu idea',
+    'lpa.passo1.p': 'Agenda una llamada gratis o mándame un mensaje. Cuéntame qué necesitan hacer tus clientes en la app.',
+    'lpa.passo2.t': 'Recibe una cotización cerrada',
+    'lpa.passo2.p': 'Te envío un precio claro y un plan. Nada empieza hasta que lo apruebes.',
+    'lpa.passo3.t': 'Pruébala en tu celular',
+    'lpa.passo3.p': 'Recibes versiones de prueba en el camino y pides cambios hasta que quede bien.',
+    'lpa.passo4.t': 'Publícala en las tiendas',
+    'lpa.passo4.p': 'Publico tu app en Google Play y en la App Store, a tu nombre.',
+
+    'lpa.faq.q1': '¿Cuánto tiempo tarda?',
+    'lpa.faq.a1': 'Depende de lo que la app tenga que hacer. Después de la llamada gratis, te doy un plazo claro junto con la cotización.',
+    'lpa.faq.q2': '¿De quién es la app?',
+    'lpa.faq.a2': 'Tuya. La app se publica en tus propias cuentas de las tiendas, a tu nombre.',
+    'lpa.faq.q3': '¿Necesito saber de tecnología?',
+    'lpa.faq.a3': 'No. Me cuentas cómo funciona tu negocio, yo me encargo del resto y te explico todo con palabras simples.',
+    'lpa.faq.q4': '¿Qué pasa después de publicarla?',
+    'lpa.faq.a4': 'Puedo seguir mejorando y actualizando tu app. Lo acordamos en la cotización, así no hay sorpresas.',
+
+    'lpa.final.titulo': 'Pon tu negocio en el bolsillo de tus clientes.',
+    'lpa.final.sub': 'Agenda una llamada gratis y recibe una cotización clara y cerrada para tu app.',
+})
+
+Object.assign(TRADUCOES.pt, {
+    'meta.titulo': 'Apps para Android e iPhone para o seu negócio · Stanley Andrade',
+    'meta.descricao': 'Um app para Android e iPhone com o seu nome e a sua logo: agendamentos, pedidos, pagamentos e notificações. Conversa grátis e orçamento claro e fechado.',
+
+    'lpa.hero.selo': 'Apps para Android e iPhone',
+    'lpa.hero.titulo': 'Seus clientes vivem no celular. <span class="degrade">O seu negócio está lá?</span>',
+    'lpa.hero.texto': 'Eu faço <strong>um app para Android e iPhone</strong> com o seu nome e a sua logo, para os clientes agendarem, pedirem e pagarem em poucos toques — e voltarem sempre.',
+    'lpa.hero.g2': 'Publicado no seu nome',
+    'lpa.vitrine.aria': 'O app do seu negócio em dois celulares: agendando um horário e acompanhando um pedido',
+
+    'lpa.dor.titulo': 'Se agendar com você leva 20 mensagens, <span class="degrade">o cliente vai para outro lugar.</span>',
+    'lpa.dor.sub': 'As pessoas querem agendar, pedir e pagar em segundos, a qualquer hora. Se não conseguem, ligam para o próximo da lista.',
+    'lpa.sem.aria': 'Sem app, agendar leva dias de mensagens',
+    'lpa.com.aria': 'Com o seu app, agendar leva três toques',
+    'lpa.d1.frase': '"Passo o dia respondendo as mesmas mensagens."',
+    'lpa.d1.texto': 'O app responde por você: preços, horários, agendamentos e status dos pedidos, 24 horas por dia.',
+    'lpa.d2.frase': '"Os clientes esquecem de voltar."',
+    'lpa.d2.texto': 'As notificações lembram de horários, promoções e novidades, direto no celular deles.',
+    'lpa.d3.frase': '"App é coisa de empresa grande."',
+    'lpa.d3.texto': 'Não é mais. Um app para Android e iPhone, feito para o seu negócio, por um preço justo.',
+
+    'lpa.sol.titulo': 'Um app feito para o seu negócio',
+    'lpa.sol.sub': 'Seu nome, sua logo, suas cores. Tudo o que os seus clientes precisam, a um toque.',
+    'lpa.sol1.aria': 'Tela de agendamento do seu app',
+    'lpa.sol1.titulo': 'Agendamentos, pedidos e pagamentos em poucos toques',
+    'lpa.sol1.l1': 'Agendamento on-line, pedidos ou uma loja completa',
+    'lpa.sol1.l2': 'Pagamento com cartão dentro do app',
+    'lpa.sol1.l3': 'Conta do cliente com o histórico',
+    'lpa.sol1.l4': 'Um painel simples para você administrar',
+    'lpa.sol2.aria': 'Notificações do seu app na tela de bloqueio de um celular',
+    'lpa.sol2.titulo': 'Notificações que fazem o cliente voltar',
+    'lpa.sol2.l1': 'Lembretes de horário para ninguém faltar',
+    'lpa.sol2.l2': 'Promoções e novidades direto no celular dos clientes',
+    'lpa.sol2.l3': 'Cartão fidelidade e recompensas',
+    'lpa.sol2.l4': 'Um app para Android e iPhone, publicado no seu nome',
+
+    'lpa.precos.titulo': 'Quanto custa um app?',
+    'lpa.precos.sub': 'Cada app é diferente, então não existe um preço igual para todos. Funciona assim:',
+    'lpa.orc.destaque': 'O app e as contas das lojas são seus',
+
+    'lpa.como.sub': 'Quatro passos simples. Você testa tudo antes de ir para o ar.',
+    'lpa.passo1.t': 'Me conte a sua ideia',
+    'lpa.passo1.p': 'Marque uma conversa grátis ou me mande uma mensagem. Conte o que os seus clientes precisam fazer no app.',
+    'lpa.passo2.t': 'Receba um orçamento fechado',
+    'lpa.passo2.p': 'Eu te mando um preço claro e um plano. Nada começa antes de você aprovar.',
+    'lpa.passo3.t': 'Teste no seu celular',
+    'lpa.passo3.p': 'Você recebe versões de teste no caminho e pede alterações até ficar do seu jeito.',
+    'lpa.passo4.t': 'Publique nas lojas',
+    'lpa.passo4.p': 'Eu publico o seu app na Google Play e na App Store, no seu nome.',
+
+    'lpa.faq.q1': 'Quanto tempo demora?',
+    'lpa.faq.a1': 'Depende do que o app precisa fazer. Depois da conversa grátis, eu te passo um prazo claro junto com o orçamento.',
+    'lpa.faq.q2': 'De quem é o app?',
+    'lpa.faq.a2': 'Seu. O app é publicado nas suas próprias contas das lojas, no seu nome.',
+    'lpa.faq.q3': 'Preciso entender de tecnologia?',
+    'lpa.faq.a3': 'Não. Você me conta como o seu negócio funciona, eu cuido do resto e explico tudo em palavras simples.',
+    'lpa.faq.q4': 'E depois que o app for publicado?',
+    'lpa.faq.a4': 'Eu posso continuar melhorando e atualizando o seu app. A gente combina isso no orçamento, sem surpresa.',
+
+    'lpa.final.titulo': 'Coloque o seu negócio no bolso dos seus clientes.',
+    'lpa.final.sub': 'Marque uma conversa grátis e receba um orçamento claro e fechado para o seu app.',
+})
