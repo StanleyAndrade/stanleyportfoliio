@@ -172,6 +172,14 @@ if ('IntersectionObserver' in window) {
 
 document.getElementById('ano').textContent = new Date().getFullYear()
 
+// ===================== Fotos dos projetos =====================
+// As fotos ficam em data-src e só entram aqui: os robôs que montam a prévia do link
+// (WhatsApp, Facebook, LinkedIn) não rodam JavaScript, então não usam uma delas como capa.
+// Quando houver uma capa própria, é só pôr a <meta property="og:image"> no index.html.
+document.querySelectorAll('img[data-src]').forEach((foto) => {
+    foto.src = foto.dataset.src
+})
+
 // ===================== Idioma =====================
 document.addEventListener('idioma-mudou', () => {
     mostrarAvisoCheckout()
