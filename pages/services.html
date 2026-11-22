@@ -24,6 +24,9 @@
             if (['light', 'rosa', 'dark', 'system'].includes(tema)) document.documentElement.dataset.theme = tema
         } catch { /* sem localStorage: segue o sistema */ }
         document.documentElement.classList.add('js')
+        // Esconde o texto até o i18n.js traduzir (evita piscar em inglês); 1,5 s de segurança
+        document.documentElement.classList.add('i18n-pendente')
+        setTimeout(() => document.documentElement.classList.remove('i18n-pendente'), 1500)
     </script>
     <link rel="stylesheet" href="../styles.css">
 </head>

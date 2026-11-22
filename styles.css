@@ -1323,6 +1323,11 @@ svg {
 }
 
 /* ===================== Animações ===================== */
+/* Página escondida até o i18n.js aplicar o idioma (ver script no <head>) */
+.i18n-pendente body {
+    visibility: hidden;
+}
+
 .js .revelar {
     opacity: 0;
     transform: translateY(18px);
@@ -2748,19 +2753,149 @@ svg {
     line-height: 1.4;
 }
 
-/* Projetos: estado vazio */
-.pf-vazio {
-    align-items: center;
-    max-width: 560px;
-    margin: 0 auto;
-    padding: 32px 22px;
-    text-align: center;
-    border-style: dashed;
-    border-color: var(--border-strong);
+/* Projetos: cartão com foto em cima e descrição embaixo */
+.pf-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr));
+    gap: 20px;
+    align-items: start;
 }
 
-.pf-vazio p {
+.pf-projeto {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pf-projeto:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.pf-projeto__foto {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: var(--primary-soft);
+    border-bottom: 1px solid var(--border);
+}
+
+.pf-projeto__foto img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+/* Logo (Lolita Bronze): inteiro, centralizado, sem cortar */
+.pf-projeto__foto--logo img {
+    object-fit: contain;
+    object-position: center;
+    padding: 14px;
+}
+
+.pf-projeto__corpo {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px;
+    line-height: 1.55;
+}
+
+.pf-projeto__tipo {
+    align-self: flex-start;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: var(--primary-soft);
+    color: var(--primary);
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.pf-projeto h3 {
+    margin-top: -6px;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.pf-projeto__bloco {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.pf-projeto__bloco h4 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
     color: var(--text-muted);
+}
+
+.pf-projeto__bloco p {
+    font-size: 0.95rem;
+}
+
+/* Parte técnica: caixa separada, com as tecnologias */
+.pf-projeto__bloco--tec {
+    gap: 10px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+}
+
+.pf-projeto__bloco--tec p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.pf-projeto__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    align-self: flex-start;
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.pf-projeto__link:hover {
+    text-decoration: underline;
+}
+
+.pf-projeto__link svg {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.pf-projetos__mais {
+    margin-top: 24px;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .pf-projeto__corpo {
+        padding: 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pf-projeto,
+    .pf-projeto:hover {
+        transition: none;
+        transform: none;
+    }
 }
 
 /* Habilidades */

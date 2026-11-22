@@ -24,6 +24,9 @@
             if (['light', 'rosa', 'dark', 'system'].includes(tema)) document.documentElement.dataset.theme = tema
         } catch { /* sem localStorage: segue o sistema */ }
         document.documentElement.classList.add('js')
+        // Esconde o texto até o i18n.js traduzir (evita piscar em inglês); 1,5 s de segurança
+        document.documentElement.classList.add('i18n-pendente')
+        setTimeout(() => document.documentElement.classList.remove('i18n-pendente'), 1500)
     </script>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -174,17 +177,102 @@
             </article>
         </section>
 
-        <!-- PROJETOS: ainda vazio (o Stanley vai criar os projetos) -->
+        <!-- PROJETOS: cartão com foto, "o que faz" (para leigos) e "como foi feito" (técnico) -->
         <section id="projects" class="secao">
             <div class="secao__cabeca">
                 <h2 data-i18n="pf.proj.titulo">Projects</h2>
+                <p data-i18n="pf.proj.sub">Real systems I built for clients and for my own products. For each one: what it does for the business, and how it was built.</p>
             </div>
-            <div class="pf-cartao pf-vazio revelar">
-                <span class="servico__icone"><svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M12 11v4M10 13h4"/></svg></span>
-                <h3 data-i18n="pf.proj.vazio">Projects coming soon</h3>
-                <p data-i18n="pf.proj.vazio.sub">I'm preparing detailed case studies of my work. In the meantime, you can check out my code on GitHub.</p>
-                <a class="btn btn--contorno" href="https://github.com/StanleyAndrade" target="_blank" rel="noopener" data-i18n="pf.proj.btn">View my GitHub</a>
+            <div class="pf-projetos">
+                <article class="pf-projeto revelar">
+                    <div class="pf-projeto__foto"><img src="img/projetos/sonelia.webp" alt="Sonelia" width="1000" height="600" loading="lazy" decoding="async"></div>
+                    <div class="pf-projeto__corpo">
+                        <span class="pf-projeto__tipo" data-i18n="pf.p.sonelia.tipo">SaaS · Health clinics</span>
+                        <h3>Sonelia</h3>
+                        <div class="pf-projeto__bloco">
+                            <h4 data-i18n="pf.proj.negocio">What it does</h4>
+                            <p data-i18n="pf.p.sonelia.negocio">An online system for clinics (psychology, physiotherapy, medical and aesthetics). Clinics book appointments, keep patient records safe, collect signed consent forms, pay their professionals and remind patients on WhatsApp. Clinics pay a monthly subscription.</p>
+                        </div>
+                        <div class="pf-projeto__bloco pf-projeto__bloco--tec">
+                            <h4 data-i18n="pf.proj.tecnica">How it was built</h4>
+                            <p data-i18n="pf.p.sonelia.tec">Multi-tenant SaaS with a React + Vite frontend and a Node.js (Fastify) + MongoDB API. Encrypted medical records with access audit, subscription billing with Mercado Pago and Stripe, 3 languages, light/pink/dark themes and installable as an app (PWA). Runs on Docker in a cloud server.</p>
+                            <ul class="pf-chips"><li>React</li><li>Node.js</li><li>Fastify</li><li>MongoDB</li><li>Stripe</li><li>Docker</li></ul>
+                        </div>
+                        <a class="pf-projeto__link" href="https://sonelia.com.br" target="_blank" rel="noopener"><span data-i18n="pf.proj.ver">Visit website</span> <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                    </div>
+                </article>
+
+                <article class="pf-projeto revelar">
+                    <div class="pf-projeto__foto pf-projeto__foto--logo"><img src="img/projetos/lolitabronze.webp" alt="Lolita Bronze" width="600" height="600" loading="lazy" decoding="async"></div>
+                    <div class="pf-projeto__corpo">
+                        <span class="pf-projeto__tipo" data-i18n="pf.p.lolita.tipo">Desktop app · Tanning studio</span>
+                        <h3>Lolita Bronze</h3>
+                        <div class="pf-projeto__bloco">
+                            <h4 data-i18n="pf.proj.negocio">What it does</h4>
+                            <p data-i18n="pf.p.lolita.negocio">The management system a tanning studio uses every day at the front desk: customers, appointments, sales, opening and closing the cash register, reports and printed receipts. Everything that used to be on paper is now in one place.</p>
+                        </div>
+                        <div class="pf-projeto__bloco pf-projeto__bloco--tec">
+                            <h4 data-i18n="pf.proj.tecnica">How it was built</h4>
+                            <p data-i18n="pf.p.lolita.tec">Windows desktop app built with Electron and React. The app starts its own Node.js API in the background, stores data in MongoDB, prints receipts on a thermal printer and ships with a Windows installer.</p>
+                            <ul class="pf-chips"><li>Electron</li><li>React</li><li>Node.js</li><li>MongoDB</li></ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="pf-projeto revelar">
+                    <div class="pf-projeto__foto"><img src="img/projetos/serverfall.webp" alt="ServerFall" width="1000" height="625" loading="lazy" decoding="async"></div>
+                    <div class="pf-projeto__corpo">
+                        <span class="pf-projeto__tipo" data-i18n="pf.p.serverfall.tipo">SaaS · Website monitoring</span>
+                        <h3>ServerFall</h3>
+                        <div class="pf-projeto__bloco">
+                            <h4 data-i18n="pf.proj.negocio">What it does</h4>
+                            <p data-i18n="pf.p.serverfall.negocio">It watches websites and servers 24/7 and sends an alert on Telegram when something goes down, so the problem is fixed before customers notice. Each end client gets a page to follow their system and pay the monthly fee.</p>
+                        </div>
+                        <div class="pf-projeto__bloco pf-projeto__bloco--tec">
+                            <h4 data-i18n="pf.proj.tecnica">How it was built</h4>
+                            <p data-i18n="pf.p.serverfall.tec">Multi-tenant SaaS with React and a Node.js + MongoDB API. Tracks uptime, CPU/RAM/disk, Docker containers, SSL and domain expiration, logs and a traffic map by country. Payments with Mercado Pago and Stripe, super admin panel with revenue and installable as an app (PWA).</p>
+                            <ul class="pf-chips"><li>React</li><li>Node.js</li><li>MongoDB</li><li>Docker</li><li>Telegram API</li></ul>
+                        </div>
+                        <a class="pf-projeto__link" href="https://serverfall.vercel.app" target="_blank" rel="noopener"><span data-i18n="pf.proj.ver">Visit website</span> <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                    </div>
+                </article>
+
+                <article class="pf-projeto revelar">
+                    <div class="pf-projeto__foto"><img src="img/projetos/speedlanhouse.webp" alt="Speed Lan House" width="1000" height="750" loading="lazy" decoding="async"></div>
+                    <div class="pf-projeto__corpo">
+                        <span class="pf-projeto__tipo" data-i18n="pf.p.speed.tipo">Website · Local shop</span>
+                        <h3>Speed Lan House</h3>
+                        <div class="pf-projeto__bloco">
+                            <h4 data-i18n="pf.proj.negocio">What it does</h4>
+                            <p data-i18n="pf.p.speed.negocio">Website for a neighborhood computer services shop. Each service (printing, document typing, second copy of documents, appointment scheduling and vehicle services) has its own page with prices, so customers know what to bring before they walk in.</p>
+                        </div>
+                        <div class="pf-projeto__bloco pf-projeto__bloco--tec">
+                            <h4 data-i18n="pf.proj.tecnica">How it was built</h4>
+                            <p data-i18n="pf.p.speed.tec">Built with Next.js, TypeScript and Tailwind CSS. One page per service to rank on Google, a fees popup, Google Analytics and a responsive layout.</p>
+                            <ul class="pf-chips"><li>Next.js</li><li>TypeScript</li><li>Tailwind CSS</li><li>SEO</li></ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="pf-projeto revelar">
+                    <div class="pf-projeto__foto"><img src="img/projetos/portalcnhfacil.webp" alt="Portal CNH Fácil" width="1000" height="625" loading="lazy" decoding="async"></div>
+                    <div class="pf-projeto__corpo">
+                        <span class="pf-projeto__tipo" data-i18n="pf.p.cnh.tipo">Online store · Courses</span>
+                        <h3>Portal CNH Fácil</h3>
+                        <div class="pf-projeto__bloco">
+                            <h4 data-i18n="pf.proj.negocio">What it does</h4>
+                            <p data-i18n="pf.p.cnh.negocio">An online store that sells specialized courses for professional drivers (cargo, passengers, emergency vehicles, school transport and dangerous goods). Students buy and pay online and find their courses in their account; the owner follows sales in a dashboard.</p>
+                        </div>
+                        <div class="pf-projeto__bloco pf-projeto__bloco--tec">
+                            <h4 data-i18n="pf.proj.tecnica">How it was built</h4>
+                            <p data-i18n="pf.p.cnh.tec">Next.js website with a Node.js + MongoDB REST API. Course catalog, checkout with Mercado Pago, student area and an admin dashboard with sales and users.</p>
+                            <ul class="pf-chips"><li>Next.js</li><li>Node.js</li><li>MongoDB</li><li>Mercado Pago</li></ul>
+                        </div>
+                        <a class="pf-projeto__link" href="https://www.portalcnhfacil.com" target="_blank" rel="noopener"><span data-i18n="pf.proj.ver">Visit website</span> <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                    </div>
+                </article>
             </div>
+            <p class="pf-projetos__mais"><a class="btn btn--contorno" href="https://github.com/StanleyAndrade" target="_blank" rel="noopener" data-i18n="pf.proj.btn">View my GitHub</a></p>
         </section>
 
         <!-- HABILIDADES -->

@@ -617,8 +617,13 @@ function escolherIdiomaInicial() {
         const salvo = localStorage.getItem('language-preference')
         if (IDIOMAS.includes(salvo)) return salvo
     } catch { /* sem localStorage: usa o idioma do aparelho */ }
-    const doAparelho = (navigator.language || 'en').slice(0, 2).toLowerCase()
-    return IDIOMAS.includes(doAparelho) ? doAparelho : 'en'
+    // Idiomas do aparelho em ordem de preferência (ex.: pt-BR, en-US): vale o primeiro que o site tem.
+    // Alguns navegadores só preenchem navigator.language, por isso ele entra no fim da lista.
+    const doAparelho = [...(navigator.languages || []), navigator.language]
+        .filter(Boolean)
+        .map((codigo) => codigo.slice(0, 2).toLowerCase())
+        .find((codigo) => IDIOMAS.includes(codigo))
+    return doAparelho || 'en'
 }
 
 let idiomaAtual = escolherIdiomaInicial()
@@ -646,6 +651,8 @@ function aplicarIdioma(idioma) {
         if (el.hasAttribute('title')) el.setAttribute('title', texto)
     })
     botoesIdioma.forEach((botao) => botao.setAttribute('aria-pressed', String(botao.dataset.idioma === idioma)))
+
+    document.documentElement.classList.remove('i18n-pendente')
 
     // Avisa o app.js para refazer os textos que ele monta (vídeo, aviso do checkout, links)
     document.dispatchEvent(new CustomEvent('idioma-mudou'))
