@@ -2792,13 +2792,6 @@ svg {
     object-position: top center;
 }
 
-/* Logo (Lolita Bronze): inteiro, centralizado, sem cortar */
-.pf-projeto__foto--logo img {
-    object-fit: contain;
-    object-position: center;
-    padding: 14px;
-}
-
 .pf-projeto__corpo {
     display: flex;
     flex-direction: column;
